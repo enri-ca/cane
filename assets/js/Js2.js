@@ -63,7 +63,7 @@ function slide_articles(){
 	}
 }
 
-//function MetaDataViewer - visualization//
+//function MetaDataViewer//
 function MDV(selection){
 	let text = "";
 	if (selection == 1){
@@ -78,38 +78,28 @@ function MDV(selection){
 	var arr = document.getElementsByClassName(classname);
 	for (let i = 0; i < arr.length; i++) {
 		//text += '<a class="dropdown-item" href="https://www.unibo.it" onclick="openpopup()">' + arr[i].getAttribute("data-label") + "</a>"
+		//text += '<button onclick="document.getElementById('id01').style.display='block'" class="w3-button">' + arr[i].getAttribute("data-label") + '</button>'
 		text += '<button onclick="openPopUp()" class="w3-button">' + arr[i].getAttribute("data-label") + '</button>'
 	}
 	document.getElementById(id).innerHTML = text;
  }
 
-//<button onclick="document.getElementById('id01').style.display='block'" class="w3-button">Open Modal</button>
-
 //function openPopUp//
-//1. highlight, 2. pop up con >> << - WIKIDATA - NOME ENTITY - CLASSE - CHIUSURA 
 function openPopUp(){
 	document.getElementById("PopUpHeader").innerHTML = "class - entityy";
 	document.getElementById("PopUpWikidata").innerHTML = "url";
 	document.getElementById("PopUpWikidata").href = "url";
 	document.getElementById("id01").style.display="block"
-}	
-
+}
+//1. highlight, 2. pop up con >> << - WIKIDATA - NOME ENTITY - CLASSE - CHIUSURA 
 	//text = <h2>classe - nome entity</h2> <p>wikidata</p>
 	//document.getElementById('id01').style.display='block';
 	//document.getElementById('id01').innerHTML = text;
 
-//function to hide/show entities [not working]//
-//function entities(){//
-//	$(".entity").hide(); 
-//	$(".entity").show(); 
-//}
+//functions prev_entity_item()
+//function next_entity_item()
 
 //function to high_href() [working off-line with $(document).ready(function(){ not online]//
-//function high_href(){//
-//$(window).load(function(){//
-//window.onload = function(){//
-//function high_href(){//
-//$(document).ready(function(){//
 $(".bib_note").click(function(){
 		var target = $(this).attr("href");
 		var source_id = $(this).attr("id");
@@ -120,3 +110,15 @@ $(".bib_note").click(function(){
 			source.scrollIntoView();
 		});
 	})
+//function high_href(){//
+//$(window).load(function(){//
+//window.onload = function(){//
+//function high_href(){//
+//$(document).ready(function(){//
+
+//function to hide/show entities [not working]//
+//function entities(){//
+//	$(".entity").hide(); 
+//	$(".entity").show(); 
+//}
+
