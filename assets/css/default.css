@@ -152,6 +152,16 @@ body {
   background-color: #ffffcc; 
 }
 
+/*2022-01-04*/
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.next {
+  background-color: #04AA6D;
+  color: white;
+}
 /*.navbar-nav ul, li {
   list-style-type: none;
   margin: 0;
