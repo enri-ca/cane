@@ -78,7 +78,7 @@ function MDV(selection){
 	var arr = document.getElementsByClassName(classname);
 	for (let i = 0; i < arr.length; i++) {
 		//text += '<a class="dropdown-item" href="https://www.unibo.it" onclick="openpopup()">' + arr[i].getAttribute("data-label") + "</a>"
-		text += '<button onclick="document.getElementById("id01").style.display="block" class="w3-button">' + arr[i].getAttribute("data-label") + '</button>'
+		text += '<button onclick="openPopUp()" class="w3-button">' + arr[i].getAttribute("data-label") + '</button>'
 	}
 	document.getElementById(id).innerHTML = text;
  }
@@ -87,7 +87,12 @@ function MDV(selection){
 
 //function openPopUp//
 //1. highlight, 2. pop up con >> << - WIKIDATA - NOME ENTITY - CLASSE - CHIUSURA 
-//function openPopUp(){
+function openPopUp(){
+	document.getElementById("id01").style.display="block"
+}
+	//text = <h2>classe - nome entity</h2> <p>wikidata</p>
+	//document.getElementById('id01').style.display='block';
+	//document.getElementById('id01').innerHTML = text;
 
 //function to hide/show entities [not working]//
 //function entities(){//
