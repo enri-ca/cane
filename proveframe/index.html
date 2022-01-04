@@ -1,0 +1,186 @@
+<html>
+<head>
+<title> IMWT </title>
+</head>
+<style type="text/css">
+
+@import url('https://fonts.googleapis.com/css2?family=Caladea&family=Rye&display=swap');
+
+	.container {
+		display: grid;
+		width: 100%;
+		grid-template-areas: "head head head"
+							 "nav nav nav"
+							 "left center right"
+							 "foot foot foot";
+		grid-template-rows: 80px 40px 1fr 50px;
+		grid-template-columns: 1fr 2fr 1fr;
+		margin: 0px;
+	}
+
+	#testa {
+		grid-area: head;
+		background: #FAEBD7;
+		margin-left: -10px;
+		margin-right: -10px;
+		margin-top: -10px;
+
+	}
+
+	#barra {
+		grid-area: nav;
+		background: white;
+		margin-left: -10px;
+		margin-right: -10px;
+	}
+	#piede {
+		grid-area: foot;
+		background: yellow;
+		margin: 0px;
+	}
+
+	#destra {
+		grid-area: right;
+		margin-right: 0px;
+		background-color:#FAEBD7;
+		position: -webkit-sticky;
+    	position: sticky;
+    	left: 0;
+    	top:50;
+    	bottom: 0;
+	}
+
+	#sinistra {
+		grid-area: left;
+		margin-left: 0px;
+		background: #FAEBD7;
+		position: -webkit-sticky;
+    	position: sticky;
+    	left: 0;
+    	top:50;
+    	bottom: 0;
+	}
+
+	#centro {
+		grid-area: center;
+		margin: 0px;
+	}
+
+	ul {
+  	list-style-type: none;
+  	margin: 0;
+  	padding: 0;
+  	overflow: hidden;
+  	background-color: black;
+	}
+
+	li {
+  	float: left;
+	}
+
+	li a {
+  	display: block;
+  	padding: 8px;
+	}
+
+	.button{
+		font-family: 'Caladea', serif;
+		font-size: 20px;
+		color: white;
+		text-decoration: none;
+		margin-left:20px;
+	}
+
+	.p{
+		font-size: 30px;
+	}
+	div.sticky {
+  	position: -webkit-sticky;
+  	position: sticky;
+  	top: 0;
+  	left:0;
+  	right:0;
+	}	
+
+</style>
+<body>
+
+<div class="container">
+  	<div class="row" id="testa">
+  		<h1 style="font-family: 'Rye', cursive; text-align: center; margin: 20px; font-size: 40pt; letter-spacing: 8px;"> CIRCUS MAGAZINE </h1>
+  	</div>
+
+  	<div class="row" id="barra" style="position: -webkit-sticky;
+    	position: sticky;
+    	top:0;">
+	<ul style="padding:4px">
+	<li><a href="#home" class="button">Home</a></li>
+  	<li><a href="#issues" class="button">Issues</a></li>
+  	<li><a href="#about" class="button">About</a></li>
+  	<li><a href="#disclaimer" class="button">Disclaimer</a></li>
+  	<li><a href="#contacts" class="button">Contacts</a></li>
+  	<li><a href="#documentation" class="button">Documentation</a></li>
+	</ul>
+  	</div>
+  	<div class="sticky">
+    <div class="col" id="sinistra" class="sticky">
+    	<img src="pngeggr.png" height="500" align="left" style="margin: 20px; position: -webkit-sticky;
+    	position: sticky;
+    	right: 0;"> 
+    </div>
+	</div>
+    <div class="col" id = "centro">
+
+	<h3> Some Viewport experiments</h3>
+	<h2><a href="0_IssuesBoxesDefault.html ">GRID responsive? 2022-01-02FRAME con un pò di JS e selector funzionante!</a></h2>
+	
+	    <h2><a href="0_MAINFRAME.html">FRAME con un pò di JS e selector funzionante!</a></h2>
+	    <h5>Pagina issue con 3 riquadri riempiti richiamando le pagine html degli articoli; selctor funzionante, cambio issue anche </h5>
+	<h2><a href="0_MAINFRAME_2.html">FRAME di prova E</a></h2>
+	    <h2><a href="viewportbozza.html">Grid</a></h2>
+	    <h3>altre prove, old</h3>
+	<h2><a href="include.html">prova html</a></h2>
+	    <h2><a href="z.html">frame  JS</a></h2>
+	    
+	<h2><a href="1.prova_colonne.html">Template 3 colonne</a></h2>
+	    <h2><a href="1.prova_nested.html">Template nested</a></h2>	    
+	    <h2><a href="1.prova_3view.html">Template anni '90</a></h2>
+   
+	    
+	    <h2>Circus and cultural studies</h2>		
+	    <h4>1.1	From the Fair Theatre to the Modern Circus. Main article</h4>
+	    <p>Go to: <a href="1_1.html">article in the issue</a> ---- <a href="http://dx.doi.org/10.1590/2237-266093237">original version</a></p>
+	  <h4>1.2	El lugar de la diferencia en Chile:circo y transformismo. El caso del Circo Timoteo. Guest article</h4>
+	    <p>Go to: <a href="1_2.html"> article in the issue</a> ---- <a href="https://raco.cat/index.php/DocumentsAnalisi/article/view/259380/346596">original version</a></p>
+    <h4>1.3	The Semiotics of Clowns and Clowning: Rituals of Transgression and the Theory of Laughter. Book review</h4>
+	    <p>Go to: <a href="1_3.html">article in the issue</a> ---- <a href="https://europeanjournalofhumour.org/ejhr/article/view/126">original version</a></p>
+	<h3>Circus and the Arts</h3>
+	  <h4>2.1	Freaks (1932): Dysmorphisms, Solidarity and Revenge. Main article</h4>
+	  <p>Go to: <a href="2_1.html">article in the issue</a> ---- <a href="https://revistas.usal.es/index.php/medicina_y_cine/article/view/68/91">original version</a></p>  
+	    <h4>2.2	Esperienze musicali nel Circo Paniko. Guest article</h4>
+	  <p>Go to: <a href="2_2.html">article in the issue</a> ---- <a href="https://doi.org/10.13125/medea-4388">original version</a></p>  
+	    <h4>2.3	The Circus as a Parallel Universe. Book review</a></h4>
+	  <p>Go to: <a href="2_3.html">article in the issue</a> ---- <a href="https://we-make-money-not-art.com/the_circus_as_a_parallel_unive/">original version</a></p>  
+	  
+	<h3>Social Circus</h3>
+	  <h4>3.1	Building Resilience by Becoming a Circus Artist. Main article</h4>
+	  <p>Go to: <a href="3_1.html">article in the issue</a> ---- <a href="https://doi.org/10.1093/jrs/fez091">original version</a></p>  
+	<h4>3.2	Enseigner les arts du cirque au collège : une dévolution artistique. Guest article</h4>
+	<p>Go to: <a href="3_2.html">article in the issue</a> ---- <a href="https://journals.openedition.org/ejrieps/1362?lang=en">original version</a></p>
+		  <h4>3.3	The Welfare of Performing Animals. A Historical Perspective. Book review</h4>
+	<p>Go to: <a href="3_3.html">article in the issue</a> ---- <a href="https://doi.org/10.3390/ani6110076">original version</a></p>
+      <p>Lorem ipsum dolor sit amet. Ut quis iste et suscipit corporis hic quia provident. At asperiores quia aut nesciunt dolores ad accusantium laboriosam id inventore et molestias culpa quo sapiente quis. Qui nemo amet id itaque perferendis qui ipsum magni et aliquid molestiae ut excepturi natus in magnam eveniet.</p>
+
+	    </div>
+    
+    <div class="sticky">
+    <div class="col" id="destra">
+      <img src="pngegg.png" height="500" align="right" style="margin: 20px; position: -webkit-sticky;
+    	position: sticky;
+    	left: 0;">
+    </div>
+    </div>
+</div>
+  
+</body>
+</html>

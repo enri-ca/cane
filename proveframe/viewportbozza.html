@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Circus Magazine</title>
+      <meta content="" name="description">
+      <meta content="" name="keywords">
+    <link id="css" type="text/css" rel="stylesheet" href ="style2000.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets\js\Js2.js"></script>
+  </head>
+
+  <body>
+    <div class="grid-container">
+      <div class="logo"> Leisurely<br>Luscious<br>Literary<br>Lens</div>
+      <div class="header"> <span id="vino">CIRCUS</span><span id="nero">MAGAZINE</span></div>
+      <div class="itemnav"> 
+        <hr id="lineanavbar">
+        <ul id="navbar">
+          <li class="button"><a class="active" href="#home">Home</a></li>
+          <li class="button"><a href="#Issues">Issues</a></li>
+          <li class="button"><a href="#Disclaimer">Disclaimer</a></li>
+          <li class="button"><a href="#Documentation">Documentation</a></li>
+          <li class="button"><a href="#about">About</a></li>
+        </ul>
+        <hr id="lineanavbar">
+        <ul id="switch-tool">
+          <a class="active" href="#" onclick="slide_articles()"><img src="mainart.png" class="switch" id="mainarticle" style="height:4.5%; width: 4.5%"></a>
+          <a  href="#" onclick="change_css('assets/css/default.css')"><img src="reset.svg" li class="switch" id="changestyle" style="width:4.5%"></a>          
+          <li class="switch"><a class="active" href="#" onclick="change_css('assets/css/pre1800.css')">-1799</a></li>
+          <li class="switch"><a  href="#" onclick="change_css('assets/css/1800.css')">1800</a></li>
+          <li class="switch"><a  href="#" onclick="change_css('assets/css/1900_50.css')">1900-1950</a></li>
+          <li class="switch"><a  href="#" onclick="change_css('assets/css/1950_89.css')">1950-1989</a></li>
+          <li class="switch"><a  href="#" onclick="change_css('assets/css/1990_2020.css')">1990-2020</a></li>
+          <li class="switch"><a  href="#" onclick="change_css('assets/css/future.css')">2030</a></li>
+        </ul>
+      </div>
+      <div class="menu">
+          <p id="titoletto">About</p><p id="corsivo">this issue<hr style="margin-top: 6em "></p>
+      </div>
+      <div class="boxM" id="artM"></div>  
+      <div class="boxRU" id="artL1"></div>
+      <div class="boxRD" id="artL2"></div>
+      <div class="footer">
+        <p><strong>The Circus Magazine</strong> is a project developed for the final exam of <a href="https://www.unibo.it/en/teaching/course-unit-catalogue/course-unit/2021/454464">Information Modelling and Web Technologies</a> course within the <a href="https://corsi.unibo.it/2cycle/DigitalHumanitiesKnowledge">DHDK Master's Degree</a>, Alma Mater Studiorum - Università di Bologna, a.y. 2020/2021. </br><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>.</p>
+      </div>
+    </div>
+  </body>
+</script>
+</html>

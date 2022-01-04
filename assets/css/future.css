@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
+
+body {
+  font-family: Arial;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#lineanavbar{
+  color:black;
+  background-color: black;
+  height: 0.3em;
+  margin: 0;
+}
+
+/*navbar*/
+#navbar {
+  list-style-type: none;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+  margin: 0;
+  width: 100%;
+  font-family:'Raleway', sans-serif;
+  letter-spacing: 0em;
+  font-size: 1.3vw;
+}
+
+.button {
+  float: left;
+}
+
+.button a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 1em 1em;
+  text-decoration: none;
+}
+
+.button a:hover {
+  background-color: #603946;
+  color: white;
+}
+
+/*switch-tool*/
+#switch-tool {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  background-color: white;
+  width: 100%;
+  font-family:'Raleway', sans-serif;
+  letter-spacing: 0em;
+  font-size: 1.3vw;
+}
+
+#mainarticle {  
+
+  float:left;
+  padding: 0.5em;
+  margin-left: 2em;
+
+} 
+
+#changestyle {
+  float:left;
+  padding: 0.5em;
+  margin-left: 2em;
+}
+
+.switch {
+  float: right;
+}
+
+.switch a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 1em 1em;
+  text-decoration: none;
+}
+
+.switch a:hover {
+  background-color: #77223e;
+  color: white;
+}
+
+/*titolo*/
+#vino{
+  color: #990033;
+}
+
+#nero{
+  color:#000000
+}
+
+#titoletto {
+  float: left;
+  font-size: 2.5vw;
+  font-family: 'Raleway', sans-serif;
+  color:#000000;
+}
+
+#corsivo{
+  font-size: 2.5vw;
+  font-family: 'Courgette', cursive;
+  color:#77223e;
+  margin-left: 0.5em;
+  float: right;
+  margin-top: 0;
+}
+
+/*grid layout and items*/
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'logo header header header header header'
+    'nav nav nav nav nav nav'
+    'menu main main main rightUp rightUp'
+    'menu main main main rightDown rightDown'
+    'footer footer footer footer footer footer';
+  height: 65em;
+  width:100%;
+  margin-top: -0.5em;
+  grid-template-columns: 15% 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 15% 12.3% 1fr 1fr 10%;
+}
+
+.logo{
+  grid-area: logo;
+  background-color: #000000;
+  color: white;
+  font-size: 1.4vw;
+  font-family: 'Raleway', sans-serif;
+  padding: 1em;
+  text-align: left;
+}
+
+.header { 
+grid-area: header;
+font-family: 'Oswald', sans-serif;
+font-size: 6vw;
+text-align: right; 
+letter-spacing: -0.05em;
+position: static;
+padding: 0.5em;
+}
+
+.itemnav{
+  grid-area: nav;
+}
+
+.menu { 
+grid-area: menu; 
+padding: 1em;
+border: 0.2em solid #000000;
+line-height: 0;
+background-color: #ededed;
+}
+
+.boxM { grid-area: main; 
+	overflow: auto;
+	/*padding: 20px;*/
+	border-top: 0.2em solid #000000;
+	border-bottom: 0.2em solid #000000;
+	height:60em;
+	padding:2em;
+}
+
+.boxRU { grid-area: rightUp; 
+	overflow:auto;
+	border-right: 0.2em solid #000000;
+	border-top: 0.2em solid #000000;
+	border-left: 0.2em solid #000000;
+	height:30em;
+	padding:2em;
+}
+
+.boxRD { grid-area: rightDown;
+	overflow:auto;
+	border: 0.2em solid #000000;
+	height:30em;
+	padding:2em
+}
+
+.footer { 
+	grid-area: footer; 
+	text-align: center;
+}
+
+/* Responsive layout - when the screen is less than xxpx (o vmin??) wide, make the grid items stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 500px) {
+	.logo { display: none; }
+	.header { grid-area: 1 / 1 / 2 / span 6 ; }
+	.itemnav{ grid-area: 2 / 1 / 3 / span 6 ; }
+	.menu { grid-area: 3 / 1 / 4 / span 6 ;  }
+	.boxM { grid-area: 4 / 1 / 5 / span 6 ; }
+	.boxRU { grid-area: 5 / 1 / 7 / span 6 ;  }
+	.boxRD { grid-area: 7 / 1 / 8 / span 6 ; }
+	.footer{ grid-area: 8 / 1 / 9 / span 6 ; }
+}
+
+/*c'è?*/
+.section1{
+  column-count: 3;
+  column-gap: 2em;
+  text-align: justify;
+  font-size: 1.5vw;
+}
+
+/* Higlight the entities and the references */
+
+.entity {
+  background-color: #ffe6e6;
+}
+
+.highlighted {
+  background-color: #ffffcc; 
+}

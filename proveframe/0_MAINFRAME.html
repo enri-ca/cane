@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>The Circus Magazine</title>
+		<meta content="" name="description">
+		<meta content="" name="keywords">
+	<link id="css" href="assets\css\default.css" rel="stylesheet">  
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>	
+	<script src="assets\js\Js.js"></script>
+
+</head>
+
+<body>
+<!-- Header -->
+<div class="header">
+  <h1>The Circus Magazine</h1>
+</div>
+
+<!-- Navigation Bar -->
+<div class="navbar">
+  <ul>
+	  	<li class="navbar"><a href="#">Home</a></li>	
+    <li class="dropdown">	
+    <a class="dropbtn" id="Ai" href="#">Issues</a>	
+	<div class="dropdown-content">
+		<a href="#" id="I1" onclick="change_issue(1)">1. Circus and cultural studies</a>
+		<a href="#" id="I2" onclick="change_issue(2)">2. Circus and Arts</a>
+		<a href="#" id="I3" onclick="change_issue(3)">3. Social Circus</a>
+	</div>
+	</li>
+		
+    <li class="navbar"><a href="#">Disclaimer</a></li>	
+	<li class="navbar"><a href="#">Documentation</a></li>	
+	<li class="navbar"><a href="#">About</a></li>	
+	<li class="navbar"><a href="#">                        </a></li>	
+	<li class="navbar"><a href="#">                        </a></li>	
+	<li class="navbar"><a href="#">                        </a></li>	
+	<li class="navbar"><a href="#">                        </a></li>	
+	<li class="navbar"><a href="#">                        </a></li>
+</ul>  
+
+	
+	<button  align="right" onclick="slide_articles()">change main article&raquo;</button>
+	<button  align="right" onclick="change_css('assets/css/default.css')">reset style</button>
+  
+	  <a href="#" onclick="change_css('assets/css/pre1800.css')">-1799</a>
+	  <a  href="#" onclick="change_css2(2)">1800</a>
+	  <a  href="#" onclick="change_css('assets/css/1900_50.css')">1900-1950</a>
+	  <a  href="#" onclick="change_css('assets/css/1950_89.css')">1950-1989</a>
+	  <a  href="#" onclick="change_css('assets/css/1990_2020.css')">1990-2020</a>
+	  <a  href="#" onclick="change_css('assets/css/future.css')">future</a>    	
+	<!-- li style="float:right"><a class="active" href="#about">future</a></li></li-->
+
+</div>
+
+<!-- headers
+<div class="row">
+<div class="sidel"></div>
+<div class="main"><h3>Main article</h3></div>
+<div class="sider"><h3>Guest article</h3></div>
+<div class="sider"><h3>Book review</h3></div>
+</div> -->
+
+<!-- The flexible grid (content) -->
+<div class="row">
+
+<!-- MD bar and menu -->
+  <div class="sidel">
+    <h2>Qui facciamo apparire il nome dell'issue?</h2>
+    <p>E il MD viewer conseguente, forse embeddato?</p>
+    <h3>MD viewer</h3>
+    <p>Places</p>
+    <p>Keywords</p>
+    <p>Person</p>
+  </div>
+
+<!-- Central colum: main article -->
+
+<div class="main" id="artM">
+   <!--embed id="artM" type="text/html" src="1_1.html" width="100%" height="100%"-->
+</div><!-- end Central colum -->
+
+<!-- sideR colum -->
+<div class="sider" id="artL1">
+<div>
+
+<!-- sideR colum2 -->
+<div class="sider" id="artL2">
+</div><!-- end sideR colum2 -->
+
+</div> <!-- end row-->
+
+<!-- Footer -->
+<div class="footer">
+  <p>The Circus Magazine is a project developed for the final exam of Information Modelling and Web Technologies course within the DHDK Master's Degree, Alma Mater Studiorum - Università di Bologna, a.y. 2020/2021. CC BY-NC-SA 4.0 license.</p>
+</div>
+
+</body>
+</html>
