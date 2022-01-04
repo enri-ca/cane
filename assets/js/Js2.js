@@ -88,8 +88,12 @@ function MDV(selection){
 //function openPopUp//
 //1. highlight, 2. pop up con >> << - WIKIDATA - NOME ENTITY - CLASSE - CHIUSURA 
 function openPopUp(){
+	document.getElementById("PopUpHeader").innerHTML = "class - entityy";
+	document.getElementById("PopUpWikidata").innerHTML = "url";
+	document.getElementById("PopUpWikidata").href = "url";
 	document.getElementById("id01").style.display="block"
-}
+}	
+
 	//text = <h2>classe - nome entity</h2> <p>wikidata</p>
 	//document.getElementById('id01').style.display='block';
 	//document.getElementById('id01').innerHTML = text;
