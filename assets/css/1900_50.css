@@ -2,15 +2,15 @@
 
 * {
   box-sizing: border-box;
-    font-family: 'EB Garamond', serif;
+    font-family: 'EB Garamond', sans-serif;
 }
 
 /*grid layout and items*/
 .grid-container {
   display: grid;
   grid-template-areas:
-    'logo header header header header header'
-    'nav nav nav nav nav nav'
+    'header header header header header logo'
+    'nav nav nav nav nav logo'
     'menu main main main rightUp rightUp'
     'menu main main main rightDown rightDown'
     'footer footer footer footer footer footer';
@@ -18,14 +18,15 @@
   width:100%;
   margin-top: -0.5vw;
   grid-template-columns: 25vmin 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 5vmin 15vmin 1fr 1fr 5vmin;
+  grid-template-rows: 15vmin 15vmin 1fr 1fr 5vmin;
 }
 
 .logo{
   grid-area: logo;
-  background-color: #000000;
+  background-color: red;
   color: white;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Staatliches', cursive;
+font-size: 2vw; 
   padding: 1vw;
   text-align: left;
 }
@@ -33,24 +34,28 @@
 .header { 
 	grid-area: header;
 	font-family: 'Staatliches', cursive;
-	text-align: right; 
+font-size: 5vw;
+	text-align: left; 
 	letter-spacing: -0.05vw;
 	position: static;
 	padding: 0.5vw;
+background-color: red;
 }
 
 .navbar{
   grid-area: nav;
-  background-color: black;
+  background-color: red;
   /*display: flex; manca blocco allo scorrimento in alto*/
 }
 
 .menu { 
 	grid-area: menu; 
-	background-color: #ededed;
+	background-color: black;
+color:white;
 	border: 0.2vw solid #000000;
 	padding: 1vw;
 	overflow: auto;
+font-family: 'Staatliches', cursive;
 }
 
 .boxM { 
