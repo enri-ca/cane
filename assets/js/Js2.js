@@ -75,10 +75,10 @@ function MDV(selection){
 	if (selection == 3){
 		classname="entity keyword";
 		id = "KW"};
-	var arr = document.getElementsByClassName(classname);
-	var myarray = Array.from(arr);
-	myarray.sort();
-	myarray.reverse();
+	//var arr = document.getElementsByClassName(classname);
+	var myarray = reverse(sort(Array.from(document.getElementsByClassName(classname))));
+	//myarray.sort();
+	//myarray.reverse();
 	for (let i = 0; i < myarray.length; i++) {
 		//text += '<a class="dropdown-item" href="https://www.unibo.it" onclick="openpopup()">' + arr[i].getAttribute("data-label") + "</a>"
 		//text += '<button onclick="document.getElementById('id01').style.display='block'" class="w3-button">' + arr[i].getAttribute("data-label") + '</button>'
