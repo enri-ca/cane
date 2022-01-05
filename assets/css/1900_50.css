@@ -46,6 +46,7 @@ background-color: red;
 .navbar{
   grid-area: nav;
   background-color: red;
+font-family: 'Staatliches', cursive;
   /*display: flex; manca blocco allo scorrimento in alto*/
 }
 
