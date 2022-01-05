@@ -32,7 +32,7 @@
 
 .header { 
 	grid-area: header;
-	font-family: font-family: 'Staatliches', cursive;
+	font-family: 'Staatliches', cursive;
 	text-align: right; 
 	letter-spacing: -0.05vw;
 	position: static;
