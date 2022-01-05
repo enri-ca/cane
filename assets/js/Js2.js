@@ -76,9 +76,10 @@ function MDV(selection){
 		classname="entity keyword";
 		id = "KW"};
 	//var arr = document.getElementsByClassName(classname);
-	var myarray = ((Array.from(document.getElementsByClassName(classname))).sort()).reverse();
+	//var myarray = ((Array.from(document.getElementsByClassName(classname))).sort()).reverse();
 	//myarray.sort();
 	//myarray.reverse();
+	var myarray = (Array.from(document.getElementsByClassName(classname))).sort();
 	for (let i = 0; i < myarray.length; i++) {
 		//text += '<a class="dropdown-item" href="https://www.unibo.it" onclick="openpopup()">' + arr[i].getAttribute("data-label") + "</a>"
 		//text += '<button onclick="document.getElementById('id01').style.display='block'" class="w3-button">' + arr[i].getAttribute("data-label") + '</button>'
