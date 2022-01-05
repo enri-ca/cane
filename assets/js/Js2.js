@@ -79,13 +79,13 @@ function MDV(selection){
 	var myarray = Array.from(arr);
 	myarray.sort();
 	myarray.reverse();
-	for (let i = 0; i < arr.length; i++) {
+	for (let i = 0; i < myarray.length; i++) {
 		//text += '<a class="dropdown-item" href="https://www.unibo.it" onclick="openpopup()">' + arr[i].getAttribute("data-label") + "</a>"
 		//text += '<button onclick="document.getElementById('id01').style.display='block'" class="w3-button">' + arr[i].getAttribute("data-label") + '</button>'
 		 //if (myarray[i].hasAttribute("data-active")){
 			  //text += '<li> <a onclick="highlight(this)" about="'+ myarray[i].getAttribute("about") + '">' + myarray[i].getAttribute("data-label") + '</a></li>';
 		//	}
-		text += '<button onclick="openPopUp()" class="w3-button">' + arr[i].getAttribute("data-label") + '</button>'
+		text += '<button onclick="openPopUp()" class="w3-button">' + myarray[i].getAttribute("data-label") + '</button>'
 		}
 	document.getElementById(id).innerHTML = text;
  }
