@@ -2,13 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap');
 @font-face {
 font-family: MyRivanna;
-src: url("..\fonts\RIVANNA_.TTF");
+src: url("../fonts/RIVANNA_.TTF");
 }
 
 * {
   box-sizing: border-box;
     font-family: 'Libre Baskerville', serif;
-	background-image: url(".\img\styles\1800background.PNG")
+	background-image: url("./img/styles/1800background.PNG")
 }
 
 /*grid layout and items*/
