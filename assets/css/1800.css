@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap');
 @font-face {
 font-family: MyRivanna;
-src: url(".\assets\fonts\RIVANNA_.TTF");
+src: url("..\fonts\RIVANNA_.TTF");
 }
 
 * {
