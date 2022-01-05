@@ -76,7 +76,7 @@ function MDV(selection){
 		classname="entity keyword";
 		id = "KW"};
 	//var arr = document.getElementsByClassName(classname);
-	var myarray = reverse(sort(Array.from(document.getElementsByClassName(classname))));
+	var myarray = ((Array.from(document.getElementsByClassName(classname))).sort()).reverse();
 	//myarray.sort();
 	//myarray.reverse();
 	for (let i = 0; i < myarray.length; i++) {
