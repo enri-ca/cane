@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
 
 * {
   box-sizing: border-box;
-    font-family: 'EB Garamond', sans-serif;
+    font-family: 'Cabin', sans-serif;
 }
 
 /*grid layout and items*/
