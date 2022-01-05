@@ -8,7 +8,7 @@ src: url("../fonts/RIVANNA_.TTF");
 * {
   box-sizing: border-box;
     font-family: 'Libre Baskerville', serif;
-	background-image: url("./img/styles/1800background.PNG")
+	background-image: url("../img/styles/1800background.PNG")
 }
 
 /*grid layout and items*/
