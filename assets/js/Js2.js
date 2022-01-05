@@ -86,9 +86,9 @@ function MDV(selection){
 
 //function openPopUp//
 function openPopUp(){
-	document.getElementById("PopUpHeader").innerHTML = "class - entityy";
-	document.getElementById("PopUpWikidata").innerHTML = "url";
-	document.getElementById("PopUpWikidata").href = "url";
+	document.getElementById("PopUpHeader").innerHTML = "class - entity Es. Place - Panama Canal";
+	document.getElementById("PopUpWikidata").innerHTML = "url es. https://www.wikidata.org/wiki/Q7350;
+	document.getElementById("PopUpWikidata").href = "https://www.wikidata.org/wiki/Q7350";
 	document.getElementById("id01").style.display="block"
 }
 //1. highlight, 2. pop up con >> << - WIKIDATA - NOME ENTITY - CLASSE - CHIUSURA 
