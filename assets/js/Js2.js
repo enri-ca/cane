@@ -103,7 +103,7 @@ var array_entities = Array.from(document.getElementsByClassName("entity"))
 
 //function openPopUp//
 function openPopUp(item){
-	var label = item.innerHTML;
+	var label = item.innerText;
 	//$(.entity).addClass('highlighted');
 	var i;
 	for (i = 0; i < array_entities.length; i++) {
