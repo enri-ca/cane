@@ -131,9 +131,9 @@ function slide_clicked_entity(go) {
 	if (go == -1) {
 		slide = slide-1;
 		}
-	entity_occurency = clicked_entity[slide]
+	var entity_occurency = clicked_entity[slide]
 	entity_occurency.classList.add("highlighted_more");
-	entity_occurency.scrollIntoView();
+	clicked_entity[slide].scrollIntoView();
 	//goto = ((entity_list[i]).getBoundingClientRect()).top;
 	//window.scrollTo(0, goto);
 }
