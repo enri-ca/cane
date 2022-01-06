@@ -74,11 +74,6 @@ function MDV(selection){
 	if (selection == 3){
 		classname="entity keyword";
 		id = "KW"};
-	//var arr = document.getElementsByClassName(classname);
-	//var myarray = ((Array.from(document.getElementsByClassName(classname))).sort()).reverse();
-	//myarray.sort();
-	//myarray.reverse();
-	//var myarray = (Array.from(document.getElementsByClassName(classname))).sort();
 	var myarray = Array.from(document.getElementsByClassName(classname));
 	var array_label = [];
 	for (let i = 0; i < myarray.length; i++) {
@@ -103,21 +98,9 @@ function MDV(selection){
 
 //var arr = document.getElementsByClassName("entity keyword");
 //var myarray = Array.from(arr);
-//function myFunction() {
-//	var arr = document.getElementsByClassName("entity keyword");
-//	var myarray = Array.from(arr);
-//	myarray.sort();
-//	myarray.reverse();
-//	let text = "";
-//	for (let i = 0; i < myarray.length; i++) {
-//	 if (myarray[i].hasAttribute("data-active")){
-//	  text += '<li> <a onclick="highlight(this)" about="'+ myarray[i].getAttribute("about") + '">' + myarray[i].getAttribute("data-label") + '</a></li>';
-//	  }
-//}
-//document.getElementById("p2").innerHTML = text;
- //}
 
 var array_entities = Array.from(document.getElementsByClassName("entity"));
+
 //function openPopUp//
 function openPopUp(entity_item_list){
 	var label = entity_item_list.innerHTML;
@@ -149,26 +132,26 @@ function openPopUp(entity_item_list){
 	document.getElementById("id01").style.display="block"
 }
 
-function highlight(el){
-	let ul = el.getAttribute("about");
-	let arre = document.getElementsByClassName("entity keyword");
-	var i;
-  	for (i = 0; i < arre.length; i++) {
-    	if (arre[i].getAttribute("about") === ul) {
-        	document.body.style.backgroundColor = 'white'
-        	arre[i].style.backgroundColor = "#cc9999";
-            } else {arre[i].style.backgroundColor = "white";}
-    }
-}
+//function highlight(el){
+//	let ul = el.getAttribute("about");
+//	let arre = document.getElementsByClassName("entity keyword");
+//	var i;
+//	for (i = 0; i < arre.length; i++) {
+  //  	if (arre[i].getAttribute("about") === ul) {
+    //    	document.body.style.backgroundColor = 'white'
+      //  	arre[i].style.backgroundColor = "#cc9999";
+        //    } else {arre[i].style.backgroundColor = "white";}
+//    }
+//}
 
-/* qui andrebbe aggiunto un if/contatore per il click + variabile classi + indici*/
-function scrollprev() {
-var el = document.getElementById("01");
-var rect = el.getBoundingClientRect();
-w = rect.top;
-  window.scrollTo(0, w);
+//* qui andrebbe aggiunto un if/contatore per il click + variabile classi + indici*/
+//function scrollprev() {
+//var el = document.getElementById("01");
+//var rect = el.getBoundingClientRect();
+//w = rect.top;
+//  window.scrollTo(0, w);
   
-}
+//}
 
 
 //1. highlight, 2. pop up con >> << - WIKIDATA - NOME ENTITY - CLASSE - CHIUSURA 
