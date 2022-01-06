@@ -97,10 +97,11 @@ function MDV(selection){
 	}
 
 var all_entities = document.getElementsByClassName("entity")
-var clicked_entity = []
+var clicked_entity = new Object()
 
 //function openPopUp//
 function openPopUp(el){
+	all_entities.classList.remove("highlighted");
 	let label = el.innerText;
 	for (i = 0; i < all_entities.length; i++) {
 		if (all_entities[i].getAttribute("data-label") == label) {
@@ -127,7 +128,6 @@ function openPopUp(el){
 
 function slide_clicked_entity(go) {
 	slide = 0
-	let entity_list = clicked_entity
 	if (go == 1) {
 		slide = slide+1;
 		}
@@ -135,8 +135,8 @@ function slide_clicked_entity(go) {
 		slide = slide-1;
 		}
 	i = slide;
-	entity_list[i].classList.add("highlighted_more");
-	entity_list[i].scrollIntoView();
+	clicked_entity[i].classList.add("highlighted_more");
+	clicked_entity[i].scrollIntoView();
 	//goto = ((entity_list[i]).getBoundingClientRect()).top;
 	//window.scrollTo(0, goto);
 }
