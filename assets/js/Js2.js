@@ -100,9 +100,10 @@ var all_entities = document.getElementsByClassName("entity")
 //function openPopUp//
 function openPopUp(el){
 	let label = el.innerText;
-	var clicked_entity
+	var clicked_entity = []
 	for (i = 0; i < all_entities.length; i++) {
 		if (all_entities[i].getAttribute("data-label") == label) {
+			cliked_entity.push(all_entities[i]);
 			all_entities[i].classList.add("highlighted");
 			if (all_entities[i].hasAttribute("data-active")) {	
 				class_name = all_entities[i].getAttribute("class");
