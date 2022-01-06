@@ -99,7 +99,7 @@ function MDV(selection){
 //var arr = document.getElementsByClassName("entity keyword");
 //var myarray = Array.from(arr);
 
-var array_entities = Array.from(document.getElementsByClassName("entity"));
+var array_entities = Array.from(document.getElementsByClassName("entity"))
 
 //function openPopUp//
 function openPopUp(){
@@ -115,6 +115,7 @@ function openPopUp(){
 				document.getElementById("PopUpWikidata").innerHTML = "url es. https://www.wikidata.org/wiki/" + wikidataID;
 				document.getElementById("PopUpWikidata").href = "https://www.wikidata.org/wiki/" + wikidataID;
 				document.getElementById("id01").style.display="block"
+				}
 			}
 		}
 	}
