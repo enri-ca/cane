@@ -90,7 +90,7 @@ function MDV(selection){
 		//	}
 		//text += '<button class="dropdown-item?" onclick="openPopUp()" class="w3-button">' + myarray[i].getAttribute("data-label") + '</button>'
 		//text += '<a class="dropdown-item w3-button" onclick="openPopUp()">' + myarray[i].getAttribute("data-label") + '</button>'
-		text += '<a class="dropdown-item w3-button" onclick="openPopUp(this)">' + array_label[i] + '</button>'
+		text += '<a class="dropdown-item w3-button" onclick="openPopUp()">' + array_label[i] + '</button>'
 		}
 	document.getElementById(id).innerHTML = text;
  }
@@ -107,10 +107,10 @@ function openPopUp(item){
 	//$(.entity).addClass('highlighted');
 	var i;
 	for (i = 0; i < array_entities.length; i++) {
-		if (array_etities[i].hasAttribute("data-active")) {
-			if (array_etities[i].getAttribute("data-label") === label) {	
-				wikidataID = array_etities[i].getAttribute("data-wikidata-id");
-				class_name = array_etities[i].getAttribute("class");
+		if (array_entities[i].hasAttribute("data-active")) {
+			if (array_entities[i].getAttribute("data-label") === label) {	
+				wikidataID = array_entities[i].getAttribute("data-wikidata-id");
+				class_name = array_entities[i].getAttribute("class");
 				document.getElementById("PopUpHeader").innerHTML = "class_name" + " - " + "label";
 				document.getElementById("PopUpWikidata").innerHTML = "url es. https://www.wikidata.org/wiki/" + wikidataID;
 				document.getElementById("PopUpWikidata").href = "https://www.wikidata.org/wiki/" + wikidataID;
