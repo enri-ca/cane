@@ -104,11 +104,15 @@ function openPopUp(el){
 		if (all_entities[i].hasAttribute("data-active")) {
 			if (all_entities[i].getAttribute("data-label") == label) {	
 				class_name = all_entities[i].getAttribute("class");
-				//appena possibile inserire il wd solo se c'è l'attributo
-				wikidataID = all_entities[i].getAttribute("data-wikidata-id");
 				document.getElementById("PopUpHeader").innerHTML = class_name + " - " + label;
-				document.getElementById("PopUpWikidata").innerHTML = "url es. https://www.wikidata.org/wiki/" + wikidataID;
-				document.getElementById("PopUpWikidata").href = "https://www.wikidata.org/wiki/" + wikidataID;
+				if (all_entities[i].hasAttribute("data-wikidata-id")) {
+					wikidataID = all_entities[i].getAttribute("data-wikidata-id");
+					document.getElementById("PopUpWikidata").innerHTML = "url es. https://www.wikidata.org/wiki/" + wikidataID;
+					document.getElementById("PopUpWikidata").href = "https://www.wikidata.org/wiki/" + wikidataID;
+					}
+				else {
+					document.getElementById("PopUpWikidata").style.display="none"
+					}
 				document.getElementById("MOD_01").style.display="block";
 				}
 			}
