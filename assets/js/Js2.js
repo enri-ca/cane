@@ -90,7 +90,8 @@ function MDV(selection){
 		//	}
 		//text += '<button class="dropdown-item?" onclick="openPopUp()" class="w3-button">' + myarray[i].getAttribute("data-label") + '</button>'
 		//text += '<a class="dropdown-item w3-button" onclick="openPopUp()">' + myarray[i].getAttribute("data-label") + '</button>'
-		text += '<a class="dropdown-item w3-button" onclick="openPopUp(this)">' + array_label[i] + '</button>'
+		//text += '<a class="dropdown-item w3-button" onclick="openPopUp(this)">' + array_label[i] + '</button>'
+		text += '<a class="dropdown-item w3-button entity-item-list">' + array_label[i] + '</button>'
 		}
 	document.getElementById(id).innerHTML = text;
  }
@@ -102,10 +103,8 @@ function MDV(selection){
 var array_entities = Array.from(document.getElementsByClassName("entity"))
 
 //function openPopUp//
-function openPopUp $(this){
+$(".entity-item-list").click(function(){
 	var label = $(this).text();
-	//let label = item.innerText;
-	//$(.entity).addClass('highlighted');
 	for (let i = 0; i < array_entities.length; i++) {
 		if (array_entities[i].hasAttribute("data-active")) {
 			if (array_entities[i].getAttribute("data-label") == label) {	
@@ -119,10 +118,7 @@ function openPopUp $(this){
 			}
 		}
 	}
-			//	$(this).attr("data-label");
-			//		array_label.push(myarray[i].getAttribute("data-label"));
-//			}
-//		}
+
 //	var array_label = [];
 //	array_label.sort();
 //	$(.entity).attr("data-label");
