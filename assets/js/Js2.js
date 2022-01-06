@@ -87,6 +87,7 @@ function MDV(selection){
 		if (myarray[i].hasAttribute("data-active")){
 			array_label.push(myarray[i].getAttribute("data-label"));
 			}
+		}
 	array_label.sort();
 	let text = "";
 	for (let i = 0; i < array_label.length; i++) {
