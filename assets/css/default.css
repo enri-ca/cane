@@ -159,6 +159,11 @@ weight: 30vw;
 color: red;
 }
 
+.modal-backdrop
+{
+    opacity:0 !important;
+}
+
 /*.previous {
   background-color: #f1f1f1;
   color: black;
