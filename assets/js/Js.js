@@ -114,7 +114,7 @@ function openPopUp(el){
 			if (arre[i].getAttribute("data-label") == label) {	
 				wikidataID = arre[i].getAttribute("data-wikidata-id");
 				class_name = arre[i].getAttribute("class");
-				document.getElementById("PopUpHeader").innerHTML = "class_name" + " - " + "label";
+				document.getElementById("PopUpHeader").innerHTML = class_name + " - " + label;
 				document.getElementById("PopUpWikidata").innerHTML = "url es. https://www.wikidata.org/wiki/" + wikidataID;
 				document.getElementById("PopUpWikidata").href = "https://www.wikidata.org/wiki/" + wikidataID;
 				document.getElementById("id01").style.display="block";
