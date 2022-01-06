@@ -63,35 +63,6 @@ function slide_articles(){
 	}
 }
 
-//function MetaDataViewer//
-function MDV(selection){
-	let text = "";
-	if (selection == 1){
-		classname="entity person";
-		id = "PE"};
-	if (selection == 2){
-		classname="entity place";
-		id = "PL"};
-	if (selection == 3){
-		classname="entity keyword";
-		id = "KW"};
-	//var arr = document.getElementsByClassName(classname);
-	//var myarray = ((Array.from(document.getElementsByClassName(classname))).sort()).reverse();
-	//myarray.sort();
-	//myarray.reverse();
-	var myarray = (Array.from(document.getElementsByClassName(classname))).sort();
-	for (let i = 0; i < myarray.length; i++) {
-		//text += '<a class="dropdown-item" href="https://www.unibo.it" onclick="openpopup()">' + arr[i].getAttribute("data-label") + "</a>"
-		//text += '<button onclick="document.getElementById('id01').style.display='block'" class="w3-button">' + arr[i].getAttribute("data-label") + '</button>'
-		 //if (myarray[i].hasAttribute("data-active")){
-			  //text += '<li> <a onclick="highlight(this)" about="'+ myarray[i].getAttribute("about") + '">' + myarray[i].getAttribute("data-label") + '</a></li>';
-		//	}
-		//text += '<button class="dropdown-item?" onclick="openPopUp()" class="w3-button">' + myarray[i].getAttribute("data-label") + '</button>'
-		text += '<a class="dropdown-item w3-button" onclick="openPopUp()">' + myarray[i].getAttribute("data-label") + '</button>'
-		}
-	document.getElementById(id).innerHTML = text;
- }
-
 //var arr = document.getElementsByClassName("entity keyword");
 //var myarray = Array.from(arr);
 
@@ -106,41 +77,51 @@ function MDV(selection){
 	if (selection == 3){
 		classname="entity keyword";
 		id = "KW"};
-	var arr = document.getElementsByClassName("entity keyword");
+	var arr = document.getElementsByClassName(classname);
 	var myarray = Array.from(arr);
 	myarray.sort();
 	myarray.reverse();
 	let text = "";
 	for (let i = 0; i < myarray.length; i++) {
 		if (myarray[i].hasAttribute("data-active")){
-			text += '<li> <a onclick="highlight(this)" about="'+ myarray[i].getAttribute("about") + '">' + myarray[i].getAttribute("data-label") + '</a></li>'
+			text += '<li> <a onclick="highlight(this); openPopUp(this);" about="'+ myarray[i].getAttribute("about") + '">' + myarray[i].getAttribute("data-label") + '</a></li>'
 		}
 	}
-document.getElementById(id).innerHTML = text;
+	document.getElementById(id).innerHTML = text;
 }
+
+var arre = document.getElementsByClassName("entity")
 
 function highlight(el){
 	let ul = el.getAttribute("about");
-	let arre = document.getElementsByClassName("entity keyword");
 	var i;
 	for (i = 0; i < arre.length; i++) {
-  	if (arre[i].getAttribute("about") === ul) {
-	   	document.body.style.backgroundColor = 'white'
-        	arre[i].style.backgroundColor = "#cc9999";
-		}
-	else {
-		arre[i].style.backgroundColor = "white";
+		if (arre[i].getAttribute("about") === ul) {
+			document.body.style.backgroundColor = 'white'
+			arre[i].style.backgroundColor = "#cc9999";
+			}
+		else {
+			arre[i].style.backgroundColor = "white";
+			}
 		}
 	}
-}
 
 //function openPopUp//
-function openPopUp(){
-	document.getElementById("PopUpHeader").innerHTML = "class - entity Es. Place - Panama Canal";
-	document.getElementById("PopUpWikidata").innerHTML = "url es. https://www.wikidata.org/wiki/Q7350";
-	document.getElementById("PopUpWikidata").href = "https://www.wikidata.org/wiki/Q7350";
-	document.getElementById("id01").style.display="block"
-}
+function openPopUp(el){
+	let label = el.innerText;
+	for (i = 0; i < arre.length; i++) {
+		if (arre[i].hasAttribute("data-active")) {
+			if (arre[i].getAttribute("data-label") == label) {	
+				wikidataID = arre[i].getAttribute("data-wikidata-id");
+				class_name = arre[i].getAttribute("class");
+				document.getElementById("PopUpHeader").innerHTML = "class_name" + " - " + "label";
+				document.getElementById("PopUpWikidata").innerHTML = "url es. https://www.wikidata.org/wiki/" + wikidataID;
+				document.getElementById("PopUpWikidata").href = "https://www.wikidata.org/wiki/" + wikidataID;
+				document.getElementById("id01").style.display="block";
+				}
+			}
+		}
+	}
 
 //1. highlight, 2. pop up con >> << - WIKIDATA - NOME ENTITY - CLASSE - CHIUSURA 
 	//text = <h2>classe - nome entity</h2> <p>wikidata</p>
