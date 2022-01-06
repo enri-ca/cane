@@ -97,7 +97,7 @@ function MDV(selection){
 	}
 
 var all_entities = document.getElementsByClassName("entity")
-var clicked_entity = new Object()
+var clicked_entity = []
 
 //function openPopUp//
 function openPopUp(el){
@@ -105,7 +105,7 @@ function openPopUp(el){
 	for (i = 0; i < all_entities.length; i++) {
 		if (all_entities[i].getAttribute("data-label") == label) {
 			all_entities[i].classList.add("highlighted");
-			clicked_entity.add(all_entities[i]);
+			clicked_entity.push(all_entities[i]);
 			if (all_entities[i].hasAttribute("data-active")) {	
 				class_name = all_entities[i].getAttribute("class");
 				document.getElementById("PopUpHeader").innerHTML = class_name + " - " + label;
@@ -131,9 +131,9 @@ function slide_clicked_entity(go) {
 	if (go == -1) {
 		slide = slide-1;
 		}
-	i = slide;
-	clicked_entity[i].classList.add("highlighted_more");
-	clicked_entity[i].scrollIntoView();
+	entity_occurency = clicked_entity[slide]
+	entity_occurency.classList.add("highlighted_more");
+	entity_occurency.scrollIntoView();
 	//goto = ((entity_list[i]).getBoundingClientRect()).top;
 	//window.scrollTo(0, goto);
 }
