@@ -102,8 +102,8 @@ function MDV(selection){
 var array_entities = Array.from(document.getElementsByClassName("entity"))
 
 //function openPopUp//
-function openPopUp(this){
-	let label = this.innerText;
+function openPopUp(item){
+	let label = item.innerText;
 	//$(.entity).addClass('highlighted');
 	var i;
 	for (i = 0; i < array_entities.length; i++) {
