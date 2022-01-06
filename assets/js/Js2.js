@@ -104,8 +104,8 @@ function openPopUp(el){
 	let label = el.innerText;
 	for (i = 0; i < all_entities.length; i++) {
 		if (all_entities[i].getAttribute("data-label") == label) {
-			clicked_entity.push(all_entities[i]);
 			all_entities[i].classList.add("highlighted");
+			clicked_entity.push(all_entities[i]);
 			if (all_entities[i].hasAttribute("data-active")) {	
 				class_name = all_entities[i].getAttribute("class");
 				document.getElementById("PopUpHeader").innerHTML = class_name + " - " + label;
@@ -127,6 +127,7 @@ function openPopUp(el){
 
 function slide_clicked_entity(go) {
 	slide = 0
+	let entity_list = clicked_entity
 	if (go == 1) {
 		slide = slide+1;
 		}
@@ -134,9 +135,9 @@ function slide_clicked_entity(go) {
 		slide = slide-1;
 		}
 	i = slide;
-	clicked_entity[i].classList.add("highlighted_more");
-	clicked_entity[i].scrollIntoView();
-	//goto = ((clicked_entity[i]).getBoundingClientRect()).top;
+	entity_list[i].classList.add("highlighted_more");
+	entity_list[i].scrollIntoView();
+	//goto = ((entity_list[i]).getBoundingClientRect()).top;
 	//window.scrollTo(0, goto);
 }
 
