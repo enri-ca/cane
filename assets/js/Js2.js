@@ -91,7 +91,7 @@ function MDV(selection){
 		//text += '<button class="dropdown-item?" onclick="openPopUp()" class="w3-button">' + myarray[i].getAttribute("data-label") + '</button>'
 		//text += '<a class="dropdown-item w3-button" onclick="openPopUp()">' + myarray[i].getAttribute("data-label") + '</button>'
 		//text += '<a class="dropdown-item w3-button" onclick="openPopUp(this)">' + array_label[i] + '</button>'
-		text += '<a class="dropdown-item w3-button entity-item-list">' + array_label[i] + '</button>'
+		text += '<a class="dropdown-item w3-button entity-item-list" onclick="openPopUp(this)">' + array_label[i] + '</button>'
 		}
 	document.getElementById(id).innerHTML = text;
  }
@@ -106,9 +106,9 @@ function MDV(selection){
 
 var all_entities = document.getElementsByClassName("entity")
 
-$(document).ready(function(){
-	$("a.entity-item-list").click(openPopUp())
-})
+//$(document).ready(function(){
+//	$("a.entity-item-list").click(openPopUp())
+//})
 
 function openPopUp(){
 	var label = $(this).text();
