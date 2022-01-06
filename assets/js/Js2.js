@@ -134,10 +134,8 @@ function slide_clicked_entity(go) {
 		slide = slide-1;
 		}
 	i = slide;
-	el = clicked.entity[i];
-	goto = el.getBoundingClientRect();
-	w = rect.top;
-	  window.scrollTo(0, w);
+	goto = ((clicked.entity[i]).getBoundingClientRect()).top;
+	window.scrollTo(0, goto);
 }
 
 //1. highligHT
