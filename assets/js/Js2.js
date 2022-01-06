@@ -65,7 +65,6 @@ function slide_articles(){
 
 //function MetaDataViewer//
 function MDV(selection){
-	let text = "";
 	if (selection == 1){
 		classname="entity person";
 		id = "PE"};
@@ -80,7 +79,6 @@ function MDV(selection){
 	//myarray.sort();
 	//myarray.reverse();
 	//var myarray = (Array.from(document.getElementsByClassName(classname))).sort();
-	
 	var myarray = Array.from(document.getElementsByClassName(classname));
 	var array_label = [];
 	for (let i = 0; i < myarray.length; i++) {
@@ -90,6 +88,7 @@ function MDV(selection){
 			array_label.push(myarray[i].getAttribute("data-label"));
 			}
 	array_label.sort();
+	let text = "";
 	for (let i = 0; i < array_label.length; i++) {
 		//text += '<li> <a onclick="highlight(this)" about="'+ myarray[i].getAttribute("about") + '">' + myarray[i].getAttribute("data-label") + '</a></li>';
 		//	}
