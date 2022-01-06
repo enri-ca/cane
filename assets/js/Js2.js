@@ -109,12 +109,12 @@ function openPopUp(){
 	for (i = 0; i < array_entities.length; i++) {
 		if (array_etities[i].hasAttribute("data-active")) {
 			if (array_etities[i].getAttribute("data-label") === label) {	
-				wikidataID = array_etities[i].getAttribute("data-wikidata-id")
-				class_name = array_etities[i].getAttribute("class")
+				wikidataID = array_etities[i].getAttribute("data-wikidata-id");
+				class_name = array_etities[i].getAttribute("class");
 				document.getElementById("PopUpHeader").innerHTML = "class_name" + " - " + "label";
 				document.getElementById("PopUpWikidata").innerHTML = "url es. https://www.wikidata.org/wiki/" + wikidataID;
 				document.getElementById("PopUpWikidata").href = "https://www.wikidata.org/wiki/" + wikidataID;
-				document.getElementById("id01").style.display="block"
+				document.getElementById("id01").style.display="block";
 				}
 			}
 		}
