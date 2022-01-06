@@ -117,7 +117,7 @@ $(".entity-item-list").click(function(){
 				}
 			}
 		}
-	}
+	})
 
 //	var array_label = [];
 //	array_label.sort();
