@@ -103,7 +103,7 @@ function MDV(selection){
 var array_entities = Array.from(document.getElementsByClassName("entity"))
 
 //function openPopUp//
-$(".entity-item-list").click(function(){
+$("a.entity-item-list").click(function(){
 	var label = $(this).text();
 	for (let i = 0; i < array_entities.length; i++) {
 		if (array_entities[i].hasAttribute("data-active")) {
@@ -162,7 +162,7 @@ $(".entity-item-list").click(function(){
 //function next_entity_item()
 
 //function to high_href() [working off-line with $(document).ready(function(){ not online]//
-$(".bib_note").click(function(){
+$("a.bib_note").click(function(){
 		var target = $(this).attr("href");
 		var source_id = $(this).attr("id");
 		var source = document.getElementById(source_id);
