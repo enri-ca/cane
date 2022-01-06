@@ -84,7 +84,7 @@ function MDV(selection){
 	let text = "";
 	for (let i = 0; i < myarray.length; i++) {
 		if (myarray[i].hasAttribute("data-active")){
-			text += '<li> <a onclick="highlight(this); openPopUp(this);" about="'+ myarray[i].getAttribute("about") + '">' + myarray[i].getAttribute("data-label") + '</a></li>'
+			text += '<li> <a onclick="highlight(this); openPopUp(this);">' + myarray[i].getAttribute("data-label") + '</a></li>'
 		}
 	}
 	document.getElementById(id).innerHTML = text;
