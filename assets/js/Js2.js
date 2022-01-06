@@ -102,12 +102,11 @@ function MDV(selection){
 var array_entities = Array.from(document.getElementsByClassName("entity"))
 
 //function openPopUp//
-function openPopUp(){
-	let label = $(this).text();
+function openPopUp($(this)){
+	var label = $(this).text();
 	//let label = item.innerText;
 	//$(.entity).addClass('highlighted');
-	var i;
-	for (i = 0; i < array_entities.length; i++) {
+	for (let i = 0; i < array_entities.length; i++) {
 		if (array_entities[i].hasAttribute("data-active")) {
 			if (array_entities[i].getAttribute("data-label") == label) {	
 				wikidataID = array_entities[i].getAttribute("data-wikidata-id");
