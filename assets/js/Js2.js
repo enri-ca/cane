@@ -134,8 +134,10 @@ function slide_clicked_entity(go) {
 		slide = slide-1;
 		}
 	i = slide;
-	goto = ((clicked.entity[i]).getBoundingClientRect()).top;
-	window.scrollTo(0, goto);
+	clicked.entity[i].classList.add("highlighted_more");
+	clicked.entity[i].scrollIntoView();
+	//goto = ((clicked.entity[i]).getBoundingClientRect()).top;
+	//window.scrollTo(0, goto);
 }
 
 //1. highligHT
