@@ -104,7 +104,7 @@ function MDV(selection){
 //function openPopUp//
 //$("a.entity-item-list").addEventListener("click", openPopUp)
 
-var array_entities = Array.from(document.getElementsByClassName("entity"))
+var all_entities = document.getElementsByClassName("entity")
 
 $(document).ready(function(){
 	$("a.entity-item-list").click(openPopUp())
@@ -112,11 +112,11 @@ $(document).ready(function(){
 
 function openPopUp(){
 	var label = $(this).text();
-	for (let i = 0; i < array_entities.length; i++) {
-		if (array_entities[i].hasAttribute("data-active")) {
-			if (array_entities[i].getAttribute("data-label") == label) {	
-				wikidataID = array_entities[i].getAttribute("data-wikidata-id");
-				class_name = array_entities[i].getAttribute("class");
+	for (i = 0; i < all_entities.length; i++) {
+		if (all_entities[i].hasAttribute("data-active")) {
+			if (all_entities[i].getAttribute("data-label") == label) {	
+				wikidataID = all_entities[i].getAttribute("data-wikidata-id");
+				class_name = all_entities[i].getAttribute("class");
 				document.getElementById("PopUpHeader").innerHTML = "class_name" + " - " + "label";
 				document.getElementById("PopUpWikidata").innerHTML = "url es. https://www.wikidata.org/wiki/" + wikidataID;
 				document.getElementById("PopUpWikidata").href = "https://www.wikidata.org/wiki/" + wikidataID;
