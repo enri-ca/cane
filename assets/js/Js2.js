@@ -105,7 +105,7 @@ function openPopUp(el){
 	for (i = 0; i < all_entities.length; i++) {
 		if (all_entities[i].getAttribute("data-label") == label) {
 			all_entities[i].classList.add("highlighted");
-			clicked_entity.push(all_entities[i]);
+			clicked_entity.add(all_entities[i]);
 			if (all_entities[i].hasAttribute("data-active")) {	
 				class_name = all_entities[i].getAttribute("class");
 				document.getElementById("PopUpHeader").innerHTML = class_name + " - " + label;
