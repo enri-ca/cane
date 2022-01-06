@@ -93,10 +93,11 @@ function MDV(selection){
 var arre = document.getElementsByClassName("entity")
 
 function highlight(el){
-	let ul = el.getAttribute("about");
+	let ul = el.innerText;
 	var i;
 	for (i = 0; i < arre.length; i++) {
-		if (arre[i].getAttribute("about") === ul) {
+		if (arre[i].getAttribute("data-label") == ul) {
+		//if (arre[i].getAttribute("about") === ul) {
 			document.body.style.backgroundColor = 'white'
 			arre[i].style.backgroundColor = "#cc9999";
 			}
