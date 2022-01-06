@@ -102,7 +102,7 @@ function MDV(selection){
 var array_entities = Array.from(document.getElementsByClassName("entity"))
 
 //function openPopUp//
-function openPopUp(){
+function openPopUp(this){
 	var label = this.innerHTML;
 	//$(.entity).addClass('highlighted');
 	var i;
