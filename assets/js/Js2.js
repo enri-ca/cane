@@ -105,17 +105,19 @@ var array_entities = Array.from(document.getElementsByClassName("entity"));
 function openPopUp(entity_item_list){
 	var label = entity_item_list.innerHTML;
 	//$(.entity).addClass('highlighted');
-	for (let i = 0; i < array_entities.length; i++) {
+	var i;
+	for (i = 0; i < array_entities.length; i++) {
 		if (array_etities[i].hasAttribute("data-active")) {
-			if (array_etities[i].getAttribute("about") === label) {	
+			if (array_etities[i].getAttribute("data-label") === label) {	
 				wikidataID = array_etities[i].getAttribute("data-wikidata-id")
 				class_name = array_etities[i].getAttribute("class")
 				document.getElementById("PopUpHeader").innerHTML = "class_name" + " - " + "label";
 				document.getElementById("PopUpWikidata").innerHTML = "url es. https://www.wikidata.org/wiki/" + wikidataID;
 				document.getElementById("PopUpWikidata").href = "https://www.wikidata.org/wiki/" + wikidataID;
 				document.getElementById("id01").style.display="block"
-}
-
+			}
+		}
+	}
 			//	$(this).attr("data-label");
 			//		array_label.push(myarray[i].getAttribute("data-label"));
 //			}
@@ -125,12 +127,12 @@ function openPopUp(entity_item_list){
 //	$(.entity).attr("data-label");
 //	array delle cose che hanno quel label
 //	prendere wikidata e altri dati da data-active:	
-	document.getElementById("PopUpHeader").innerHTML = "class - entity Es. Place - Panama Canal";
-	document.getElementById("PopUpWikidata").innerHTML = "url es. https://www.wikidata.org/wiki/ + Q7350";
-	document.getElementById("PopUpWikidata").href = "https://www.wikidata.org/wiki/ + Q7350";
+//	document.getElementById("PopUpHeader").innerHTML = "class - entity Es. Place - Panama Canal";
+//	document.getElementById("PopUpWikidata").innerHTML = "url es. https://www.wikidata.org/wiki/ + Q7350";
+//	document.getElementById("PopUpWikidata").href = "https://www.wikidata.org/wiki/ + Q7350";
 //	$(this).attr("data-label");
-	document.getElementById("id01").style.display="block"
-}
+//	document.getElementById("id01").style.display="block"
+//}
 
 //function highlight(el){
 //	let ul = el.getAttribute("about");
