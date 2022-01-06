@@ -100,10 +100,13 @@ function MDV(selection){
 //var arr = document.getElementsByClassName("entity keyword");
 //var myarray = Array.from(arr);
 
-var array_entities = Array.from(document.getElementsByClassName("entity"))
 
 //function openPopUp//
-$("a.entity-item-list").click(function(){
+$("a.entity-item-list").addEventListener("click", openPopUp)
+
+var array_entities = Array.from(document.getElementsByClassName("entity"))
+
+function openPopUp(){
 	var label = $(this).text();
 	for (let i = 0; i < array_entities.length; i++) {
 		if (array_entities[i].hasAttribute("data-active")) {
@@ -117,7 +120,7 @@ $("a.entity-item-list").click(function(){
 				}
 			}
 		}
-	})
+	}
 
 //	var array_label = [];
 //	array_label.sort();
