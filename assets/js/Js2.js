@@ -108,7 +108,7 @@ function openPopUp(item){
 	var i;
 	for (i = 0; i < array_entities.length; i++) {
 		if (array_entities[i].hasAttribute("data-active")) {
-			if (array_entities[i].getAttribute("data-label") === label) {	
+			if (array_entities[i].getAttribute("data-label") == label) {	
 				wikidataID = array_entities[i].getAttribute("data-wikidata-id");
 				class_name = array_entities[i].getAttribute("class");
 				document.getElementById("PopUpHeader").innerHTML = "class_name" + " - " + "label";
