@@ -100,6 +100,7 @@ function MDV(selection){
 	document.getElementById(id).innerHTML = text;
  }
 
+
 //var arr = document.getElementsByClassName("entity keyword");
 //var myarray = Array.from(arr);
 //function myFunction() {
@@ -116,14 +117,14 @@ function MDV(selection){
 //document.getElementById("p2").innerHTML = text;
  //}
 
-//var array_entities = Array.from(document.getElementsByClassName("entity"));
+var array_entities = Array.from(document.getElementsByClassName("entity"));
 //function openPopUp//
-
-function openPopUp(){
-	var label = this.innerHTML;
-	//for (let i = 0; i < array_etities.length; i++) {
-	//	if (array_etities[i].hasAttribute("data-active")){
-	//		if (array_etities[i].hasAttribute("data-active"))
+function openPopUp(entity_item_list){
+	var label = entity_item_list.innerHTML;
+	//$(.entity).addClass('highlighted');
+	for (let i = 0; i < array_entities.length; i++) {
+		if (array_etities[i].getAttribute("about") === label) {			
+		if (array_etities[i].hasAttribute("data-active"))
 	//		array_label.push(myarray[i].getAttribute("data-label"));
 //			}
 //		}
@@ -138,6 +139,28 @@ function openPopUp(){
 //	$(this).attr("data-label");
 	document.getElementById("id01").style.display="block"
 }
+
+function highlight(el){
+	let ul = el.getAttribute("about");
+	let arre = document.getElementsByClassName("entity keyword");
+	var i;
+  	for (i = 0; i < arre.length; i++) {
+    	if (arre[i].getAttribute("about") === ul) {
+        	document.body.style.backgroundColor = 'white'
+        	arre[i].style.backgroundColor = "#cc9999";
+            } else {arre[i].style.backgroundColor = "white";}
+    }
+}
+
+/* qui andrebbe aggiunto un if/contatore per il click + variabile classi + indici*/
+function scrollprev() {
+var el = document.getElementById("01");
+var rect = el.getBoundingClientRect();
+w = rect.top;
+  window.scrollTo(0, w);
+  
+}
+
 
 //1. highlight, 2. pop up con >> << - WIKIDATA - NOME ENTITY - CLASSE - CHIUSURA 
 	//text = <h2>classe - nome entity</h2> <p>wikidata</p>
