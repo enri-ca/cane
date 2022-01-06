@@ -79,22 +79,23 @@ function MDV(selection){
 	//var myarray = ((Array.from(document.getElementsByClassName(classname))).sort()).reverse();
 	//myarray.sort();
 	//myarray.reverse();
-	var myarray = (Array.from(document.getElementsByClassName(classname))).sort();
+	//var myarray = (Array.from(document.getElementsByClassName(classname))).sort();
+	var myarray = Array.from(document.getElementsByClassName(classname));
 	for (let i = 0; i < myarray.length; i++) {
 		//text += '<a class="dropdown-item" href="https://www.unibo.it" onclick="openpopup()">' + arr[i].getAttribute("data-label") + "</a>"
 		//text += '<button onclick="document.getElementById('id01').style.display='block'" class="w3-button">' + arr[i].getAttribute("data-label") + '</button>'
-		 //if (myarray[i].hasAttribute("data-active")){
+		if (myarray[i].hasAttribute("data-active")){
+			var array_label = [];
 			  //text += '<li> <a onclick="highlight(this)" about="'+ myarray[i].getAttribute("about") + '">' + myarray[i].getAttribute("data-label") + '</a></li>';
 		//	}
 		//text += '<button class="dropdown-item?" onclick="openPopUp()" class="w3-button">' + myarray[i].getAttribute("data-label") + '</button>'
-		text += '<a class="dropdown-item w3-button" onclick="openPopUp()">' + myarray[i].getAttribute("data-label") + '</button>'
+		//text += '<a class="dropdown-item w3-button" onclick="openPopUp()">' + myarray[i].getAttribute("data-label") + '</button>'
 		}
 	document.getElementById(id).innerHTML = text;
  }
 
 //var arr = document.getElementsByClassName("entity keyword");
 //var myarray = Array.from(arr);
-
 //function myFunction() {
 //	var arr = document.getElementsByClassName("entity keyword");
 //	var myarray = Array.from(arr);
