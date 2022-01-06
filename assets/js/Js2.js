@@ -101,7 +101,6 @@ var clicked_entity = new Object()
 
 //function openPopUp//
 function openPopUp(el){
-	all_entities.classList.remove("highlighted");
 	let label = el.innerText;
 	for (i = 0; i < all_entities.length; i++) {
 		if (all_entities[i].getAttribute("data-label") == label) {
@@ -123,8 +122,6 @@ function openPopUp(el){
 			}
 		}
 	}
-
-/* qui andrebbe aggiunto un if/contatore per il click + variabile classi + indici*/
 
 function slide_clicked_entity(go) {
 	slide = 0
