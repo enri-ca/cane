@@ -122,6 +122,28 @@ function openPopUp(el){
 		}
 	}
 
+/* qui andrebbe aggiunto un if/contatore per il click + variabile classi + indici*/
+slide = 0
+function slide_clicked_entity(go) {
+	if (go == 1) {
+		slide = slide+1;
+		}
+	if (go == -1) {
+		slide = slide-1;
+		}
+	i = slide;
+	el = clicked.entity[i];
+	goto = el.getBoundingClientRect();
+	w = rect.top;
+	  window.scrollTo(0, w); 
+		for (i = 0; i < clicked_entity.length; i++) {
+		if (all_entities[i].getAttribute("data-label") == label) {
+	var el = document.getElementById("01");
+	var rect = el.getBoundingClientRect();
+	w = rect.top;
+	  window.scrollTo(0, w); 
+}
+
 //1. highligHT
 //functions prev_entity_item()
 //function next_entity_item()
