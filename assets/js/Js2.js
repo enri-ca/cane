@@ -97,10 +97,11 @@ function MDV(selection){
 	}
 
 var all_entities = document.getElementsByClassName("entity")
+var clicked_entity = []
+
 //function openPopUp//
 function openPopUp(el){
 	let label = el.innerText;
-	var clicked_entity = []
 	for (i = 0; i < all_entities.length; i++) {
 		if (all_entities[i].getAttribute("data-label") == label) {
 			cliked_entity.push(all_entities[i]);
