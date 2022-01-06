@@ -1,32 +1,18 @@
+//Js 2021-01-06 8.54//
+
 //function change_css//
 function change_css(style) {
 	document.getElementById('css').href = style
 	//setAttribute('href', style);
 }
 
-//function change_css 2nd version (I prefere the first one)//
-function change_css2(style) {
-	var n_css;
-	if (style == 0) {
-		n_css = "assets\default.css"
-	}
-	if (style == 2) {
-		n_css = "assets/css/1800.css"
-	}
-	if (style == 4) {
-		n_css = "assets/1900-50.css"
-	}  //else{
-	    //n_css = "abcd.css"
-	  //}
-	 document.getElementById('css').href = n_css;
-}
-
+//set variables for the 3 articles in the 3 issues//
 var art1, art2, art3
 art1 = "1_1.html";
 art2 = "1_2.html";
 art3 = "1_3.html";
 
-//function load default article in the frame{//
+//function load default article in the IssuesViewer page//
 $(document).ready(function(){
 	$("#artM").load(art1);
 	$("#artL1").load(art2);
@@ -77,6 +63,7 @@ function slide_articles(){
 	}
 }
 
+//function MetaDataViewer//
 function MDV(selection){
 	let text = "";
 	if (selection == 1){
@@ -88,56 +75,59 @@ function MDV(selection){
 	if (selection == 3){
 		classname="entity keyword";
 		id = "KW"};
-	var arr = document.getElementsByClassName(classname);
-	for (let i = 0; i < arr.length; i++) {
-		text += '<a class="dropdown-item" href="https://www.unibo.it" onclick="openpopup()">' + arr[i].getAttribute("data-label") + "</a>"
-	}
+	//var arr = document.getElementsByClassName(classname);
+	//var myarray = ((Array.from(document.getElementsByClassName(classname))).sort()).reverse();
+	//myarray.sort();
+	//myarray.reverse();
+	var myarray = (Array.from(document.getElementsByClassName(classname))).sort();
+	for (let i = 0; i < myarray.length; i++) {
+		//text += '<a class="dropdown-item" href="https://www.unibo.it" onclick="openpopup()">' + arr[i].getAttribute("data-label") + "</a>"
+		//text += '<button onclick="document.getElementById('id01').style.display='block'" class="w3-button">' + arr[i].getAttribute("data-label") + '</button>'
+		 //if (myarray[i].hasAttribute("data-active")){
+			  //text += '<li> <a onclick="highlight(this)" about="'+ myarray[i].getAttribute("about") + '">' + myarray[i].getAttribute("data-label") + '</a></li>';
+		//	}
+		//text += '<button class="dropdown-item?" onclick="openPopUp()" class="w3-button">' + myarray[i].getAttribute("data-label") + '</button>'
+		text += '<a class="dropdown-item w3-button" onclick="openPopUp()">' + myarray[i].getAttribute("data-label") + '</button>'
+		}
 	document.getElementById(id).innerHTML = text;
  }
 
-//function to hide/show entities [not working]//
-//function entities(){//
-//	$(".entity").hide(); 
-//	$(".entity").show(); 
+//var arr = document.getElementsByClassName("entity keyword");
+//var myarray = Array.from(arr);
+
+//function myFunction() {
+//	var arr = document.getElementsByClassName("entity keyword");
+//	var myarray = Array.from(arr);
+//	myarray.sort();
+//	myarray.reverse();
+//	let text = "";
+//	for (let i = 0; i < myarray.length; i++) {
+//	 if (myarray[i].hasAttribute("data-active")){
+//	  text += '<li> <a onclick="highlight(this)" about="'+ myarray[i].getAttribute("about") + '">' + myarray[i].getAttribute("data-label") + '</a></li>';
+//	  }
 //}
+//document.getElementById("p2").innerHTML = text;
+ //}
 
-//previous attempts to load issues//
-//$(document).ready(function(){
-//	$("#I1").click(function(){
-//    $(function(){
-//      $("#artM").load("1_1.html");
-//	$("#artL1").load("1_2.html");
-//	$("#artL2").load("1_3.html")
-//    });
-//});
-// })
 
-//$(document).ready(function(){
-//	$("#I2").click(function(){
-//    $(function(){
-//      $("#artM").load("2_1.html");
-//	$("#artL1").load("2_2.html");
-//	$("#artL2").load("2_3.html")
-//    });
-//});
-// })
+//function openPopUp//
+function openPopUp(){
+	document.getElementById("PopUpHeader").innerHTML = "class - entity Es. Place - Panama Canal";
+	document.getElementById("PopUpWikidata").innerHTML = "url es. https://www.wikidata.org/wiki/Q7350";
+	document.getElementById("PopUpWikidata").href = "https://www.wikidata.org/wiki/Q7350";
+	document.getElementById("id01").style.display="block"
+}
 
-//$(document).ready(function(){
-//	$("#I3").click(function(){
-//    $(function(){
-//      $("#artM").load("3_1.html");
-//	$("#artL1").load("3_2.html");
-//	$("#artL2").load("3_3.html")
-//    });
-//});
-// })
+
+//1. highlight, 2. pop up con >> << - WIKIDATA - NOME ENTITY - CLASSE - CHIUSURA 
+	//text = <h2>classe - nome entity</h2> <p>wikidata</p>
+	//document.getElementById('id01').style.display='block';
+	//document.getElementById('id01').innerHTML = text;
+
+//functions prev_entity_item()
+//function next_entity_item()
 
 //function to high_href() [working off-line with $(document).ready(function(){ not online]//
-//function high_href(){//
-//$(window).load(function(){//
-//window.onload = function(){//
-//function high_href(){//
-//$(document).ready(function(){//
 $(".bib_note").click(function(){
 		var target = $(this).attr("href");
 		var source_id = $(this).attr("id");
@@ -148,3 +138,14 @@ $(".bib_note").click(function(){
 			source.scrollIntoView();
 		});
 	})
+//function high_href(){//
+//$(window).load(function(){//
+//window.onload = function(){//
+//function high_href(){//
+//$(document).ready(function(){//
+
+//function to hide/show entities [not working]//
+//function entities(){//
+//	$(".entity").hide(); 
+//	$(".entity").show(); 
+//}
