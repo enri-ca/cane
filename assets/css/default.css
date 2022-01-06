@@ -143,19 +143,20 @@ body {
   text-align: left;
 }
 
-.highlighted {
-  background-color: #ffffcc; 
-}
-
-.highlighted_more {
-  background-color: red; 
-}
 
 /*2022-01-06*/
 .modal {
 position: top-left absolute !important;
 weight: 30vw;
 color: red;
+}
+
+.highlighted {
+  background-color: #ffffcc; 
+}
+
+.highlighted_more {
+  background-color: red; 
 }
 
 .modal-backdrop
@@ -189,6 +190,6 @@ li .dropdown {
 
 
 /* Higlight the entities and the references */
-.entity {
+/*.entity {
   background-color: #ffe6e6;
 }*/
