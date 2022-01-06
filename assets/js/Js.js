@@ -95,20 +95,44 @@ function MDV(selection){
 //var arr = document.getElementsByClassName("entity keyword");
 //var myarray = Array.from(arr);
 
-//function myFunction() {
-//	var arr = document.getElementsByClassName("entity keyword");
-//	var myarray = Array.from(arr);
-//	myarray.sort();
-//	myarray.reverse();
-//	let text = "";
-//	for (let i = 0; i < myarray.length; i++) {
-//	 if (myarray[i].hasAttribute("data-active")){
-//	  text += '<li> <a onclick="highlight(this)" about="'+ myarray[i].getAttribute("about") + '">' + myarray[i].getAttribute("data-label") + '</a></li>';
-//	  }
-//}
-//document.getElementById("p2").innerHTML = text;
- //}
+//function MetaDataViewer//
+function MDV(selection){
+	if (selection == 1){
+		classname="entity person";
+		id = "PE"};
+	if (selection == 2){
+		classname="entity place";
+		id = "PL"};
+	if (selection == 3){
+		classname="entity keyword";
+		id = "KW"};
+	var arr = document.getElementsByClassName("entity keyword");
+	var myarray = Array.from(arr);
+	myarray.sort();
+	myarray.reverse();
+	let text = "";
+	for (let i = 0; i < myarray.length; i++) {
+		if (myarray[i].hasAttribute("data-active")){
+			text += '<li> <a onclick="highlight(this)" about="'+ myarray[i].getAttribute("about") + '">' + myarray[i].getAttribute("data-label") + '</a></li>'
+		}
+	}
+document.getElementById(id).innerHTML = text;
+}
 
+function highlight(el){
+	let ul = el.getAttribute("about");
+	let arre = document.getElementsByClassName("entity keyword");
+	var i;
+	for (i = 0; i < arre.length; i++) {
+  	if (arre[i].getAttribute("about") === ul) {
+	   	document.body.style.backgroundColor = 'white'
+        	arre[i].style.backgroundColor = "#cc9999";
+		}
+	else {
+		arre[i].style.backgroundColor = "white";
+		}
+	}
+}
 
 //function openPopUp//
 function openPopUp(){
@@ -117,7 +141,6 @@ function openPopUp(){
 	document.getElementById("PopUpWikidata").href = "https://www.wikidata.org/wiki/Q7350";
 	document.getElementById("id01").style.display="block"
 }
-
 
 //1. highlight, 2. pop up con >> << - WIKIDATA - NOME ENTITY - CLASSE - CHIUSURA 
 	//text = <h2>classe - nome entity</h2> <p>wikidata</p>
