@@ -106,7 +106,10 @@ function MDV(selection){
 
 var array_entities = Array.from(document.getElementsByClassName("entity"))
 
-$("a.entity-item-list").click(openPopUp())
+$(document).ready(function(){
+	$("a.entity-item-list").click(openPopUp())
+})
+
 function openPopUp(){
 	var label = $(this).text();
 	for (let i = 0; i < array_entities.length; i++) {
