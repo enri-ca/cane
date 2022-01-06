@@ -116,12 +116,26 @@ function MDV(selection){
 //document.getElementById("p2").innerHTML = text;
  //}
 
-
+//var array_entities = Array.from(document.getElementsByClassName("entity"));
 //function openPopUp//
+
 function openPopUp(){
+	var label = this.innerHTML;
+	//for (let i = 0; i < array_etities.length; i++) {
+	//	if (array_etities[i].hasAttribute("data-active")){
+	//		if (array_etities[i].hasAttribute("data-active"))
+	//		array_label.push(myarray[i].getAttribute("data-label"));
+//			}
+//		}
+//	var array_label = [];
+//	array_label.sort();
+//	$(.entity).attr("data-label");
+//	array delle cose che hanno quel label
+//	prendere wikidata e altri dati da data-active:	
 	document.getElementById("PopUpHeader").innerHTML = "class - entity Es. Place - Panama Canal";
 	document.getElementById("PopUpWikidata").innerHTML = "url es. https://www.wikidata.org/wiki/ + Q7350";
 	document.getElementById("PopUpWikidata").href = "https://www.wikidata.org/wiki/ + Q7350";
+//	$(this).attr("data-label");
 	document.getElementById("id01").style.display="block"
 }
 
