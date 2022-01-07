@@ -132,7 +132,7 @@ function slide_clicked_entity(go) {
 		slide = slide-1;
 		}
 	var entity = document.getElementById("PopUpHeader").innerText;
-	var clicked_entity = document.getElementsByClassName("entity").(getAttribute("data-label") == entity);
+	var clicked_entity = document.getElementsByClassName("entity").(getAttribute("data-label") == (entity));
 	//for (i = 0; i < all_entities.length; i++) {
 	//	if (all_entities[i].getAttribute("data-label") == entity) {
 	//		clicked_entity.push(all_entities[i]);
