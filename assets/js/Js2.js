@@ -97,13 +97,14 @@ function MDV(selection){
 	}
 
 var all_entities = document.getElementsByClassName("entity")
-var clicked_entity = Array.from(document.getElementsByClassName("entity"))
+var clicked_entity = []
 
 //function openPopUp//
 function openPopUp(el){
 	let label = el.innerText;
 	for (i = 0; i < all_entities.length; i++) {
 		if (all_entities[i].getAttribute("data-label") == label) {
+			clicked_entity.prototype.push(all_entities[i]);
 			all_entities[i].classList.add("highlighted");
 			if (all_entities[i].hasAttribute("data-active")) {	
 				//class_name = all_entities[i].getAttribute("class");
@@ -119,9 +120,9 @@ function openPopUp(el){
 				document.getElementById("MOD_01").style.display="block";
 				}
 			}
-		else {
-			clicked_entity.prototype.pop(all_entities[i]);
-			}
+		//else {
+		//	clicked_entity.prototype.pop(all_entities[i]);
+		//	}
 
 		}
 	}
