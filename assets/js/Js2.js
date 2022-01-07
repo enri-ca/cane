@@ -97,7 +97,7 @@ function MDV(selection){
 	}
 
 var all_entities = document.getElementsByClassName("entity")
-//var clicked_entity = []
+var clicked_entity = []
 
 //function openPopUp//
 function openPopUp(el){
@@ -105,7 +105,7 @@ function openPopUp(el){
 	for (i = 0; i < all_entities.length; i++) {
 		if (all_entities[i].getAttribute("data-label") == label) {
 			all_entities[i].classList.add("highlighted");
-			//clicked_entity.push(all_entities[i]);
+			clicked_entity.Array.prototype.push(all_entities[i]);
 			if (all_entities[i].hasAttribute("data-active")) {	
 				//class_name = all_entities[i].getAttribute("class");
 				document.getElementById("PopUpHeader").innerHTML = label;
@@ -131,8 +131,12 @@ function slide_clicked_entity(go) {
 	if (go == -1) {
 		slide = slide-1;
 		}
-	var entity = document.getElementById("PopUpHeader").innerText;
-	var clicked_entity = document.getElementsByClassName("entity").(getAttribute("data-label") == (entity));
+	//	var entity = document.getElementById("PopUpHeader").innerText;
+	//	var clicked_entity = document.getElementsByClassName("entity").(getAttribute("data-label") == (entity));
+	//	var testElements = document.getElementsByClassName('test');
+	//var testDivs = Array.prototype.filter.call(all_entities, function(testElement){
+	//  return testElement.nodeName === 'DIV';
+	//});
 	//for (i = 0; i < all_entities.length; i++) {
 	//	if (all_entities[i].getAttribute("data-label") == entity) {
 	//		clicked_entity.push(all_entities[i]);
