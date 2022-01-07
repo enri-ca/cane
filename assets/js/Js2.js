@@ -152,6 +152,7 @@ function slide_clicked_entity(go){
 
 //function slide occurrencies//
 function closePopUp(){
+	document.getElementById('MOD_01').style.display='none';
 	let label = document.getElementById("PopUpHeader").innerText;
 	var clicked_entity = ((Array.from(all_entities)).filter(entity => entity.getAttribute("data-label") == label));
 	clicked_entity.forEach(entity => entity.classList.remove("highlighted", "highlighted_more"));
