@@ -8,7 +8,7 @@ src: url("../fonts/RIVANNA_.TTF");
 * {
   box-sizing: border-box;
     font-family: 'Libre Baskerville', serif;
-	background-image: url("../img/styles/1800background.PNG");
+	/*background-image: url("../img/styles/1800background.PNG");*/
 }
 .h2, .h3, .h4 {
 	font-family: 'MyRivanna', sans-serif;
@@ -27,14 +27,14 @@ src: url("../fonts/RIVANNA_.TTF");
   width:100%;
   margin-top: -0.5vw;
   grid-template-columns: 25vmax 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 10vmax 10vmax 1fr 1fr 5vmax;
+  grid-template-rows: 10vmax 7vmax 1fr 1fr 5vmax;
 }
 
 .logo{
   grid-area: logo;
   background-color: #000000;
-font-size: 2vw;
-  color: white;
+font-size: 7vw;
+  color: sepia;
   font-family: 'MyRivanna', sans-serif;
   padding: 1vw;
   text-align: left;
