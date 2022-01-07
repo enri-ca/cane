@@ -114,8 +114,8 @@ function openPopUp(el){
 	//wikidataID = all_entities[i].getAttribute("data-wikidata-id");
 	//class_name = all_entities[i].getAttribute("class");
 	document.getElementById("PopUpHeader").innerHTML = label;
-	if (item_with_data.hasAttribute("data-wikidata-id")) {
-		wikidataID = item_with_data.getAttribute("data-wikidata-id");
+	if (item_with_data[0].hasAttribute("data-wikidata-id")) {
+		wikidataID = item_with_data[0].getAttribute("data-wikidata-id");
 		document.getElementById("PopUpWikidata").innerHTML = "url es. https://www.wikidata.org/wiki/" + wikidataID;
 		document.getElementById("PopUpWikidata").href = "https://www.wikidata.org/wiki/" + wikidataID;
 		}
