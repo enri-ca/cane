@@ -26,13 +26,13 @@ src: url("../fonts/RIVANNA_.TTF");
   height: 100vmin;
   width:100%;
   margin-top: -0.5vw;
-  grid-template-columns: 25vmax 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 15vmax 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 10vmax 7vmax 1fr 1fr 5vmax;
 }
 
 .logo{
   grid-area: logo;
-  background-color: #000000;
+  background-color: d2691e;
 font-size: 3vw;
   color: sepia;
   font-family: 'MyRivanna', sans-serif;
@@ -98,6 +98,7 @@ font-family: 'MyRivanna', sans-serif;
 .footer { 
 	grid-area: footer; 
 	text-align: center;
+	background-color: d2691e;
 }
 
 img {
