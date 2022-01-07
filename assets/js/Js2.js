@@ -135,8 +135,13 @@ function slide_clicked_entity(go) {
 	if (go == -1) {
 		slide = slide-1;
 		}
-	let label = document.getElementById("PopUpHeader").innerText
+	let label = document.getElementById("PopUpHeader").innerText;
 	var clicked_entity = (Array.from(all_entities)).filter(entity => entity.getAttribute("data-label") == label);
+	var entity_occurency = clicked_entity.at(slide);
+	entity_occurency.classList.add("highlighted_more");
+	clicked_entity[slide].scrollIntoView();
+	//goto = ((entity_list[i]).getBoundingClientRect()).top;
+	//window.scrollTo(0, goto);
 	//const clicked_entity = all_entities.filter(word => word.length > 6);
 	//	var clicked_entity = document.getElementsByClassName("entity").(getAttribute("data-label") == (entity));
 
@@ -145,11 +150,7 @@ function slide_clicked_entity(go) {
 	//		clicked_entity.push(all_entities[i]);
 	//		}
 	//}
-	var entity_occurency = clicked_entity[slide];
-	entity_occurency.classList.add("highlighted_more");
-	clicked_entity[slide].scrollIntoView();
-	//goto = ((entity_list[i]).getBoundingClientRect()).top;
-	//window.scrollTo(0, goto);
+
 	}
 
 //1. highligHT
