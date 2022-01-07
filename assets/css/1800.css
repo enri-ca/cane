@@ -27,7 +27,7 @@ src: url("../fonts/RIVANNA_.TTF");
   width:100%;
   margin-top: -0.5vw;
   grid-template-columns: 25vmax 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 10vmax 15vmax 1fr 1fr 5vmax;
+  grid-template-rows: 10vmax 10vmax 1fr 1fr 5vmax;
 }
 
 .logo{
