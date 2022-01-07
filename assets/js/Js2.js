@@ -139,7 +139,7 @@ function slide_clicked_entity(go) {
 	var clicked_entity = (Array.from(all_entities)).filter(entity => entity.getAttribute("data-label") == label);
 	var entity_occurency = clicked_entity.at(slide);
 	entity_occurency.classList.add("highlighted_more");
-	clicked_entity[slide].scrollIntoView();
+	entity_occurency.scrollIntoView();
 	//goto = ((entity_list[i]).getBoundingClientRect()).top;
 	//window.scrollTo(0, goto);
 	//const clicked_entity = all_entities.filter(word => word.length > 6);
