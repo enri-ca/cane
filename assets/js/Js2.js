@@ -127,8 +127,8 @@ function openPopUp(el){
 		}
 	}
 
+slide = 0
 function slide_clicked_entity(go) {
-	slide = 0
 	if (go == 1) {
 		slide = slide+1;
 		}
