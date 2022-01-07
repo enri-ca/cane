@@ -126,17 +126,18 @@ function openPopUp(el){
 
 //function slide occurrencies//
 slide = 0
-function slide_clicked_entity(go) {
+function slide_clicked_entity(go){
 	let label = document.getElementById("PopUpHeader").innerText;
 	var clicked_entity = ((Array.from(all_entities)).filter(entity => entity.getAttribute("data-label") == label));
 	if (Math.abs(slide) < clicked_entity.length) {
 		if (go == 1) {
 			slide = slide+1;
 			(clicked_entity.at(slide-1)).classList.remove("highlighted_more");
-		}
+			}
 		if (go == -1) {
 			slide = slide-1;
 			(clicked_entity.at(slide+1)).classList.remove("highlighted_more");
+			}
 		}
 	else {
 		slide = 0
