@@ -130,7 +130,7 @@ function openPopUp(el){
 slide = 0
 function slide_clicked_entity(go) {
 	let label = document.getElementById("PopUpHeader").innerText;
-	var clicked_entity = (Array.from(all_entities)).filter(entity => entity.getAttribute("data-label") == label);
+	var clicked_entity = (Array.from(all_entities)).filter(entity => entity.getAttribute("data-label") == label).sort();
 	//fino a lunghezza array while slide < clicked_entity.length - else slide = 0
 	if (go == 1) {
 		slide = slide-1;
@@ -141,6 +141,8 @@ function slide_clicked_entity(go) {
 	var entity_occurency = clicked_entity.at(slide);
 	entity_occurency.classList.add("highlighted_more");
 	entity_occurency.scrollIntoView();
+	var entity_occurency_prev = clicked_entity.at(slide-1);
+	entity_occurency_prev.classList.remove("highlighted_more");
 	//goto = ((entity_list[i]).getBoundingClientRect()).top;
 	//window.scrollTo(0, goto);
 	//const clicked_entity = all_entities.filter(word => word.length > 6);
