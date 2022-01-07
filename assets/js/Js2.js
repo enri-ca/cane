@@ -142,14 +142,22 @@ function slide_clicked_entity(go){
 		if (go == -1) {
 			slide = slide-1;
 			(clicked_entity.at(slide+1)).classList.remove("highlighted_more");
+			entity_counter=1;
 			};
 		if (Math.abs(slide) == clicked_entity.length)  {
-			slide = 0
+			slide = 0;
+			entity_counter=1;
 			}
 		}
 	(clicked_entity.at(slide)).classList.add("highlighted_more");
 	(clicked_entity.at(slide)).scrollIntoView();
-	document.getElementById("counter_occurrencies").innerText = (slide+1);
+	if (slide >= 0) {
+			entity_counter=slide+1
+	}
+	else {
+			entity_counter=clicked_entity.lenght+slide-1
+	}
+	document.getElementById("counter_occurrencies").innerText = entity_counter;
 	}
 
 //function slide occurrencies//
