@@ -111,7 +111,7 @@ function openPopUp(el){
 	//		all_entities[i].classList.add("highlighted");
 	//		if (all_entities[i].hasAttribute("data-active")) {	
 	item_with_data = clicked_entity.filter(entity => entity.hasAttribute("data-active"));
-	wikidataID = all_entities[i].getAttribute("data-wikidata-id");
+	//wikidataID = all_entities[i].getAttribute("data-wikidata-id");
 	//class_name = all_entities[i].getAttribute("class");
 	document.getElementById("PopUpHeader").innerHTML = label;
 	if (item_with_data.hasAttribute("data-wikidata-id")) {
