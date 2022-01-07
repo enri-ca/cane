@@ -131,7 +131,7 @@ function slide_clicked_entity(go) {
 	if (go == -1) {
 		slide = slide-1;
 		}
-	var entity = document.getElementsById("PopUpHeader").innerText;
+	var entity = document.getElementById("PopUpHeader").innerText;
 	var clicked_entity = [];
 	for (i = 0; i < all_entities.length; i++) {
 		if (all_entities[i].getAttribute("data-label") == entity) {
