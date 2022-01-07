@@ -105,14 +105,7 @@ function openPopUp(el){
 	clicked_entity.forEach(entity => entity.classList.add("highlighted"));
 	(clicked_entity.at(0)).classList.add("highlighted_more");
 	(clicked_entity.at(0)).scrollIntoView();
-	//clicked_entity.classList.add("highlighted");
-	//for (i = 0; i < all_entities.length; i++) {
-	//	if (all_entities[i].getAttribute("data-label") == label) {
-	//		all_entities[i].classList.add("highlighted");
-	//		if (all_entities[i].hasAttribute("data-active")) {	
 	item_with_data = clicked_entity.filter(entity => entity.hasAttribute("data-active"));
-	//wikidataID = all_entities[i].getAttribute("data-wikidata-id");
-	//class_name = all_entities[i].getAttribute("class");
 	document.getElementById("PopUpHeader").innerHTML = label;
 	if (item_with_data[0].hasAttribute("data-wikidata-id")) {
 		wikidataID = item_with_data[0].getAttribute("data-wikidata-id");
@@ -124,6 +117,13 @@ function openPopUp(el){
 		}
 	document.getElementById("MOD_01").style.display="block";
 	}
+	//clicked_entity.classList.add("highlighted");
+	//for (i = 0; i < all_entities.length; i++) {
+	//	if (all_entities[i].getAttribute("data-label") == label) {
+	//		all_entities[i].classList.add("highlighted");
+	//		if (all_entities[i].hasAttribute("data-active")) {	
+	//wikidataID = all_entities[i].getAttribute("data-wikidata-id");
+	//class_name = all_entities[i].getAttribute("class");
 
 //function slide occurrencies//
 slide = 0
@@ -150,7 +150,14 @@ function slide_clicked_entity(go){
 	(clicked_entity.at(slide)).scrollIntoView();
 	}
 
-	//var entity_occurency = clicked_entity.at(slide);
+//function slide occurrencies//
+function closePopUp(){
+	let label = document.getElementById("PopUpHeader").innerText;
+	var clicked_entity = ((Array.from(all_entities)).filter(entity => entity.getAttribute("data-label") == label));
+	clicked_entity.forEach(entity => entity.classList.remove("highlighted", "highlighted_more"));
+	}
+
+//var entity_occurency = clicked_entity.at(slide);
 	//var entity_occurency_prev = clicked_entity.at(slide-1);
 	//goto = ((entity_list[i]).getBoundingClientRect()).top;
 	//window.scrollTo(0, goto);
