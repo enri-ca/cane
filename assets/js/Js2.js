@@ -97,7 +97,7 @@ function MDV(selection){
 	}
 
 var all_entities = document.getElementsByClassName("entity")
-//var clicked_entity = []
+var clicked_entity = []
 
 //function openPopUp//
 function openPopUp(el){
