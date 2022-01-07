@@ -8,7 +8,7 @@ src: url("../fonts/RIVANNA_.TTF");
 * {
   box-sizing: border-box;
     font-family: 'Libre Baskerville', serif;
-	background-image: url("../img/styles/1800background.PNG")
+	background-image: url("../img/styles/1800background.PNG");
 }
 .h2, .h3, .h4 {
 	font-family: 'MyRivanna', sans-serif;
@@ -45,7 +45,7 @@ font-size: 2vw;
 	font-family: 'MyRivanna', sans-serif;
 	/*font-family: 'Cinzel Decorative', cursive;*/
 	text-align: right; 
-	font-size: 4vw;
+	font-size: 7vw;
 	letter-spacing: -0.05vw;
 	position: static;
 	padding: 0.5vw;
