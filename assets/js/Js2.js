@@ -136,13 +136,14 @@ function slide_clicked_entity(go) {
 	for (i = 0; i < all_entities.length; i++) {
 		if (all_entities[i].getAttribute("data-label") == entity) {
 			clicked_entity.push(all_entities[i]);
-		}
+			}
+	}
 	var entity_occurency = clicked_entity[slide];
 	entity_occurency.classList.add("highlighted_more");
 	clicked_entity[slide].scrollIntoView();
 	//goto = ((entity_list[i]).getBoundingClientRect()).top;
 	//window.scrollTo(0, goto);
-}
+	}
 
 //1. highligHT
 //functions prev_entity_item()
