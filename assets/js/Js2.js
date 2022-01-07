@@ -97,7 +97,6 @@ function MDV(selection){
 	}
 
 var all_entities = document.getElementsByClassName("entity")
-var clicked_entity = []
 
 //function openPopUp//
 function openPopUp(el){
@@ -124,7 +123,8 @@ function openPopUp(el){
 		}
 	document.getElementById("MOD_01").style.display="block";
 	}
-	
+
+//function slide occurrencies//
 slide = 0
 function slide_clicked_entity(go) {
 	let label = document.getElementById("PopUpHeader").innerText;
@@ -132,15 +132,15 @@ function slide_clicked_entity(go) {
 	if (Math.abs(slide) < clicked_entity.length) {
 		if (go == 1) {
 			slide = slide+1;
-			}
+			(clicked_entity.at(slide-1)).classList.remove("highlighted_more");
+		}
 		if (go == -1) {
 			slide = slide-1;
-			}
+			(clicked_entity.at(slide+1)).classList.remove("highlighted_more");
 		}
 	else {
 		slide = 0
 		}
-	(clicked_entity.at(slide-1)).classList.remove("highlighted_more");
 	(clicked_entity.at(slide)).classList.add("highlighted_more");
 	(clicked_entity.at(slide)).scrollIntoView();
 	}
