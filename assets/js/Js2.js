@@ -97,7 +97,7 @@ function MDV(selection){
 	}
 
 var all_entities = document.getElementsByClassName("entity")
-var clicked_entity = []
+//var clicked_entity = []
 
 //function openPopUp//
 function openPopUp(el){
@@ -105,10 +105,10 @@ function openPopUp(el){
 	for (i = 0; i < all_entities.length; i++) {
 		if (all_entities[i].getAttribute("data-label") == label) {
 			all_entities[i].classList.add("highlighted");
-			clicked_entity.push(all_entities[i]);
+			//clicked_entity.push(all_entities[i]);
 			if (all_entities[i].hasAttribute("data-active")) {	
-				class_name = all_entities[i].getAttribute("class");
-				document.getElementById("PopUpHeader").innerHTML = class_name + " - " + label;
+				//class_name = all_entities[i].getAttribute("class");
+				document.getElementById("PopUpHeader").innerHTML = label;
 				if (all_entities[i].hasAttribute("data-wikidata-id")) {
 					wikidataID = all_entities[i].getAttribute("data-wikidata-id");
 					document.getElementById("PopUpWikidata").innerHTML = "url es. https://www.wikidata.org/wiki/" + wikidataID;
@@ -131,7 +131,13 @@ function slide_clicked_entity(go) {
 	if (go == -1) {
 		slide = slide-1;
 		}
-	var entity_occurency = clicked_entity[slide]
+	var entity = document.getElementsById("PopUpHeader").innerText;
+	var clicked_entity = [];
+	for (i = 0; i < all_entities.length; i++) {
+		if (all_entities[i].getAttribute("data-label") == entity) {
+			clicked_entity.push(all_entities[i]);
+		}
+	var entity_occurency = clicked_entity[slide];
 	entity_occurency.classList.add("highlighted_more");
 	clicked_entity[slide].scrollIntoView();
 	//goto = ((entity_list[i]).getBoundingClientRect()).top;
