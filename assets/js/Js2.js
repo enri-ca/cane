@@ -127,6 +127,8 @@ function openPopUp(el){
 	
 slide = 0
 function slide_clicked_entity(go) {
+	let label = document.getElementById("PopUpHeader").innerText;
+	var clicked_entity = ((Array.from(all_entities)).filter(entity => entity.getAttribute("data-label") == label));
 	if (Math.abs(slide) < clicked_entity.length) {
 		if (go == 1) {
 			slide = slide+1;
@@ -138,11 +140,13 @@ function slide_clicked_entity(go) {
 	else {
 		slide = 0
 		}
-	//var entity_occurency = clicked_entity.at(slide);
+	(clicked_entity.at(slide-1)).classList.remove("highlighted_more");
 	(clicked_entity.at(slide)).classList.add("highlighted_more");
 	(clicked_entity.at(slide)).scrollIntoView();
+	}
+
+	//var entity_occurency = clicked_entity.at(slide);
 	//var entity_occurency_prev = clicked_entity.at(slide-1);
-	(clicked_entity.at(slide-1)).classList.remove("highlighted_more");
 	//goto = ((entity_list[i]).getBoundingClientRect()).top;
 	//window.scrollTo(0, goto);
 	//const clicked_entity = all_entities.filter(word => word.length > 6);
@@ -150,17 +154,13 @@ function slide_clicked_entity(go) {
 //let label = document.getElementById("PopUpHeader").innerText;
 	//var clicked_entity = ((Array.from(all_entities)).filter(entity => entity.getAttribute("data-label") == label).sort()).reverse();
 	//fino a lunghezza array while slide < clicked_entity.length - else slide = 0
-	
-	
 	//for (i = 0; i < all_entities.length; i++) {
 	//	if (all_entities[i].getAttribute("data-label") == entity) {
 	//		clicked_entity.push(all_entities[i]);
 	//		}
 	//}
 
-	}
-
-//1. highligHT
+	//1. highligHT
 //functions prev_entity_item()
 //function next_entity_item()
 
@@ -180,9 +180,3 @@ $(".bib_note").click(function(){
 //window.onload = function(){//
 //function high_href(){//
 //$(document).ready(function(){//
-
-//function to hide/show entities [not working]//
-//function entities(){//
-//	$(".entity").hide(); 
-//	$(".entity").show(); 
-//}
