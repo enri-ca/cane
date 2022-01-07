@@ -143,11 +143,9 @@ function slide_clicked_entity(go){
 		if (go == -1) {
 			slide = slide-1;
 			(clicked_entity.at(slide+1)).classList.remove("highlighted_more");
-			entity_counter=1;
 			};
 		if (Math.abs(slide) == clicked_entity.length)  {
 			slide = 0;
-			entity_counter=1;
 			}
 		}
 	(clicked_entity.at(slide)).classList.add("highlighted_more");
