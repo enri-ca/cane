@@ -130,7 +130,7 @@ slide = 0
 function slide_clicked_entity(go){
 	let label = document.getElementById("PopUpHeader").innerText;
 	var clicked_entity = ((Array.from(all_entities)).filter(entity => entity.getAttribute("data-label") == label));
-	if (clicked_entity.length < 1) {
+	if (clicked_entity.length <= 1) {
 		slide = 0
 		}
 	else {
