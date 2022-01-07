@@ -103,7 +103,7 @@ var all_entities = document.getElementsByClassName("entity")
 function openPopUp(el){
 	let label = el.innerText;
 	var clicked_entity = ((Array.from(all_entities)).filter(entity => entity.getAttribute("data-label") == label));
-	clicked_entity.forEach(element => classList.add("highlighted"));
+	clicked_entity.forEach(entity => entity.classList.add("highlighted"));
 	(clicked_entity.at(0)).classList.add("highlighted_more");
 	//clicked_entity.classList.add("highlighted");
 	//for (i = 0; i < all_entities.length; i++) {
