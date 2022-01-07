@@ -102,15 +102,20 @@ var all_entities = document.getElementsByClassName("entity")
 //function openPopUp//
 function openPopUp(el){
 	let label = el.innerText;
-	for (i = 0; i < all_entities.length; i++) {
-		if (all_entities[i].getAttribute("data-label") == label) {
-			//clicked_entity.prototype.push(all_entities[i]);
-			all_entities[i].classList.add("highlighted");
-			if (all_entities[i].hasAttribute("data-active")) {	
+	var clicked_entity = ((Array.from(all_entities)).filter(entity => entity.getAttribute("data-label") == label);
+	clicked_entity.forEach(element => classList.add("highlighted"))
+	(clicked_entity.at(0)).classList.add("highlighted_more");
+	//clicked_entity.classList.add("highlighted");
+	item_with_data = clicked_entity.filter(entity => entity.hasAttribute("data-active");
+	wikidataID = all_entities[i].getAttribute("data-wikidata-id");
+	//for (i = 0; i < all_entities.length; i++) {
+	//	if (all_entities[i].getAttribute("data-label") == label) {
+	//		all_entities[i].classList.add("highlighted");
+	//		if (all_entities[i].hasAttribute("data-active")) {	
 				//class_name = all_entities[i].getAttribute("class");
 				document.getElementById("PopUpHeader").innerHTML = label;
-				if (all_entities[i].hasAttribute("data-wikidata-id")) {
-					wikidataID = all_entities[i].getAttribute("data-wikidata-id");
+				if (item_with_data.hasAttribute("data-wikidata-id")) {
+					wikidataID = item_with_data.getAttribute("data-wikidata-id");
 					document.getElementById("PopUpWikidata").innerHTML = "url es. https://www.wikidata.org/wiki/" + wikidataID;
 					document.getElementById("PopUpWikidata").href = "https://www.wikidata.org/wiki/" + wikidataID;
 					}
@@ -129,25 +134,31 @@ function openPopUp(el){
 
 slide = 0
 function slide_clicked_entity(go) {
-	let label = document.getElementById("PopUpHeader").innerText;
-	var clicked_entity = ((Array.from(all_entities)).filter(entity => entity.getAttribute("data-label") == label).sort()).reverse();
-	//fino a lunghezza array while slide < clicked_entity.length - else slide = 0
-	if (go == 1) {
-		slide = slide+1;
+	if (Math.abs(slide) < clicked_entity.length) {
+		if (go == 1) {
+			slide = slide+1;
+			}
+		if (go == -1) {
+			slide = slide-1;
+			}
 		}
-	if (go == -1) {
-		slide = slide-1;
+	else {
+		slide = 0
 		}
-	var entity_occurency = clicked_entity.at(slide);
-	entity_occurency.classList.add("highlighted_more");
-	entity_occurency.scrollIntoView();
-	var entity_occurency_prev = clicked_entity.at(slide-1);
-	entity_occurency_prev.classList.remove("highlighted_more");
+	//var entity_occurency = clicked_entity.at(slide);
+	(clicked_entity.at(slide)).classList.add("highlighted_more");
+	(clicked_entity.at(slide)).scrollIntoView();
+	//var entity_occurency_prev = clicked_entity.at(slide-1);
+	(clicked_entity.at(slide-1)).classList.remove("highlighted_more");
 	//goto = ((entity_list[i]).getBoundingClientRect()).top;
 	//window.scrollTo(0, goto);
 	//const clicked_entity = all_entities.filter(word => word.length > 6);
 	//	var clicked_entity = document.getElementsByClassName("entity").(getAttribute("data-label") == (entity));
-
+//let label = document.getElementById("PopUpHeader").innerText;
+	//var clicked_entity = ((Array.from(all_entities)).filter(entity => entity.getAttribute("data-label") == label).sort()).reverse();
+	//fino a lunghezza array while slide < clicked_entity.length - else slide = 0
+	
+	
 	//for (i = 0; i < all_entities.length; i++) {
 	//	if (all_entities[i].getAttribute("data-label") == entity) {
 	//		clicked_entity.push(all_entities[i]);
