@@ -136,7 +136,7 @@ function slide_clicked_entity(go) {
 		slide = slide-1;
 		}
 	let label = document.getElementById("PopUpHeader").innerText
-	var clicked_entity = all_entities.prototype.filter(entity => entity.getAttribute("data-label") == label);
+	var clicked_entity = (Array.from(all_entities)).prototype.filter(entity => entity.getAttribute("data-label") == label);
 	//const clicked_entity = all_entities.filter(word => word.length > 6);
 	//	var clicked_entity = document.getElementsByClassName("entity").(getAttribute("data-label") == (entity));
 
