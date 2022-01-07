@@ -104,6 +104,7 @@ function openPopUp(el){
 	var clicked_entity = ((Array.from(all_entities)).filter(entity => entity.getAttribute("data-label") == label));
 	clicked_entity.forEach(entity => entity.classList.add("highlighted"));
 	(clicked_entity.at(0)).classList.add("highlighted_more");
+	(clicked_entity.at(0)).scrollIntoView();
 	//clicked_entity.classList.add("highlighted");
 	//for (i = 0; i < all_entities.length; i++) {
 	//	if (all_entities[i].getAttribute("data-label") == label) {
