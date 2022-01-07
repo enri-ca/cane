@@ -87,6 +87,8 @@
 /* Responsive layout - when the screen is less than xxpx (o vmin??) wide, make the grid items stack on top of each other instead of next to each other */
 
 @media screen and (max-width: 500px) {
+	height: 100vmax;
+  	width:100vmin;
 	.logo { display: none; }
 	.header { grid-area: 1 / 1 / 2 / span 6 ; }
 	.navbar { grid-area: 2 / 1 / 3 / span 6 ; }
