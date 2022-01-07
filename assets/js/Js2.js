@@ -107,9 +107,10 @@ function openPopUp(el){
 	(clicked_entity.at(0)).scrollIntoView();
 	item_with_data = clicked_entity.filter(entity => entity.hasAttribute("data-active"));
 	document.getElementById("PopUpHeader").innerHTML = label;
+	document.getElementById("tot_occurrencies").innerText = clicked_entity.length;
 	if (item_with_data[0].hasAttribute("data-wikidata-id")) {
 		wikidataID = item_with_data[0].getAttribute("data-wikidata-id");
-		document.getElementById("PopUpWikidata").innerHTML = "url es. https://www.wikidata.org/wiki/" + wikidataID;
+		document.getElementById("PopUpWikidata").innerHTML = "https://www.wikidata.org/wiki/" + wikidataID;
 		document.getElementById("PopUpWikidata").href = "https://www.wikidata.org/wiki/" + wikidataID;
 		}
 	else {
@@ -148,6 +149,7 @@ function slide_clicked_entity(go){
 		}
 	(clicked_entity.at(slide)).classList.add("highlighted_more");
 	(clicked_entity.at(slide)).scrollIntoView();
+	document.getElementById("counter_occurrencies").innerText = slide+1;
 	}
 
 //function slide occurrencies//
