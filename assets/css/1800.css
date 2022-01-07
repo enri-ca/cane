@@ -47,10 +47,11 @@ font-size: 3vw;
 	/*font-family: 'Cinzel Decorative', cursive;*/
 	text-align: right; 
 	font-size: 7vw;
+	color: #c87354;
 	letter-spacing: -0.05vw;
 	position: static;
 	padding: 0.5vw;
-	background-color: #c87354;
+	background-color: black;
 }
 
 .navbar{
@@ -64,7 +65,8 @@ font-family: 'MyRivanna', sans-serif;
 
 .menu { 
 	grid-area: menu; 
-	background-color: #d2691e;
+	background-color: black;
+	color: #c87354;
 	border: 0.2vw solid #000000;
 	padding: 1vw;
 	overflow: auto;
@@ -99,7 +101,8 @@ font-family: 'MyRivanna', sans-serif;
 .footer { 
 	grid-area: footer; 
 	text-align: center;
-	background-color: #c87354;
+	color: #c87354;
+	background-color: black;
 }
 
 img {
@@ -128,6 +131,7 @@ body {
   font-family: 'MyRivanna', sans-serif;
   font-size: 12vmin;
   font-style: normal;
+  float: left;
 }
 
 /* Style the navigation bar links */
