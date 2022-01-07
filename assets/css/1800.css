@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Libre+Baskerville&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap');*/
 @font-face {
 font-family: MyRivanna;
 src: url("../fonts/RIVANNA_.TTF");
@@ -15,8 +15,8 @@ src: url("../fonts/RIVANNA_.TTF");
 .grid-container {
   display: grid;
   grid-template-areas:
-    'logo header header header header header'
-    'nav nav nav nav nav nav'
+    'logo logo header header header header'
+    'logo logo nav nav nav nav'
     'menu main main main rightUp rightUp'
     'menu main main main rightDown rightDown'
     'footer footer footer footer footer footer';
@@ -24,14 +24,15 @@ src: url("../fonts/RIVANNA_.TTF");
   width:100%;
   margin-top: -0.5vw;
   grid-template-columns: 25vmin 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 5vmin 15vmin 1fr 1fr 5vmin;
+  grid-template-rows: 10vmin 15vmin 1fr 1fr 5vmin;
 }
 
 .logo{
   grid-area: logo;
   background-color: #000000;
+font-size: 2vw;
   color: white;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'MyRivanna', sans-serif;
   padding: 1vw;
   text-align: left;
 }
@@ -40,6 +41,7 @@ src: url("../fonts/RIVANNA_.TTF");
 	grid-area: header;
 	font-family: 'Cinzel Decorative', cursive;
 	text-align: right; 
+	font-size: 4vw;
 	letter-spacing: -0.05vw;
 	position: static;
 	padding: 0.5vw;
