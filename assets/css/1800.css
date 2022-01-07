@@ -117,6 +117,12 @@ body {
   font-family: Arial;
 }
 
+.maincontent div[id^="sec"] p:first-of-type::first-letter {
+  font-family: 'MyRivanna', sans-serif;
+  font-size: 12vmin;
+  font-style: normal;
+}
+
 /* Style the navigation bar links */
 
 .navbar a {
