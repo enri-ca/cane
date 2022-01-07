@@ -151,6 +151,12 @@ weight: 30vw;
 color: red;
 }
 
+.modal-dialog {
+        left: 50%;
+        right: auto;
+        width: 50vmin;
+    }
+
 .highlighted {
   background-color: #ffffcc; 
 }
