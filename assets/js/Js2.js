@@ -106,32 +106,25 @@ function openPopUp(el){
 	clicked_entity.forEach(element => classList.add("highlighted"));
 	(clicked_entity.at(0)).classList.add("highlighted_more");
 	//clicked_entity.classList.add("highlighted");
-	item_with_data = clicked_entity.filter(entity => entity.hasAttribute("data-active"));
-	wikidataID = all_entities[i].getAttribute("data-wikidata-id");
 	//for (i = 0; i < all_entities.length; i++) {
 	//	if (all_entities[i].getAttribute("data-label") == label) {
 	//		all_entities[i].classList.add("highlighted");
 	//		if (all_entities[i].hasAttribute("data-active")) {	
-				//class_name = all_entities[i].getAttribute("class");
-				document.getElementById("PopUpHeader").innerHTML = label;
-				if (item_with_data.hasAttribute("data-wikidata-id")) {
-					wikidataID = item_with_data.getAttribute("data-wikidata-id");
-					document.getElementById("PopUpWikidata").innerHTML = "url es. https://www.wikidata.org/wiki/" + wikidataID;
-					document.getElementById("PopUpWikidata").href = "https://www.wikidata.org/wiki/" + wikidataID;
-					}
-				else {
-					document.getElementById("WikidataIntro").style.display="none"
-					}
-				document.getElementById("MOD_01").style.display="block";
-				}
-			}
-		//else {
-		//	clicked_entity.prototype.pop(all_entities[i]);
-		//	}
-
+	item_with_data = clicked_entity.filter(entity => entity.hasAttribute("data-active"));
+	wikidataID = all_entities[i].getAttribute("data-wikidata-id");
+	//class_name = all_entities[i].getAttribute("class");
+	document.getElementById("PopUpHeader").innerHTML = label;
+	if (item_with_data.hasAttribute("data-wikidata-id")) {
+		wikidataID = item_with_data.getAttribute("data-wikidata-id");
+		document.getElementById("PopUpWikidata").innerHTML = "url es. https://www.wikidata.org/wiki/" + wikidataID;
+		document.getElementById("PopUpWikidata").href = "https://www.wikidata.org/wiki/" + wikidataID;
 		}
+	else {
+		document.getElementById("WikidataIntro").style.display="none"
+		}
+	document.getElementById("MOD_01").style.display="block";
 	}
-
+	
 slide = 0
 function slide_clicked_entity(go) {
 	if (Math.abs(slide) < clicked_entity.length) {
