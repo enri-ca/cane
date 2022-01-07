@@ -142,6 +142,7 @@ function slide_clicked_entity(go){
 		}
 	else {
 		slide = 0
+		(clicked_entity.at(slide-1)).classList.remove("highlighted_more");
 		}
 	(clicked_entity.at(slide)).classList.add("highlighted_more");
 	(clicked_entity.at(slide)).scrollIntoView();
@@ -153,7 +154,7 @@ function slide_clicked_entity(go){
 	//window.scrollTo(0, goto);
 	//const clicked_entity = all_entities.filter(word => word.length > 6);
 	//	var clicked_entity = document.getElementsByClassName("entity").(getAttribute("data-label") == (entity));
-//let label = document.getElementById("PopUpHeader").innerText;
+	//let label = document.getElementById("PopUpHeader").innerText;
 	//var clicked_entity = ((Array.from(all_entities)).filter(entity => entity.getAttribute("data-label") == label).sort()).reverse();
 	//fino a lunghezza array while slide < clicked_entity.length - else slide = 0
 	//for (i = 0; i < all_entities.length; i++) {
