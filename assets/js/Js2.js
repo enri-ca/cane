@@ -97,14 +97,14 @@ function MDV(selection){
 	}
 
 var all_entities = document.getElementsByClassName("entity")
-var clicked_entity = []
+//var clicked_entity = []
 
 //function openPopUp//
 function openPopUp(el){
 	let label = el.innerText;
 	for (i = 0; i < all_entities.length; i++) {
 		if (all_entities[i].getAttribute("data-label") == label) {
-			clicked_entity.prototype.push(all_entities[i]);
+			//clicked_entity.prototype.push(all_entities[i]);
 			all_entities[i].classList.add("highlighted");
 			if (all_entities[i].hasAttribute("data-active")) {	
 				//class_name = all_entities[i].getAttribute("class");
@@ -135,12 +135,11 @@ function slide_clicked_entity(go) {
 	if (go == -1) {
 		slide = slide-1;
 		}
-	//	var entity = document.getElementById("PopUpHeader").innerText;
+	let label = document.getElementById("PopUpHeader").innerText
+	var clicked_entity = all_entities.filter(entity => entity.getAttribute("data-label") == label);
+	//const clicked_entity = all_entities.filter(word => word.length > 6);
 	//	var clicked_entity = document.getElementsByClassName("entity").(getAttribute("data-label") == (entity));
-	//	var testElements = document.getElementsByClassName('test');
-	//var testDivs = Array.prototype.filter.call(all_entities, function(testElement){
-	//  return testElement.nodeName === 'DIV';
-	//});
+
 	//for (i = 0; i < all_entities.length; i++) {
 	//	if (all_entities[i].getAttribute("data-label") == entity) {
 	//		clicked_entity.push(all_entities[i]);
