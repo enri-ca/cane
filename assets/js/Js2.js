@@ -106,7 +106,7 @@ function openPopUp(el){
 	clicked_entity.forEach(element => classList.add("highlighted"))
 	(clicked_entity.at(0)).classList.add("highlighted_more");
 	//clicked_entity.classList.add("highlighted");
-	item_with_data = clicked_entity.filter(entity => entity.hasAttribute("data-active");
+	item_with_data = clicked_entity.filter(entity => entity.hasAttribute("data-active"));
 	wikidataID = all_entities[i].getAttribute("data-wikidata-id");
 	//for (i = 0; i < all_entities.length; i++) {
 	//	if (all_entities[i].getAttribute("data-label") == label) {
