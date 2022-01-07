@@ -149,7 +149,7 @@ function slide_clicked_entity(go){
 		}
 	(clicked_entity.at(slide)).classList.add("highlighted_more");
 	(clicked_entity.at(slide)).scrollIntoView();
-	document.getElementById("counter_occurrencies").innerText = slide+1;
+	document.getElementById("counter_occurrencies").innerText = (slide+1);
 	}
 
 //function slide occurrencies//
