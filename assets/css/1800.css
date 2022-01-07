@@ -32,9 +32,9 @@ src: url("../fonts/RIVANNA_.TTF");
 
 .logo{
   grid-area: logo;
-  background-color: d2691e;
+  background-color: #c87354;
 font-size: 3vw;
-  color: sepia;
+  color: black;
   font-family: 'MyRivanna', sans-serif;
   padding: 1vw;
   text-align: left;
@@ -50,6 +50,7 @@ font-size: 3vw;
 	letter-spacing: -0.05vw;
 	position: static;
 	padding: 0.5vw;
+	background-color: #c87354;
 }
 
 .navbar{
@@ -63,7 +64,7 @@ font-family: 'MyRivanna', sans-serif;
 
 .menu { 
 	grid-area: menu; 
-	background-color: #ededed;
+	background-color: #d2691e;
 	border: 0.2vw solid #000000;
 	padding: 1vw;
 	overflow: auto;
@@ -98,7 +99,7 @@ font-family: 'MyRivanna', sans-serif;
 .footer { 
 	grid-area: footer; 
 	text-align: center;
-	background-color: d2691e;
+	background-color: #c87354;
 }
 
 img {
