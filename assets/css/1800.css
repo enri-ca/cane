@@ -26,8 +26,8 @@ src: url("../fonts/RIVANNA_.TTF");
   height: 100vmin;
   width:100%;
   margin-top: -0.5vw;
-  grid-template-columns: 25vmin 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 10vmin 15vmin 1fr 1fr 5vmin;
+  grid-template-columns: 25vmax 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 10vmax 15vmax 1fr 1fr 5vmax;
 }
 
 .logo{
@@ -55,6 +55,8 @@ font-size: 2vw;
   grid-area: nav;
   background-color: black;
 font-family: 'MyRivanna', sans-serif;
+	
+	position: static;
   /*display: flex; manca blocco allo scorrimento in alto*/
 }
 
