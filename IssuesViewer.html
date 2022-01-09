@@ -15,9 +15,9 @@
   <body>
     <!-- GRID -->
     <div class="grid-container">
-	    
-      <div class="logo">LLLL (Leisurely LusciousLiteraryLens) oppure mettere immagine</div>
-      <div class="header">THECIRCUSMAGAZINE</span></div>
+	<div class="logo"><p>Leisurely</p><p>Luscious</p><p>Literary</p><p>Lens</p></div>
+	<div class="header">THECIRCUSMAGAZINE</span></div>
+	<div class="sep"></div>
       
       <!-- NAVBAR -->
       <nav class="navbar">
@@ -34,10 +34,12 @@
 		  <li class="nav-item"><a class="nav-link" href="#Documentation">Documentation</a></li>
 		  <li class="nav-item"><a class="nav-link" href="#About">About</a></li>
 		</ul>
-		<hr class="lineanavbar">
-		<ul class="navbar-nav" align="right">				  
-		  <button class="nav-item active" onclick="slide_articles()">change main article&raquo;</button>
-		  <button class="nav-item" onclick="change_css('assets/css/default.css')">reset style</button>
+		<!--hr class="lineanavbar"-->
+	      	<ul class="navbar-nav-selector" align="right">
+		<!--ul class="navbar-nav" align="right"-->				  
+		  <!--button class="nav-item active" onclick="slide_articles()">change main article&raquo;</button-->
+		<button class="buttons" onclick="slide_articles()">change main article&raquo;</button>
+		  <button class="buttons" onclick="change_css('assets/css/default.css')">reset style</button>
 		  <li class="nav-item"><a class="nav-link" href="#" onclick="change_css('assets/css/pre1800.css')">-1799</a></li>
 		  <li class="nav-item"><a class="nav-link" href="#" onclick="change_css('assets/css/1800.css')">1800</a></li>
 		  <li class="nav-item"><a class="nav-link" href="#" onclick="change_css('assets/css/1900_50.css')">1900-1950</a></li>
@@ -50,10 +52,11 @@
 	  
       <!-- MENU -->
       <div class="menu">
-        <!-- Paragraph, inserire funzione per apparizione issue title -->
-	<h3>About this issue</h3>
+          <!-- Paragraph, inserire funzione per apparizione issue title -->
+	  <!--p id="menutitle">About</p><p>this issue</p-->
+	<!--h3>About this issue</h3-->
 	<div id=issue_title><h4>Circus and cultural studies</h4></div>
-	<!-- paragraph end-->
+	  <!-- paragraph end-->
 	      
 	  <!-- MDViewer: strutturato a navbar, forse meglio un accordion?-->
 	  <nav class="navbar">
@@ -74,25 +77,26 @@
 	    </nav>
 	    <!-- MDViewer end-->
 	      
-	    <!-- Title Articles part -->
-	
+	      <!-- Articles metadata part: messo un js che carica tutto l'html della issue, se si cambiano id, cambiare dati nel js -->
 		<div id="issue_metadata">
-			<h6 id="main_art_title">1.1 From the Fair Theatre to the Modern Circus. Main article</h6>
+			<h6 id="main_art_title"> da sovrascrivere col java1.1 From the Fair Theatre to the Modern Circus. Main article</h6>
 			<p id="main_art_url"><a href="http://dx.doi.org/10.1590/2237-266093237">original version</a></p>
 			<h6 id="guest_art_title">1.2 El lugar de la diferencia en Chile:circo y transformismo. El caso del Circo Timoteo. Guest article</h6>
 			<p id="guest_art_url"><a href="https://raco.cat/index.php/DocumentsAnalisi/article/view/259380/346596">original version</a></p>
 			<h6 id="rev_art_title">1.3 The Semiotics of Clowns and Clowning: Rituals of Transgression and the Theory of Laughter. Book review</h6>
 			<p id="rev_art_url"><a href="https://europeanjournalofhumour.org/ejhr/article/view/126">original version</a></p>
 		</div>      
-
+	      <!-- End Articles metadata part -->
+	      
 	    <!-- Modal hidden -->
-	    <div id="MOD_01" class="w3-modal" data-backdrop="false">
+	    <div id="MOD_01" class="w3-modal">
 			  <div class="w3-modal-content">
 				<div class="w3-container">
 				  	<span onclick="closePopUp()" class="w3-button w3-display-topright">&times;</span>
 				  	<h4 id="PopUpHeader">class and entity</h4>
-					<p id="WikidataIntro">More info at: <a id="PopUpWikidata" href="">wikidata ref</a></p>
-					<p><span>Occurencies in the issue: <span id="counter_occurrencies"></span>/<span id="tot_occurrencies"></span></span>
+					<p id="WikidataIntro">More info at: <a id="PopUpWikidata" href="" target="_blank">wikidata ref</a></p>
+					<p><span>Occurencies in the issue: </span>
+					<span id="counter_occurrencies"></span>/<span id="tot_occurrencies"></span></span>
 						<a href="#" onclick="slide_clicked_entity(-1)" class="previous">&laquo; Previous</a>
 						<a href="#" onclick="slide_clicked_entity(1)" class="next">Next &raquo;</a>
 					</p>
@@ -101,7 +105,7 @@
 		</div>
       	      <!-- Modal hidden end -->
 	   <!-- Paragraph se serve -->
-	   <p>altre cose che servisero</p>
+	   <!-- p>altre cose che servisero</p -->
 	   <!-- paragraph end-->
       </div><!-- MENU end -->
 
