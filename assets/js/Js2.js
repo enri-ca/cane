@@ -51,6 +51,7 @@ function slide_articles(){
 		$("#artM").load(art2);
 		$("#artL1").load(art3);
 		$("#artL2").load(art1);
+		document.getElementById("guest_art_title").classList.add("highlighted");
 		}
 	if (counter==2) {
 		$("#artM").load(art3);
