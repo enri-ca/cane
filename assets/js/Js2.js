@@ -156,7 +156,7 @@ function slide_clicked_entity(go){
 	else {
 			entity_counter=clicked_entity.lenght+slide+1
 	}
-	document.getElementById("counter_occurrencies").innerText = (entity_counter).toString();
+	document.getElementById("counter_occurrencies").innerText = String(entity_counter);
 	}
 
 //function slide occurrencies//
