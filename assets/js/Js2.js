@@ -85,7 +85,7 @@ function MDV(selection){
 	for (let i = 0; i < myarray.length; i++) {
 		if (myarray[i].hasAttribute("data-active")){
 			array_label.push(myarray[i].getAttribute("data-label"));
-			array_label_sorted.push((myarray[i].getAttribute("data-label").toLowerCase());
+			array_label_sorted.push((myarray[i].getAttribute("data-label")).toLowerCase());
 			}
 		}
 	(array_label_sorted).sort()
