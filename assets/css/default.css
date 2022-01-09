@@ -2,7 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Lato&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap');
+@font-face{
+  src: url(assets/fonts/quentincaps.regular.ttf);
+  font-family: QuentinCaps;
+}
 * {
   box-sizing: border-box;
 }
@@ -12,6 +16,7 @@
   display: grid;
   grid-template-areas:
     'logo header header header header header'
+    'sep sep sep sep sep sep'
     'nav nav nav nav nav nav'
     'menu main main main rightUp rightUp'
     'menu main main main rightDown rightDown'
@@ -19,8 +24,12 @@
   height: 100vmin;
   width:100%;
   margin-top: -0.5vw;
-  grid-template-columns: 25vmin 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 5vmin 15vmin 1fr 1fr 5vmin;
+  /*grid-template-columns: 25vmin 1fr 1fr 1fr 1fr 1fr;*/
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  /*grid-template-rows: 15vmin 2vmin 13vw 1fr 1fr 10vmin;*/
+  grid-template-rows: 0.2fr 0.3fr 0.8fr 2.1fr 2.1fr 0.3fr;
+  /*ricordiamoci che dobbiamo ragionare in 12imi */
+
 }
 
 .logo{
@@ -33,82 +42,110 @@
 }
 
 .header { 
-	grid-area: header;
-	font-family: 'Oswald', sans-serif;
-	text-align: right; 
-	letter-spacing: -0.05vw;
-	position: static;
-	padding: 0.5vw;
+  grid-area: header;
+  font-family: QuentinCaps;
+  font-size: 4.5vw;
+  text-shadow: 4px 4px 16px white;
+  text-align: center; 
+  letter-spacing: -0.05vw;
+  position: static;
+  padding: 0.5vw;
+  background-image: url("sfondo.jpg");
+  background-size: 100%;
+  background-position: center;
 }
+
+.sep {
+  grid-area: sep;
+  background-color: black; 
+}
+
 
 .navbar{
   grid-area: nav;
-  background-color: black;
+  background-color: #dfbfbf;
+  font-family:'Cinzel', serif;
+  font-size: 1.2vw;
+  color: black;
   /*display: flex; manca blocco allo scorrimento in alto*/
 }
 
 .menu { 
-	grid-area: menu; 
-	background-color: #ededed;
-	border: 0.2vw solid #000000;
-	padding: 1vw;
-	overflow: auto;
+  grid-area: menu; 
+  background-color: #ededed;
+  border: 0.2vw solid #000000;
+  padding: 1vw;
+  overflow: auto;
 }
 
+#menutitle{
+  font-family: QuentinCaps;
+  font-size: 2.5vw;
+  letter-spacing: 0.2vw;
+  text-shadow: 2px 2px 5px #dfbfbf;
+  text-align: center;
+}
 .boxM { 
-	grid-area: main; 
-	overflow: auto;
-	border-top: 0.2vw solid #000000;
-	border-bottom: 0.2vw solid #000000;
-	padding:2vw;
+  grid-area: main; 
+  overflow: auto;
+  border-top: 0.2vw solid #000000;
+  border-bottom: 0.2vw solid #000000;
+  padding:2vw;
 }
 
 .boxRU { 
-	grid-area: rightUp; 
-	overflow:auto;
-	border-right: 0.2vw solid #000000;
-	border-top: 0.2vw solid #000000;
-	border-left: 0.2vw solid #000000;
-	padding:2vw;
+  grid-area: rightUp; 
+  overflow:auto;
+  border-right: 0.2vw solid #000000;
+  border-top: 0.2vw solid #000000;
+  border-left: 0.2vw solid #000000;
+  padding:2vw;
 }
 
 .boxRD { 
-	grid-area: rightDown;
-	overflow:auto;
-	border: 0.2vw solid #000000;
-	padding:2vw
+  grid-area: rightDown;
+  overflow:auto;
+  border: 0.2vw solid #000000;
+  padding:2vw
 }
 
 .footer { 
-	grid-area: footer; 
-	text-align: center;
+  grid-area: footer; 
+  text-align: center;
+  color: black;
+  background-color: #f2e6e6;
+  font-family: 'Cinzel', serif;
+  font-size: 1vw;
 }
 
-/* Responsive layout - when the screen is less than xxpx (o vmin??) wide, make the grid items stack on top of each other instead of next to each other */
+/* Responsive layout - when the screen is less than xxpx (o vmin??) wide, make the grid items stack on top of each other instead of next to each other 
 
 @media screen and (max-width: 500px) {
-	height: 100vmax;
-  	width:100vmin;
-	.logo { display: none; }
-	.header { grid-area: 1 / 1 / 2 / span 6 ; }
-	.navbar { grid-area: 2 / 1 / 3 / span 6 ; }
-	.menu { grid-area: 3 / 1 / 4 / span 6 ;  }
-	.boxM { grid-area: 4 / 1 / 6 / span 6 ; }
-	.boxRU { grid-area: 6 / 1 / 8 / span 6 ;  }
-	.boxRD { grid-area: 8 / 1 / 10 / span 6 ; }
-	.footer{ grid-area: 10 / 1 / 11 / span 6 ; }
-}
+  .logo { display: none; }
+  .header { grid-area: 1 / 1 / 2 / span 6 ; }
+  .navbar { grid-area: 2 / 1 / 3 / span 6 ; }
+  .menu { grid-area: 3 / 1 / 4 / span 6 ;  }
+  .boxM { grid-area: 4 / 1 / 6 / span 6 ; }
+  .boxRU { grid-area: 6 / 1 / 8 / span 6 ;  }
+  .boxRD { grid-area: 8 / 1 / 10 / span 6 ; }
+  .footer{ grid-area: 10 / 1 / 11 / span 6 ; }
+}*/
 
 /* Style the body or other elements*/
 body {
   font-family: Arial;
+  margin: 0;
+  overflow-y: hidden;
 }
 
 /* Style the navigation bar links */
-
+.navbar-nav {
+  background-color: #f2e6e6;
+}
 .navbar a {
-  color: white;
+  color: black;
   padding: 0.1vw 0.2vw;
+  margin-right: 0.5vw;
   text-decoration: none;
   text-align: center;
 }
@@ -119,7 +156,7 @@ body {
 }
 
 .nav-item, .dropdown li, a {
-	display: inline-block;
+  display: inline-block;
 }
 
 .dropdown:hover .dropdown-menu {
@@ -132,7 +169,7 @@ body {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
-  min-width: 10vw;
+  min-width: 20vw;
   /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
   z-index: 1;
 }
@@ -145,19 +182,13 @@ body {
   text-align: left;
 }
 
-
-/*2022-01-06*/
-.modal {
-position: top-left absolute !important;
-weight: 30vw;
-color: red;
+img {
+  width: 100%
 }
 
-.modal-dialog {
-        left: 50%;
-        right: auto;
-        width: 50vmin;
-    }
+/*.entity {
+  background-color: #ffe6e6;
+}*/
 
 .highlighted {
   background-color: #ffffcc; 
@@ -167,37 +198,24 @@ color: red;
   background-color: red; 
 }
 
-.modal-backdrop
-{
-    opacity:0 !important;
+.navbar-nav-selector {
+background-color: #c68c8c;
+margin-top: 2.5vmin;
 }
 
-/*.previous {
-  background-color: #f1f1f1;
-  color: black;
-}
-
-.next {
-  background-color: #04AA6D;
-  color: white;
-}*/
-
-/*.navbar-nav ul, li {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  background-color: ;
-}*/
-/*li a:hover, .dropdown:hover .nav-item {
-  background-color: #ddd;
-}
-
-li .dropdown {
+.buttons {
+  border: none;
+  text-align: center;
+  text-decoration: none;
   display: inline-block;
-}*/
+  float: left;
+  cursor: pointer;
+  text-align: center;
+  color: white;
+  background-color: #993333;
+  margin-right: 1vmin;
+  font-family: 'Cinzel', serif;
+  font-size: 1.2vw;
 
-
-/* Higlight the entities and the references */
-/*.entity {
-  background-color: #ffe6e6;
-}*/
+  
+}
