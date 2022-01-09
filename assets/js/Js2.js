@@ -8,7 +8,7 @@ var art1, art2, art3, metadata_issue
 art1 = "1_1.html";
 art2 = "1_2.html";
 art3 = "1_3.html";
-metadata_issue = '<div><h6>1.1	From the Fair Theatre to the Modern Circus. Main article</h6><p><a href="http://dx.doi.org/10.1590/2237-266093237">original version</a></p><h6>1.2 El lugar de la diferencia en Chile:circo y transformismo. El caso del Circo Timoteo. Guest article</h6>			<p><a href="https://raco.cat/index.php/DocumentsAnalisi/article/view/259380/346596">original version</a></p><h6>1.3 The Semiotics of Clowns and Clowning: Rituals of Transgression and the Theory of Laughter. Book review</h6><p><a href="https://europeanjournalofhumour.org/ejhr/article/view/126">original version</a></p></div>'
+metadata_issue = '<div><h6>1.1	From the Fair Theatre to the Modern Circus. Main article</h6><p><a href="http://dx.doi.org/10.1590/2237-266093237">original version</a></p><h6>1.2 El lugar de la diferencia en Chile:circo y transformismo. El caso del Circo Timoteo. Guest article</h6>			<p><a href="https://raco.cat/index.php/DocumentsAnalisi/article/view/259380/346596">original version</a></p><h6>1.3 The Semiotics of Clowns and Clowning: Rituals of Transgression and the Theory of Laughter. Book review</h6><p><a href="https://europeanjournalofhumour.org/ejhr/article/view/126">original version</a></p></div>';
 	 
 //function load default article in the IssuesViewer page//
 $(document).ready(function(){
@@ -23,24 +23,24 @@ function change_issue(issue) {
 		art1 = "1_1.html";
 		art2 = "1_2.html";
 		art3 = "1_3.html";
-		metadata_issue = '<div><h6>1.1	From the Fair Theatre to the Modern Circus. Main article</h6><p><a href="http://dx.doi.org/10.1590/2237-266093237">original version</a></p><h6>1.2 El lugar de la diferencia en Chile:circo y transformismo. El caso del Circo Timoteo. Guest article</h6>			<p><a href="https://raco.cat/index.php/DocumentsAnalisi/article/view/259380/346596">original version</a></p><h6>1.3 The Semiotics of Clowns and Clowning: Rituals of Transgression and the Theory of Laughter. Book review</h6><p><a href="https://europeanjournalofhumour.org/ejhr/article/view/126">original version</a></p></div>'
+		metadata_issue = '<div><h6>1.1	From the Fair Theatre to the Modern Circus. Main article</h6><p><a href="http://dx.doi.org/10.1590/2237-266093237">original version</a></p><h6>1.2 El lugar de la diferencia en Chile:circo y transformismo. El caso del Circo Timoteo. Guest article</h6>			<p><a href="https://raco.cat/index.php/DocumentsAnalisi/article/view/259380/346596">original version</a></p><h6>1.3 The Semiotics of Clowns and Clowning: Rituals of Transgression and the Theory of Laughter. Book review</h6><p><a href="https://europeanjournalofhumour.org/ejhr/article/view/126">original version</a></p></div>';
 	  	}
 	if (issue == 2) {
 		art1 = "2_1.html";
 		art2 = "2_2.html";
 		art3 = "2_3.html";
-		metadata_issue = '<div><h6>2.1	.....</h6><p><a href="http://dx.doi.org/10.1590/2237-266093237">original version</a></p><h6>1.2 El lugar de la diferencia en Chile:circo y transformismo. El caso del Circo Timoteo. Guest article</h6>			<p><a href="https://raco.cat/index.php/DocumentsAnalisi/article/view/259380/346596">original version</a></p><h6>1.3 The Semiotics of Clowns and Clowning: Rituals of Transgression and the Theory of Laughter. Book review</h6><p><a href="https://europeanjournalofhumour.org/ejhr/article/view/126">original version</a></p></div>'
+		metadata_issue = '<div><h6>2.1	.....</h6><p><a href="http://dx.doi.org/10.1590/2237-266093237">original version</a></p><h6>1.2 El lugar de la diferencia en Chile:circo y transformismo. El caso del Circo Timoteo. Guest article</h6>			<p><a href="https://raco.cat/index.php/DocumentsAnalisi/article/view/259380/346596">original version</a></p><h6>1.3 The Semiotics of Clowns and Clowning: Rituals of Transgression and the Theory of Laughter. Book review</h6><p><a href="https://europeanjournalofhumour.org/ejhr/article/view/126">original version</a></p></div>';
 		}
 	if (issue == 3) {
 		art1 = "3_1.html";
 		art2 = "3_2.html";
 		art3 = "3_3.html";
-		metadata_issue = '<div><h6>3.1	....ain article</h6><p><a href="http://dx.doi.org/10.1590/2237-266093237">original version</a></p><h6>1.2 El lugar de la diferencia en Chile:circo y transformismo. El caso del Circo Timoteo. Guest article</h6>			<p><a href="https://raco.cat/index.php/DocumentsAnalisi/article/view/259380/346596">original version</a></p><h6>1.3 The Semiotics of Clowns and Clowning: Rituals of Transgression and the Theory of Laughter. Book review</h6><p><a href="https://europeanjournalofhumour.org/ejhr/article/view/126">original version</a></p></div>'
-	}
+		metadata_issue = '<div><h6>3.1	....ain article</h6><p><a href="http://dx.doi.org/10.1590/2237-266093237">original version</a></p><h6>1.2 El lugar de la diferencia en Chile:circo y transformismo. El caso del Circo Timoteo. Guest article</h6>			<p><a href="https://raco.cat/index.php/DocumentsAnalisi/article/view/259380/346596">original version</a></p><h6>1.3 The Semiotics of Clowns and Clowning: Rituals of Transgression and the Theory of Laughter. Book review</h6><p><a href="https://europeanjournalofhumour.org/ejhr/article/view/126">original version</a></p></div>';	}
 	$("#artM").load(art1);
 	$("#artL1").load(art2);
 	$("#artL2").load(art3);
-	$("#issue_metadata").innerHTML = metadata_issue
+	document.getElementById("issue_metadata").innerHTML = metadata_issue;
+	//$("#issue_metadata").innerHTML = metadata_issue
 	}
 
 //function slide_articles() in an issue//
