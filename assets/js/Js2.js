@@ -6,12 +6,12 @@ function change_css(style) {
 	}
 
 //set variables for the 3 articles and their metadata in the 3 issues//
-var art1, art2, art3, metadata_issue
-art1 = '1_1.html';
-art2 = '1_2.html';
-art3 = '1_3.html';
-issue_id = 'I1';
-metadata_issue = '<h6 id="main_art_title">1.1 From the Fair Theatre to the Modern Circus. Main article</h6><p id="main_art_url"><a href="http://dx.doi.org/10.1590/2237-266093237">original version</a></p><h6 id="guest_art_title">1.2 El lugar de la diferencia en Chile:circo y transformismo. El caso del Circo Timoteo. Guest article</h6><p id="guest_art_url"><a href="https://raco.cat/index.php/DocumentsAnalisi/article/view/259380/346596">original version</a></p><h6 id="rev_art_title">1.3 The Semiotics of Clowns and Clowning: Rituals of Transgression and the Theory of Laughter. Book review</h6><p id="rev_art_url"><a href="https://europeanjournalofhumour.org/ejhr/article/view/126">original version</a></p>';
+//var art1, art2, art3, metadata_issue
+//art1 = '1_1.html';
+//art2 = '1_2.html';
+//art3 = '1_3.html';
+//issue_id = 'I1';
+//metadata_issue = '<h6 id="main_art_title">1.1 From the Fair Theatre to the Modern Circus. Main article</h6><p id="main_art_url"><a href="http://dx.doi.org/10.1590/2237-266093237">original version</a></p><h6 id="guest_art_title">1.2 El lugar de la diferencia en Chile:circo y transformismo. El caso del Circo Timoteo. Guest article</h6><p id="guest_art_url"><a href="https://raco.cat/index.php/DocumentsAnalisi/article/view/259380/346596">original version</a></p><h6 id="rev_art_title">1.3 The Semiotics of Clowns and Clowning: Rituals of Transgression and the Theory of Laughter. Book review</h6><p id="rev_art_url"><a href="https://europeanjournalofhumour.org/ejhr/article/view/126">original version</a></p>';
 
 //function load default article in the IssuesViewer page//
 $(document).ready(function(){
@@ -45,7 +45,8 @@ function change_issue(issue) {
 		//art1 = "2_1.html";
 		//art2 = "2_2.html";
 		//art3 = "2_3.html";
-		metadata_issue = '<h6 id="main_art_title">2.1 Freaks (1932): Dysmorphisms, Solidarity and Revenge. Main article</h6><p id="main_art_url"><a href="http://dx.doi.org/10.1590/2237-266093237">original version</a></p><h6 id="guest_art_title">2.2 Esperienze musicali nel Circo Paniko. Guest article</h6><p id="guest_art_url"><a href="https://revistas.usal.es/index.php/medicina_y_cine/article/view/68/91">original version</a></p><h6 id="rev_art_title">2.3 The Circus as a Parallel Universe. Book review</h6><p id="rev_art_url"><a href="https://we-make-money-not-art.com/the_circus_as_a_parallel_unive/">original version</a></p>';
+		metadata_issue = '<h6 id="main_art_title">' + issue + '.2' + document.querySelector('div.title_art > h2').innerText + '. Main article</h6>';
+		//metadata_issue = '<h6 id="main_art_title">2.1 Freaks (1932): Dysmorphisms, Solidarity and Revenge. Main article</h6><p id="main_art_url"><a href="http://dx.doi.org/10.1590/2237-266093237">original version</a></p><h6 id="guest_art_title">2.2 Esperienze musicali nel Circo Paniko. Guest article</h6><p id="guest_art_url"><a href="https://revistas.usal.es/index.php/medicina_y_cine/article/view/68/91">original version</a></p><h6 id="rev_art_title">2.3 The Circus as a Parallel Universe. Book review</h6><p id="rev_art_url"><a href="https://we-make-money-not-art.com/the_circus_as_a_parallel_unive/">original version</a></p>';
 		}
 	if (issue == 3) {
 		//art1 = "3_1.html";
