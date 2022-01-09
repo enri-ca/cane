@@ -107,7 +107,7 @@ function openPopUp(el){
 	(clicked_entity.at(0)).scrollIntoView();
 	item_with_data = clicked_entity.filter(entity => entity.hasAttribute("data-active"));
 	document.getElementById("PopUpHeader").innerHTML = label;
-	document.getElementById("counter_occurrencies").innerText = "1";
+	document.getElementById("counter_occurrencies").innerText = 1;
 	document.getElementById("tot_occurrencies").innerText = clicked_entity.length;
 	if (item_with_data[0].hasAttribute("data-wikidata-id")) {
 		wikidataID = item_with_data[0].getAttribute("data-wikidata-id");
