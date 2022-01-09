@@ -1,20 +1,25 @@
+//copia Js per prove modifica su mainframe2//
+
 //function change_css//
 function change_css(style) {
 	document.getElementById('css').href = style
 	}
 
-//set variables for the 3 articles in the 3 issues//
+//set variables for the 3 articles and their metadata in the 3 issues//
 var art1, art2, art3, metadata_issue
 art1 = "1_1.html";
 art2 = "1_2.html";
 art3 = "1_3.html";
-metadata_issue = '<div><h6>1.1	From the Fair Theatre to the Modern Circus. Main article</h6><p><a href="http://dx.doi.org/10.1590/2237-266093237">original version</a></p><h6>1.2 El lugar de la diferencia en Chile:circo y transformismo. El caso del Circo Timoteo. Guest article</h6>			<p><a href="https://raco.cat/index.php/DocumentsAnalisi/article/view/259380/346596">original version</a></p><h6>1.3 The Semiotics of Clowns and Clowning: Rituals of Transgression and the Theory of Laughter. Book review</h6><p><a href="https://europeanjournalofhumour.org/ejhr/article/view/126">original version</a></p></div>';
-	 
+metadata_issue = '<h6 id="main_art_title">1.1 From the Fair Theatre to the Modern Circus. Main article</h6><p id="main_art_url"><a href="http://dx.doi.org/10.1590/2237-266093237">original version</a></p><h6 id="guest_art_title">1.2 El lugar de la diferencia en Chile:circo y transformismo. El caso del Circo Timoteo. Guest article</h6><p id="guest_art_url"><a href="https://raco.cat/index.php/DocumentsAnalisi/article/view/259380/346596">original version</a></p><h6 id="rev_art_title">1.3 The Semiotics of Clowns and Clowning: Rituals of Transgression and the Theory of Laughter. Book review</h6><p id="rev_art_url"><a href="https://europeanjournalofhumour.org/ejhr/article/view/126">original version</a></p>';
+issue_title = 'Circus and cultural studies'
+
 //function load default article in the IssuesViewer page//
 $(document).ready(function(){
 	$("#artM").load(art1);
 	$("#artL1").load(art2);
 	$("#artL2").load(art3);
+	document.getElementById("issue_metadata").innerHTML = metadata_issue;
+	document.getElementById("issue_title").innerHTML = issue_title;
 	})
 
 //function change_issue//
@@ -23,24 +28,30 @@ function change_issue(issue) {
 		art1 = "1_1.html";
 		art2 = "1_2.html";
 		art3 = "1_3.html";
-		metadata_issue = '<div><h6>1.1	From the Fair Theatre to the Modern Circus. Main article</h6><p><a href="http://dx.doi.org/10.1590/2237-266093237">original version</a></p><h6>1.2 El lugar de la diferencia en Chile:circo y transformismo. El caso del Circo Timoteo. Guest article</h6>			<p><a href="https://raco.cat/index.php/DocumentsAnalisi/article/view/259380/346596">original version</a></p><h6>1.3 The Semiotics of Clowns and Clowning: Rituals of Transgression and the Theory of Laughter. Book review</h6><p><a href="https://europeanjournalofhumour.org/ejhr/article/view/126">original version</a></p></div>';
-	  	}
+	  	metadata_issue = '<h6 id="main_art_title">1.1 From the Fair Theatre to the Modern Circus. Main article</h6><p id="main_art_url"><a href="http://dx.doi.org/10.1590/2237-266093237">original version</a></p><h6 id="guest_art_title">1.2 El lugar de la diferencia en Chile:circo y transformismo. El caso del Circo Timoteo. Guest article</h6><p id="guest_art_url"><a href="https://raco.cat/index.php/DocumentsAnalisi/article/view/259380/346596">original version</a></p><h6 id="rev_art_title">1.3 The Semiotics of Clowns and Clowning: Rituals of Transgression and the Theory of Laughter. Book review</h6><p id="rev_art_url"><a href="https://europeanjournalofhumour.org/ejhr/article/view/126">original version</a></p>';
+		issue_title = 'Circus and cultural studies'
+		}
 	if (issue == 2) {
 		art1 = "2_1.html";
 		art2 = "2_2.html";
 		art3 = "2_3.html";
-		metadata_issue = '<div><h6>2.1	.....</h6><p><a href="http://dx.doi.org/10.1590/2237-266093237">original version</a></p><h6>1.2 El lugar de la diferencia en Chile:circo y transformismo. El caso del Circo Timoteo. Guest article</h6>			<p><a href="https://raco.cat/index.php/DocumentsAnalisi/article/view/259380/346596">original version</a></p><h6>1.3 The Semiotics of Clowns and Clowning: Rituals of Transgression and the Theory of Laughter. Book review</h6><p><a href="https://europeanjournalofhumour.org/ejhr/article/view/126">original version</a></p></div>';
+		metadata_issue = '<h6 id="main_art_title">2.1 Freaks (1932): Dysmorphisms, Solidarity and Revenge. Main article</h6><p id="main_art_url"><a href="http://dx.doi.org/10.1590/2237-266093237">original version</a></p><h6 id="guest_art_title">2.2 Esperienze musicali nel Circo Paniko. Guest article</h6><p id="guest_art_url"><a href="https://revistas.usal.es/index.php/medicina_y_cine/article/view/68/91">original version</a></p><h6 id="rev_art_title">2.3 The Circus as a Parallel Universe. Book review</h6><p id="rev_art_url"><a href="https://we-make-money-not-art.com/the_circus_as_a_parallel_unive/">original version</a></p>';
+		issue_title = 'Circus and the Arts'
 		}
 	if (issue == 3) {
 		art1 = "3_1.html";
 		art2 = "3_2.html";
 		art3 = "3_3.html";
-		metadata_issue = '<div><h6>3.1	....ain article</h6><p><a href="http://dx.doi.org/10.1590/2237-266093237">original version</a></p><h6>1.2 El lugar de la diferencia en Chile:circo y transformismo. El caso del Circo Timoteo. Guest article</h6>			<p><a href="https://raco.cat/index.php/DocumentsAnalisi/article/view/259380/346596">original version</a></p><h6>1.3 The Semiotics of Clowns and Clowning: Rituals of Transgression and the Theory of Laughter. Book review</h6><p><a href="https://europeanjournalofhumour.org/ejhr/article/view/126">original version</a></p></div>';	}
+		metadata_issue = '<h6 id="main_art_title">3.1 Building Resilience by Becoming a Circus Artist. Main article</h6><p id="main_art_url"><a href="https://doi.org/10.1093/jrs/fez091">original version</a></p><h6 id="guest_art_title">3.2	Enseigner les arts du cirque au collège : une dévolution artistique. Guest article</h6><p id="guest_art_url"><a href="https://journals.openedition.org/ejrieps/1362?lang=en">original version</a></p><h6 id="rev_art_title">3.3	The Welfare of Performing Animals. A Historical Perspective. Book review</h6><p id="rev_art_url"><a href="https://doi.org/10.3390/ani6110076">original version</a></p>';
+		issue_title = 'Social Circus'
+		}
 	$("#artM").load(art1);
 	$("#artL1").load(art2);
 	$("#artL2").load(art3);
+	document.getElementById("issue_title").innerHTML = issue_title;
 	document.getElementById("issue_metadata").innerHTML = metadata_issue;
-	//$("#issue_metadata").innerHTML = metadata_issue
+	document.getElementById("main_art_title").classList.add("highlighted");
+	document.getElementById("main_art_url").classList.add("highlighted");
 	}
 
 //function slide_articles() in an issue//
@@ -51,18 +62,29 @@ function slide_articles(){
 		$("#artM").load(art2);
 		$("#artL1").load(art3);
 		$("#artL2").load(art1);
+		document.getElementById("main_art_title").classList.remove("highlighted");
+		document.getElementById("main_art_url").classList.remove("highlighted");
 		document.getElementById("guest_art_title").classList.add("highlighted");
+		document.getElementById("guest_art_url").classList.add("highlighted");
 		}
 	if (counter==2) {
 		$("#artM").load(art3);
 		$("#artL1").load(art1);
 		$("#artL2").load(art2);
+		document.getElementById("guest_art_title").classList.remove("highlighted");
+		document.getElementById("guest_art_url").classList.remove("highlighted");
+		document.getElementById("rev_art_title").classList.add("highlighted");
+		document.getElementById("rev_art_url").classList.add("highlighted");
 		}	
 	if (counter==3) {
 		$("#artM").load(art1);
 		$("#artL1").load(art2);
 		$("#artL2").load(art3);
 		counter = 0;
+		document.getElementById("rev_art_title").classList.remove("highlighted");
+		document.getElementById("rev_art_url").classList.remove("highlighted");
+		document.getElementById("main_art_title").classList.add("highlighted");
+		document.getElementById("main_art_url").classList.add("highlighted");
 		}
 	}
 
@@ -92,7 +114,7 @@ function MDV(selection){
 			array_label.push(myarray[i].getAttribute("data-label"));
 			}
 		}
-	array_label.sort()
+	array_label.sort();
 	let text = "";
 	for (let i = 0; i < array_label.length; i++) {
 		//text += '<li> <a onclick="highlight(this)" about="'+ myarray[i].getAttribute("about") + '">' + myarray[i].getAttribute("data-label") + '</a></li>';
@@ -102,6 +124,7 @@ function MDV(selection){
 	document.getElementById(id).innerHTML = text;
 	}
 
+//set a global variable with all the entities to be recalled if needed//
 var all_entities = document.getElementsByClassName("entity")
 
 //function openPopUp//
@@ -117,7 +140,7 @@ function openPopUp(el){
 	document.getElementById("tot_occurrencies").innerText = clicked_entity.length;
 	if (item_with_data[0].hasAttribute("data-wikidata-id")) {
 		wikidataID = item_with_data[0].getAttribute("data-wikidata-id");
-		document.getElementById("PopUpWikidata").innerHTML = "https://www.wikidata.org/wiki/" + wikidataID;
+		document.getElementById("PopUpWikidata").innerHTML = "url es. https://www.wikidata.org/wiki/" + wikidataID;
 		document.getElementById("PopUpWikidata").href = "https://www.wikidata.org/wiki/" + wikidataID;
 		}
 	else {
@@ -125,7 +148,7 @@ function openPopUp(el){
 		}
 	document.getElementById("MOD_01").style.display="block";
 	}
-	//clicked_entity.classList.add("highlighted");
+	//cambiata la ricorsività per filtri: clicked_entity.classList.add("highlighted");
 	//for (i = 0; i < all_entities.length; i++) {
 	//	if (all_entities[i].getAttribute("data-label") == label) {
 	//		all_entities[i].classList.add("highlighted");
@@ -133,7 +156,7 @@ function openPopUp(el){
 	//wikidataID = all_entities[i].getAttribute("data-wikidata-id");
 	//class_name = all_entities[i].getAttribute("class");
 
-//function slide occurrencies//
+//function to slides entities occurencies//
 slide = 0
 function slide_clicked_entity(go){
 	let label = document.getElementById("PopUpHeader").innerText;
@@ -151,46 +174,27 @@ function slide_clicked_entity(go){
 			(clicked_entity.at(slide+1)).classList.remove("highlighted_more");
 			};
 		if (Math.abs(slide) == clicked_entity.length)  {
-			slide = 0;
+			slide = 0
 			}
 		}
 	(clicked_entity.at(slide)).classList.add("highlighted_more");
 	(clicked_entity.at(slide)).scrollIntoView();
 	if (slide >= 0) {
 			entity_counter=slide+1
-	}
+			}
 	else {
 			entity_counter=clicked_entity.length+slide+1
-	}
+		}
 	document.getElementById("counter_occurrencies").innerText = entity_counter;
 	}
 
-//function slide occurrencies//
+//function closePopUp()//
 function closePopUp(){
 	document.getElementById('MOD_01').style.display='none';
 	let label = document.getElementById("PopUpHeader").innerText;
 	var clicked_entity = ((Array.from(all_entities)).filter(entity => entity.getAttribute("data-label") == label));
 	clicked_entity.forEach(entity => entity.classList.remove("highlighted", "highlighted_more"));
 	}
-
-//var entity_occurency = clicked_entity.at(slide);
-	//var entity_occurency_prev = clicked_entity.at(slide-1);
-	//goto = ((entity_list[i]).getBoundingClientRect()).top;
-	//window.scrollTo(0, goto);
-	//const clicked_entity = all_entities.filter(word => word.length > 6);
-	//	var clicked_entity = document.getElementsByClassName("entity").(getAttribute("data-label") == (entity));
-	//let label = document.getElementById("PopUpHeader").innerText;
-	//var clicked_entity = ((Array.from(all_entities)).filter(entity => entity.getAttribute("data-label") == label).sort()).reverse();
-	//fino a lunghezza array while slide < clicked_entity.length - else slide = 0
-	//for (i = 0; i < all_entities.length; i++) {
-	//	if (all_entities[i].getAttribute("data-label") == entity) {
-	//		clicked_entity.push(all_entities[i]);
-	//		}
-	//}
-
-	//1. highligHT
-//functions prev_entity_item()
-//function next_entity_item()
 
 //function to high_href() [working off-line with $(document).ready(function(){ not online]//
 $(".bib_note").click(function(){
@@ -208,3 +212,22 @@ $(".bib_note").click(function(){
 //window.onload = function(){//
 //function high_href(){//
 //$(document).ready(function(){//
+
+//function to hide/show entities [not working]//
+//function entities(){//
+//	$(".entity").hide(); 
+//	$(".entity").show(); 
+//}
+
+
+// function to set on resize the client w/h to window w/h [elements w/ position absolute/fixed and responsive measurement units needed]
+document.addEventListener("resize", myRes)
+function myRes() {
+  var w = window.outerWidth;
+  	var h = window.outerHeight;
+  	if (document.documentElement.clientWidth != w ||
+  		document.documentElement.clientHeight != h) {
+  			document.documentElement.clientWidth = w;
+  			document.documentElement.clientHeight = h;
+}
+}
