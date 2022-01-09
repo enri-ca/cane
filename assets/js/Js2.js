@@ -86,7 +86,7 @@ function MDV(selection){
 			array_label.push(myarray[i].getAttribute("data-label"));
 			}
 		}
-	array_label.sort();
+	((array_label)toLowerCase()).sort()
 	let text = "";
 	for (let i = 0; i < array_label.length; i++) {
 		//text += '<li> <a onclick="highlight(this)" about="'+ myarray[i].getAttribute("about") + '">' + myarray[i].getAttribute("data-label") + '</a></li>';
