@@ -81,17 +81,21 @@ function MDV(selection){
 	//però non funziona perchè il sort ordina l'arrai di object quindi a seconda dell'indice e non per il label: proposta:
 	var myarray = Array.from(document.getElementsByClassName(classname));
 	var array_label = [];
+	var array_label_sorted = [];
 	for (let i = 0; i < myarray.length; i++) {
 		if (myarray[i].hasAttribute("data-active")){
 			array_label.push(myarray[i].getAttribute("data-label"));
+			array_label_sorted.push((myarray[i].getAttribute("data-label").toLowerCase());
 			}
 		}
-	((array_label).toLowerCase()).sort()
+	(array_label_sorted).sort()
 	let text = "";
-	for (let i = 0; i < array_label.length; i++) {
+	for (let i = 0; i < array_label_sorted.length; i++) {
+		sorted_entity = array_label_sorted[i]
+		sorted_label = array_label_sorted[sorted_entity]
 		//text += '<li> <a onclick="highlight(this)" about="'+ myarray[i].getAttribute("about") + '">' + myarray[i].getAttribute("data-label") + '</a></li>';
 		//text += '<a class="dropdown-item w3-button" onclick="openPopUp()">' + myarray[i].getAttribute("data-label") + '</button>'
-		text += '<button class="dropdown-item w3-button" onclick="openPopUp(this)">' + array_label[i] + '</button>'
+		text += '<button class="dropdown-item w3-button" onclick="openPopUp(this)">' + array_label_sorted[sorted_entity] + '</button>'
 		}
 	document.getElementById(id).innerHTML = text;
 	}
