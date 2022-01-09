@@ -50,8 +50,7 @@ function change_issue(issue) {
 	$("#artL2").load(art3);
 	document.getElementById("issue_title").innerHTML = issue_title;
 	document.getElementById("issue_metadata").innerHTML = metadata_issue;
-	document.getElementById("main_art_title").classList.add("highlighted");
-	document.getElementById("main_art_url").classList.add("highlighted");
+	document.querySelectorAll("#main_art_title, #main_art_url").classList.add("highlighted");
 	}
 
 //function slide_articles() in an issue//
