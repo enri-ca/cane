@@ -26,11 +26,20 @@ $(document).ready(function(){
 
 //function change_issue//
 function change_issue(issue) {
+	issue_id = 'I' + issue;
+	art1 = issue + '_1.html';
+	art2 = issue + '_2.html';
+	art3 = issue + '_3.html';
+	$("#artM").load(art1);
+	$("#artL1").load(art2);
+	$("#artL2").load(art3);
+	document.getElementById("issue_title").innerHTML = document.getElementById(issue_id).innerText;
 	if (issue == 1) {
 		//art1 = "1_1.html";
 		//art2 = "1_2.html";
 		//art3 = "1_3.html";
-		metadata_issue = '<h6 id="main_art_title">1.1 From the Fair Theatre to the Modern Circus. Main article</h6><p id="main_art_url"><a href="http://dx.doi.org/10.1590/2237-266093237">original version</a></p><h6 id="guest_art_title">1.2 El lugar de la diferencia en Chile:circo y transformismo. El caso del Circo Timoteo. Guest article</h6><p id="guest_art_url"><a href="https://raco.cat/index.php/DocumentsAnalisi/article/view/259380/346596">original version</a></p><h6 id="rev_art_title">1.3 The Semiotics of Clowns and Clowning: Rituals of Transgression and the Theory of Laughter. Book review</h6><p id="rev_art_url"><a href="https://europeanjournalofhumour.org/ejhr/article/view/126">original version</a></p>';
+		metadata_issue = '<h6 id="main_art_title">' + issue + '.1' + document.querySelector('div.title_art > h2').innerText + '. Main article</h6>';
+		//<p id="main_art_url"><a href="http://dx.doi.org/10.1590/2237-266093237">original version</a></p><h6 id="guest_art_title">1.2 El lugar de la diferencia en Chile:circo y transformismo. El caso del Circo Timoteo. Guest article</h6><p id="guest_art_url"><a href="https://raco.cat/index.php/DocumentsAnalisi/article/view/259380/346596">original version</a></p><h6 id="rev_art_title">1.3 The Semiotics of Clowns and Clowning: Rituals of Transgression and the Theory of Laughter. Book review</h6><p id="rev_art_url"><a href="https://europeanjournalofhumour.org/ejhr/article/view/126">original version</a></p>';
 		}
 	if (issue == 2) {
 		//art1 = "2_1.html";
@@ -44,16 +53,6 @@ function change_issue(issue) {
 		//art3 = "3_3.html";
 		metadata_issue = '<h6 id="main_art_title">3.1 Building Resilience by Becoming a Circus Artist. Main article</h6><p id="main_art_url"><a href="https://doi.org/10.1093/jrs/fez091">original version</a></p><h6 id="guest_art_title">3.2	Enseigner les arts du cirque au collège : une dévolution artistique. Guest article</h6><p id="guest_art_url"><a href="https://journals.openedition.org/ejrieps/1362?lang=en">original version</a></p><h6 id="rev_art_title">3.3	The Welfare of Performing Animals. A Historical Perspective. Book review</h6><p id="rev_art_url"><a href="https://doi.org/10.3390/ani6110076">original version</a></p>';
 		}
-	issue_id = 'I' + issue;
-	art1 = issue + '_1.html';
-	art2 = issue + '_2.html';
-	art3 = issue + '_3.html';
-	$("#artM").load(art1);
-	$("#artL1").load(art2);
-	$("#artL2").load(art3);
-	metadata_issue = '<h6 id="main_art_title">' + issue + '.1' + document.querySelector('div.title_art > h2').innerText + '. Main article</h6>'
-	//<p id="main_art_url"><a href="http://dx.doi.org/10.1590/2237-266093237">original version</a></p><h6 id="guest_art_title">1.2 El lugar de la diferencia en Chile:circo y transformismo. El caso del Circo Timoteo. Guest article</h6><p id="guest_art_url"><a href="https://raco.cat/index.php/DocumentsAnalisi/article/view/259380/346596">original version</a></p><h6 id="rev_art_title">1.3 The Semiotics of Clowns and Clowning: Rituals of Transgression and the Theory of Laughter. Book review</h6><p id="rev_art_url"><a href="https://europeanjournalofhumour.org/ejhr/article/view/126">original version</a></p>';
-	document.getElementById("issue_title").innerHTML = document.getElementById(issue_id).innerText;
 	document.getElementById("issue_metadata").innerHTML = metadata_issue;
 	document.querySelectorAll("#main_art_title, #main_art_url").classList.add("highlighted");
 	}
