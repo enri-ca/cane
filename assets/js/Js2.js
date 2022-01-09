@@ -16,7 +16,7 @@ metadata_issue = '<h6 id="main_art_title">1.1 From the Fair Theatre to the Moder
 //function load default article in the IssuesViewer page//
 $(document).ready(function(){
 	change_issue(1)
-	}
+	})
 	//$("#artM").load(art1);
 	//$("#artL1").load(art2);
 	//$("#artL2").load(art3);
@@ -200,16 +200,18 @@ function closePopUp(){
 	}
 
 //function to high_href() [working off-line with $(document).ready(function(){ not online]//
+$(document).ready(function(){
 $(".bib_note").click(function(){
-		var target = $(this).attr("href");
-		var source_id = $(this).attr("id");
-		var source = document.getElementById(source_id);
-		$(target).addClass('highlighted');
-		$(target).click(function(){
-			$(target).removeClass('highlighted');
-			source.scrollIntoView();
+	var target = $(this).attr("href");
+	var source_id = $(this).attr("id");
+	var source = document.getElementById(source_id);
+	$(target).addClass('highlighted');
+	$(target).click(function(){
+		$(target).removeClass('highlighted');
+		source.scrollIntoView();
 		});
 	})
+
 //function high_href(){//
 //$(window).load(function(){//
 //window.onload = function(){//
