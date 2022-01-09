@@ -10,8 +10,8 @@ var art1, art2, art3, metadata_issue
 art1 = "1_1.html";
 art2 = "1_2.html";
 art3 = "1_3.html";
+issue_title = document.getElementById("I1")
 metadata_issue = '<h6 id="main_art_title">1.1 From the Fair Theatre to the Modern Circus. Main article</h6><p id="main_art_url"><a href="http://dx.doi.org/10.1590/2237-266093237">original version</a></p><h6 id="guest_art_title">1.2 El lugar de la diferencia en Chile:circo y transformismo. El caso del Circo Timoteo. Guest article</h6><p id="guest_art_url"><a href="https://raco.cat/index.php/DocumentsAnalisi/article/view/259380/346596">original version</a></p><h6 id="rev_art_title">1.3 The Semiotics of Clowns and Clowning: Rituals of Transgression and the Theory of Laughter. Book review</h6><p id="rev_art_url"><a href="https://europeanjournalofhumour.org/ejhr/article/view/126">original version</a></p>';
-issue_title = 'Circus and cultural studies'
 
 //function load default article in the IssuesViewer page//
 $(document).ready(function(){
