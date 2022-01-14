@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Staatliches&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+/* Staatliches font from Google inspired by the response to Herbert Bayer’s title lettering on the cover of the first Bauhaus exhibition catalogue*/
+
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
 
 /* Akzidenz-grotesk font from Bauhaus Zeitschrift*/
 @font-face {
@@ -21,54 +22,70 @@ src: url("../fonts/Akzidenz-grotesk-black.ttf");
 .grid-container {
   display: grid;
   grid-template-areas:
-    'header header header header header logo'
-    'nav nav nav nav nav logo'
-    'menu main main main rightUp rightUp'
-    'menu main main main rightDown rightDown'
-    'footer footer footer footer footer footer';
-  height: 100vmin;
-  width:100%;
+    'header header header header rightUp logo'
+	'sep sep sep sep rightUp logo'
+    'nav nav nav nav rightUp logo'
+    'menu main main main rightUp rightDown'
+    'menu main main main rightUp rightDown'
+    'menu footer footer footer footer footer';
+	  height: 100vmin;
+  width: 100%;
   margin-top: -0.5vw;
-  grid-template-columns: 25vmin 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 15vmin 15vmin 1fr 1fr 5vmin;
+grid-template-columns: 1fr 1fr 1fr 0fr 1.5fr 1.5fr;
+  grid-template-rows: 0.4fr 0.01fr 0.2fr 3.2fr 3.2fr 0.1fr;
+}
+
+.sep {
+  grid-area: sep;
+  background-color: white; 
 }
 
 .logo{
   grid-area: logo;
   background-color: red;
   color: white;
-  font-family: 'Staatliches', cursive;
-font-size: 2vw; 
-  padding: 1vw;
-  text-align: right;
+  padding: 0.2vw;
+  text-align: left;
+}
+
+.logo p{
+	font-size: 3vw; 
+	line-height: 0.1vw;
+	font-family: MyAkzidenz_b;
+	text-transform:uppercase;
+	}
+	
+.logo p::first-letter {
+	line-height: 0.1vw;
+	font-size: 4.5vw;
+	color: black;
 }
 
 .header { 
 	grid-area: header;
 	font-family: 'Staatliches', cursive;
-font-size: 5vw;
+	font-size: 6vw;
 	text-align: left; 
 	letter-spacing: -0.05vw;
 	position: static;
-	padding: 0.5vw;
+	padding: 0.3vw;
 background-color: red;
 }
 
 .navbar{
   grid-area: nav;
   background-color: red;
-font-family: 'Staatliches', cursive;
-  /*display: flex; manca blocco allo scorrimento in alto*/
+  /*font-family: 'Staatliches', cursive;display: flex; manca blocco allo scorrimento in alto*/
 }
 
 .menu { 
 	grid-area: menu; 
 	background-color: black;
-color:white;
+	color:white;
 	border: 0.2vw solid #000000;
 	padding: 1vw;
 	overflow: auto;
-font-family: 'Staatliches', cursive;
+	font-family: 'Staatliches', cursive;
 }
 
 .boxM { 
@@ -82,35 +99,45 @@ font-family: 'Staatliches', cursive;
 .boxRU { 
 	grid-area: rightUp; 
 	overflow:auto;
-	border-right: 0.2vw solid #000000;
-	border-top: 0.2vw solid #000000;
-	border-left: 0.2vw solid #000000;
+	border: 0.2vw solid #000000;
+	margin-top: 0.5vw;
 	padding:1vw;
 }
 
 .boxRD { 
 	grid-area: rightDown;
 	overflow:auto;
-	border: 0.2vw solid #000000;
+	border-top: 0.2vw solid #000000;
+	border-bottom: 0.2vw solid #000000;
 	padding:1vw
 }
 
 .footer { 
 	grid-area: footer; 
 	text-align: center;
+	background-color: red;
+	color: white;
 }
 
-/* Responsive layout - when the screen is less than xxpx (o vmin??) wide, make the grid items stack on top of each other instead of next to each other */
+/* width */
+::-webkit-scrollbar {
+  width: 1.2vw;
+}
 
-@media screen and (max-width: 500px) {
-	.logo { display: none; }
-	.header { grid-area: 1 / 1 / 2 / span 6 ; }
-	.navbar { grid-area: 2 / 1 / 3 / span 6 ; }
-	.menu { grid-area: 3 / 1 / 4 / span 6 ;  }
-	.boxM { grid-area: 4 / 1 / 6 / span 6 ; }
-	.boxRU { grid-area: 6 / 1 / 8 / span 6 ;  }
-	.boxRD { grid-area: 8 / 1 / 10 / span 6 ; }
-	.footer{ grid-area: 10 / 1 / 11 / span 6 ; }
+/* Track */
+::-webkit-scrollbar-track {
+background: black;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: transparent;
+	
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #555; 
 }
 
 /* Style the body or other elements*/
@@ -120,10 +147,18 @@ body {
 
 .boxM, .boxRU, .boxRD p {
 	line-height: 97%;
+	font-family: MyAkzidenz;
 	}
 
-h2 {
-	font-family: MyAkzidenz_b;
+
+.boxRU .maincontent div[id^="sec"] p:before, .highlighted_more:before {
+	content: "⬤";
+    display: block;
+    /*background: url("icon.jpg") no-repeat;
+    width: 20px;
+    height: 20px;*/
+    float: left;
+    margin: 0 6px 0 0;
 }
 
 .title_art {
@@ -148,18 +183,29 @@ h2 {
  position: absolute;
 }*/
 
+h2 {
+	font-family: MyAkzidenz_b;
+	line-height: 1em;
+}
+
 h3, h4, h5, h6 {
 	font-family: MyAkzidenz_b;
 	padding-top: 1em;
 }
 
-.menu h4, h5, h6 {
+.menu h2, h4, h5, h6 {
 	font-family: font-family: MyAkzidenz;
 }
 
+img {
+	width: 100%;
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
 /* Style the navigation bar links */
 
 .navbar a {
+	font-family: font-family: MyAkzidenz_b;
   color: white;
   padding: 0.1vw 0.2vw;
   text-decoration: none;
@@ -205,6 +251,12 @@ h3, h4, h5, h6 {
 
 .highlighted {
   font-family: MyAkzidenz_b; 
+  font-size: 1.5em; 
+}
+
+.highlighted_more {
+  font-family: MyAkzidenz_b; 
+  font-size: 1.5em; 
 }
 
 /*.navbar-nav ul, li {
