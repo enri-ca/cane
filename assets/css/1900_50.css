@@ -1,9 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Staatliches&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
 
+/* Akzidenz-grotesk font from Bauhaus Zeitschrift*/
+@font-face {
+font-family: MyAkzidenz;
+src: url("../fonts/Akzidenz-grotesk-roman.ttf");
+}
+
+@font-face {
+font-family: MyAkzidenz_b;
+src: url("../fonts/Akzidenz-grotesk-black.ttf");
+}
+
 * {
   box-sizing: border-box;
-    font-family: 'Cabin', sans-serif;
+  font-family: MyAkzidenz;
 }
 
 /*grid layout and items*/
@@ -65,7 +76,7 @@ font-family: 'Staatliches', cursive;
 	overflow: auto;
 	border-top: 0.2vw solid #000000;
 	border-bottom: 0.2vw solid #000000;
-	padding:2vw;
+	padding:1vw;
 }
 
 .boxRU { 
@@ -74,14 +85,14 @@ font-family: 'Staatliches', cursive;
 	border-right: 0.2vw solid #000000;
 	border-top: 0.2vw solid #000000;
 	border-left: 0.2vw solid #000000;
-	padding:2vw;
+	padding:1vw;
 }
 
 .boxRD { 
 	grid-area: rightDown;
 	overflow:auto;
 	border: 0.2vw solid #000000;
-	padding:2vw
+	padding:1vw
 }
 
 .footer { 
@@ -104,7 +115,46 @@ font-family: 'Staatliches', cursive;
 
 /* Style the body or other elements*/
 body {
-  font-family: Arial;
+	font-family: MyAkzidenz;
+}
+
+.boxM, .boxRU, .boxRD p {
+	line-height: 97%;
+	}
+
+h2 {
+	font-family: MyAkzidenz_b;
+}
+
+.title_art {
+	border-bottom: 4vh solid black;	
+}
+
+.references {
+	border-top: 2vh solid black;	
+	border-right: 2vh solid black;
+}
+/*.maincontent h2 {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.maincontent h2:after, h2::after {
+  content: "&#9607;""&#9607;""&#9607;""&#9607;""&#9607;";
+  display: inline-block;
+  width: %;
+  height: %;
+ z-index: -1;
+ position: absolute;
+}*/
+
+h3, h4, h5, h6 {
+	font-family: MyAkzidenz_b;
+	padding-top: 1em;
+}
+
+.menu h4, h5, h6 {
+	font-family: font-family: MyAkzidenz;
 }
 
 /* Style the navigation bar links */
@@ -149,12 +199,12 @@ body {
 }
 
 
-.entity {
+/*.entity {
   background-color: #ffe6e6;
-}
+}*/
 
 .highlighted {
-  background-color: #ffffcc; 
+  font-family: MyAkzidenz_b; 
 }
 
 /*.navbar-nav ul, li {
