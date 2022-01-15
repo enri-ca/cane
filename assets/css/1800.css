@@ -1,7 +1,5 @@
 /*Fonts' import*/
 
-@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Libre+Baskerville&display=swap');
-
 /* RIVANNA art-nuveau inspired font for titles */
 @font-face {
 font-family: MyRivanna;
@@ -10,8 +8,8 @@ src: url("../fonts/RIVANNA_.TTF");
 
 /* Jenson font for body inspired to William Morris rethinking of the type, with typical "e" */
 @font-face {
-font-family: 'MyJenson', serif;
-src: url("../fonts/Jenson.ttf");
+font-family: MyJenson;
+src: url("../fonts/AdobeJensonProRegular.otf") format("opentype");
 }
 
 /* Flowers icons for end of lines?*/
@@ -28,44 +26,24 @@ src: url("../fonts/Art Nouveau Flowers.ttf");
 body {
 	margin: 0;
   	overflow-y: hidden;
+	font-family: 'MyJenson', serif;
 }
 
 h2, h3, h4, h5, h6 {
-	font-family: 'MyRivanna', sans-serif;
+	font-family: 'MyJenson', serif;
+	text-transform:uppercase;
+	text-align:center;
 }
 
-img {
-	background: blue;
-	-z-index: 1;
-	opacity: 0.9;
+img{
 	width: 100%;
-	-webkit-filter: grayscale(100%);
-	filter: grayscale(90%);
+	filter: sepia(100%);
+	opacity: 0.7;
 }
 
 .maincontent {
 	overflow-wrap: break-word;
 }
-
-button {
-	background-color: #e5c19a;
-	font-family: 'MyJenson', serif;
-	color:black;
-	padding:0.3em 0.3em;
-	/*display:inline-block;
-	font-weight:300;
-	padding:0.3em 1.2em;
-	text-align:center;
-	transition: all 0.2s;
-	box-sizing: border-box;
-	margin:0 0.3em 0.3em 0;*/
-	border-radius:2em;
-	text-decoration:none;
-}
-
-	button:hover{
-	background-color:#c87354;
-	}
 
 /*grid layout and items*/
 .grid-container {
@@ -97,8 +75,8 @@ button {
 }
 
 .sep {
-  grid-area: sep;
-  background-color: black; 
+	grid-area: sep;
+	background-color: black; 
 }
 
 .logo{
@@ -115,14 +93,12 @@ button {
 		font-family: 'MyRivanna', sans-serif;
 		margin-bottom:-1em;
 		letter-spacing:1em;
+		font-weight: bold;
 		}
 
 .navbar{
-  grid-area: nav;
-  background-color: black;
-	font-family: 'MyJenson', serif;
-	font-size: 1.2vw;
-	position: flex;
+	grid-area: nav;
+	background-color: black;
 }
 
 .menu { 
@@ -135,12 +111,17 @@ button {
 	font-family: 'MyJenson', serif;
 }
 
-	.menu h6 {
+	.menu h4 {
 		font-family: 'MyRivanna', sans-serif;
 	}
 	
-	.menu h4, h5, p {
+	.menu h6, p {
 	font-family: 'MyJenson', serif;
+	text-align: left;
+	}
+	
+	.menu a {
+		text-decoration:none;
 	}
 	
 .boxM { 
@@ -181,13 +162,13 @@ button {
 /*Highlighting*/
 
 .highlighted {
-background-color: #c87354;
-  color: black;
+	background-color: #c87354;
+	color: black;
 }
 
 .highlighted_more {
-background-color: black;
-  color: #c87354;
+	background-color: black;
+	color: #c87354;
 }
 
 
@@ -196,7 +177,7 @@ background-color: black;
 
 .maincontent div[id^="sec"] p:first-of-type::first-letter {
 	font-family: 'MyRivanna', sans-serif;
-	padding: 0.1em 0.1em;
+	padding: 0;
 	font-size: 4em;
 	font-style: normal;
 	float: left;
@@ -214,6 +195,14 @@ background-color: black;
     margin: 0 6px 0 0;
 }
 
+/*publications part*/
+.pub_data p {
+	border-top: 0.3vw solid #000000;
+	margin: 0.5vw;
+	padding:0.3vw;
+	border-bottom: 0.2vw solid #000000;
+}
+
 
 /*customized scrollbar*/
 /* width */
@@ -223,13 +212,14 @@ background-color: black;
 
 /* Track */
 ::-webkit-scrollbar-track {
-background: url("../img/styles/1800scrollbar.PNG");
+	background: url("../img/styles/1800scrollbar.PNG");
+	/*from https://anno.onb.ac.at/cgi-content/anno-plus?aid=vsa&datum=1898&page=316&size=18&qid=KJUQ53UXY3PEFUDA2C48T9ZRWIEWHK*/
 }
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
 	background: #555; 
-/*	background: #555 #c87354; */
+	/*	background: #555 #c87354; */
 }
 
 /* Handle on hover */
@@ -298,11 +288,13 @@ margin:0.2em auto;
 /* Style the navigation bar links */
 
 .navbar a {
-  color: white;
-  padding: 0.1vw 0.2vw;
-  text-decoration: none;
-  text-align: center;
-font-family: 'MyJenson', serif;
+	color: white;
+	padding: 0.1vw 0.2vw;
+	text-decoration: none;
+	text-align: center;
+	font-family: 'MyRivanna', sans-serif;
+	letter-spacing: 0.1em;
+	font-size: 1.2vw;
 }
 
 .navbar a:hover, .dropdown:hover {
@@ -336,6 +328,30 @@ font-family: 'MyJenson', serif;
   display: block;
   text-align: left;
 }
+
+button {
+	background-color: #e5c19a;
+		font-family: 'MyRivanna', sans-serif;
+	letter-spacing: 0.1em;
+	font-size: 1.2vw;
+	color:black;
+	padding:0.3em 0.3em;
+	/*display:inline-block;
+	font-family: 'MyJenson', serif;
+
+	font-weight:300;
+	padding:0.3em 1.2em;
+	text-align:center;
+	transition: all 0.2s;
+	box-sizing: border-box;
+	margin:0 0.3em 0.3em 0;*/
+	border-radius:2em;
+	text-decoration:none;
+}
+
+	button:hover{
+	background-color:#c87354;
+	}
 
 
 

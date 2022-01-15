@@ -89,7 +89,6 @@ img {
 	font-size: 6vw;
 	text-align: left; 
 	letter-spacing: -0.05vw;
-	position: static;
 	padding: 0.3vw;
 	background-color: #d40000;
 }
@@ -109,12 +108,16 @@ img {
 	font-family: 'Staatliches', cursive;
 }
 
-	.menu h6 {
+	.menu h4 {
 		font-family: 'Staatliches', cursive;
 	}
 	
-	.menu h4, h5, p {
+	.menu H6, p {
 		font-family: font-family: MyAkzidenz;
+	}
+	
+	.menu a {
+		text-decoration:none;
 	}
 
 .boxM { 
