@@ -1,8 +1,9 @@
-/* Staatliches font from Google inspired by the response to Herbert Bayer’s title lettering on the cover of the first Bauhaus exhibition catalogue*/
+/*Fonts' import*/
 
+/*Staatliches font from Google inspired by the response to Herbert Bayer’s title lettering on the cover of the first Bauhaus exhibition catalogue*/
 @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
 
-/* Akzidenz-grotesk font from Bauhaus Zeitschrift*/
+/* Akzidenz-grotesk fonts from Bauhaus Zeitschrift*/
 @font-face {
 font-family: MyAkzidenz;
 src: url("../fonts/Akzidenz-grotesk-roman.ttf");
@@ -13,26 +14,47 @@ font-family: MyAkzidenz_b;
 src: url("../fonts/Akzidenz-grotesk-black.ttf");
 }
 
+/*general settings*/
 * {
   box-sizing: border-box;
   font-family: MyAkzidenz;
 }
 
+h2 {
+	font-family: MyAkzidenz_b;
+	line-height: 1em;
+}
+
+h3, h4, h5, h6 {
+	font-family: MyAkzidenz_b;
+	padding-top: 1em;
+}
+
+body {
+	font-family: MyAkzidenz;
+}
+
+img {
+	width: 100%;
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
+
 /*grid layout and items*/
 .grid-container {
-  display: grid;
-  grid-template-areas:
-    'header header header header rightUp logo'
-	'sep sep sep sep rightUp logo'
-    'nav nav nav nav rightUp logo'
-    'menu main main main rightUp rightDown'
-    'menu main main main rightUp rightDown'
-    'menu footer footer footer footer footer';
-	  height: 100vmin;
-  width: 100%;
-  margin-top: -0.5vw;
-grid-template-columns: 1fr 1fr 1fr 0fr 1.5fr 1.5fr;
-  grid-template-rows: 0.4fr 0.01fr 0.2fr 3.2fr 3.2fr 0.1fr;
+	display: grid;
+	grid-template-areas:
+		'header header header header rightUp logo'
+		'sep sep sep sep rightUp logo'
+		'nav nav nav nav rightUp logo'
+		'menu main main main rightUp rightDown'
+		'menu main main main rightUp rightDown'
+		'menu footer footer footer footer footer';
+	height: 100vmin;
+	width: 100%;
+	margin-top: -0.5vw;
+	grid-template-columns: 1fr 1fr 1fr 0fr 1.5fr 1.5fr;
+	grid-template-rows: 0.4fr 0.01fr 0.2fr 3.2fr 3.2fr 0.1fr;
 }
 
 .sep {
@@ -48,18 +70,18 @@ grid-template-columns: 1fr 1fr 1fr 0fr 1.5fr 1.5fr;
   text-align: left;
 }
 
-.logo p{
-	font-size: 3vw; 
-	line-height: 0.1vw;
-	font-family: MyAkzidenz_b;
-	text-transform:uppercase;
+	.logo p{
+		font-size: 3vw; 
+		line-height: 0.1vw;
+		font-family: MyAkzidenz_b;
+		text-transform:uppercase;
+		}
+		
+	.logo p::first-letter {
+		line-height: 0.1vw;
+		font-size: 4.5vw;
+		color: black;
 	}
-	
-.logo p::first-letter {
-	line-height: 0.1vw;
-	font-size: 4.5vw;
-	color: black;
-}
 
 .header { 
 	grid-area: header;
@@ -69,12 +91,12 @@ grid-template-columns: 1fr 1fr 1fr 0fr 1.5fr 1.5fr;
 	letter-spacing: -0.05vw;
 	position: static;
 	padding: 0.3vw;
-background-color: #d40000;
+	background-color: #d40000;
 }
 
 .navbar{
-  grid-area: nav;
-  background-color: #d40000;
+	grid-area: nav;
+	background-color: #d40000;
 }
 
 .menu { 
@@ -86,6 +108,10 @@ background-color: #d40000;
 	overflow: auto;
 	font-family: 'Staatliches', cursive;
 }
+
+	.menu h2, h4, h5, h6, p {
+		font-family: font-family: MyAkzidenz;
+	}
 
 .boxM { 
 	grid-area: main; 
@@ -114,6 +140,15 @@ background-color: #d40000;
 	padding:1vw
 }
 
+	.title_art {
+		border-bottom: 4vh solid black;	
+	}
+
+	.boxM, .boxRU, .boxRD p {
+		line-height: 97%;
+		font-family: MyAkzidenz;
+		}
+
 .footer { 
 	grid-area: footer; 
 	text-align: center;
@@ -121,96 +156,78 @@ background-color: #d40000;
 	color: white;
 }
 
-/* width */
-::-webkit-scrollbar {
-  width: 1.2vw;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-	background: black;
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-	background: transparent;
-	
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-	background: #555; 
-}
-
-/* Style the body or other elements*/
-body {
-	font-family: MyAkzidenz;
-}
-
-.boxM, .boxRU, .boxRD p {
-	line-height: 97%;
-	font-family: MyAkzidenz;
+	.footer a{ 
+		text-decoration:none;
 	}
 
-.boxRU .maincontent div[id^="sec"] p:before, .highlighted_more:before {
+	.footer a:hover{ 
+		font-weight: bold;
+	}
+
+/*Highlighting*/
+
+.entity:before {
+	content: "▶";
+    display: inline-block;
+}
+
+.highlighted {
+  font-family: MyAkzidenz_b; 
+  font-size: 1.5em; 
+}
+
+.highlighted_more {
+  font-family: MyAkzidenz_b; 
+  font-size: 1.5em; 
+}
+
+	.higlighted_more:before {
+		content: "▶";
+		display: inline-block;
+	}
+
+
+/*Decorations*/
+/*dots to highlight paragraph in the central article from Bauhaus*/
+.boxRU .maincontent div[id^="sec"] p:before {
 	content: "⬤";
     display: block;
     float: left;
     margin: 0 6px 0 0;
 }
 
-.title_art {
-	border-bottom: 4vh solid black;	
-}
-
+/*strong lateral lines to highlight references, from Sovremennaya arkhitektura and Bauhaus*/
 .references {
 	border-top: 2vh solid black;	
 	border-right: 2vh solid black;
 }
-/*.maincontent h2 {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-}
-.maincontent h2:after, h2::after {
-  content: "&#9607;""&#9607;""&#9607;""&#9607;""&#9607;";
-  display: inline-block;
-  width: %;
-  height: %;
- z-index: -1;
- position: absolute;
-}*/
 
-h2 {
-	font-family: MyAkzidenz_b;
-	line-height: 1em;
+/*customized scrollbar*/
+/* width */
+::-webkit-scrollbar {
+  width: 1.2vw;
 }
-
-h3, h4, h5, h6 {
-	font-family: MyAkzidenz_b;
-	padding-top: 1em;
+/* Track */
+::-webkit-scrollbar-track {
+	background: black;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: transparent;	
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #555; 
 }
 
-.menu h2, h4, h5, h6, p {
-	font-family: font-family: MyAkzidenz;
-}
-
-img {
-	width: 100%;
-	-webkit-filter: grayscale(100%);
-	filter: grayscale(100%);
-}
 /* Style the navigation bar links */
-
 .navbar a {
 	font-family: 'Staatliches', cursive;
 	font-size: 1.2em;
-  color: white;
-  background-color: #d40000;
-  padding: 0.1vw 0.2vw;
-  text-decoration: none;
-  text-align: center;
-  
+	color: white;
+	padding: 0.1vw 0.2vw;
+	text-decoration: none;
+	text-align: center;
 }
 
 .navbar a:hover, .dropdown:hover {
@@ -233,7 +250,6 @@ img {
   position: absolute;
   background-color: #ddd;
   max-width: 25vw;
-  /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
   z-index: 1;
 }
 
@@ -249,20 +265,8 @@ button {
 	font-family: 'Staatliches', cursive;
 	background-color: black;
 	color:white;
-padding:0.3em 0.3em;
-	
-/*
 	padding:0.3em 0.3em;
-	margin:0 0.3em 0.3em 0;
-	display:inline-block;
-font-weight:300;
-padding:0.3em 1.2em;
-text-align:center;
-margin:0 0.3em 0.3em 0;
-border-radius:2em;*/
-/*box-sizing: border-box;*/
-text-decoration:none;
-/*transition: all 0.2s;*/
+	text-decoration:none;
 }
 
 button:hover{
@@ -277,29 +281,6 @@ margin:0.2em auto;
 }
 
 
-/*.entity {
-  background-color: #ffe6e6;
-}*/
-/*.entity:before {
-	content: "▶";
-    display: inline-block;
-}*/
-
-
-.highlighted {
-  font-family: MyAkzidenz_b; 
-  font-size: 1.2em; 
-}
-
-.highlighted_more {
-  font-family: MyAkzidenz_b; 
-  font-size: 1.5em; 
-}
-
-.higlighted_more:before {
-	content: "▶";
-    display: inline-block;
-}
 
 
 /*.navbar-nav ul, li {
@@ -349,7 +330,7 @@ li .dropdown {
   position: absolute;
   background-color: #f9f9f9;
   min-width: 50vw;
-  /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
+  /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
 
