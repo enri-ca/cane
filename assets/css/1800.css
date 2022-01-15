@@ -1,101 +1,173 @@
+/*Fonts' import*/
+
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Libre+Baskerville&display=swap');
-/*@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap');*/
+
+/* RIVANNA art-nuveau inspired font for titles */
 @font-face {
 font-family: MyRivanna;
 src: url("../fonts/RIVANNA_.TTF");
 }
 
+/* Jenson font for body inspired to William Morris rethinking of the type, with typical "e" */
+@font-face {
+font-family: 'MyJenson', serif;
+src: url("../fonts/Jenson.ttf");
+}
+
+/* Flowers icons for end of lines?*/
+@font-face {
+font-family: MyFlow;
+src: url("../fonts/Art Nouveau Flowers.ttf");
+}
+
+/*general settings*/
 * {
   box-sizing: border-box;
-    font-family: 'Libre Baskerville', serif;
-	/*background-image: url("../img/styles/1800background.PNG");*/
 }
-.h2, .h3, .h4 {
+
+body {
+	margin: 0;
+  	overflow-y: hidden;
+}
+
+h2, h3, h4, h5, h6 {
 	font-family: 'MyRivanna', sans-serif;
 }
 
+img {
+	background: blue;
+	-z-index: 1;
+	opacity: 0.9;
+	width: 100%;
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(90%);
+}
+
+.maincontent {
+	overflow-wrap: break-word;
+}
+
+button {
+	background-color: #e5c19a;
+	font-family: 'MyJenson', serif;
+	color:black;
+	padding:0.3em 0.3em;
+	/*display:inline-block;
+	font-weight:300;
+	padding:0.3em 1.2em;
+	text-align:center;
+	transition: all 0.2s;
+	box-sizing: border-box;
+	margin:0 0.3em 0.3em 0;*/
+	border-radius:2em;
+	text-decoration:none;
+}
+
+	button:hover{
+	background-color:#c87354;
+	}
+
 /*grid layout and items*/
 .grid-container {
-  display: grid;
-  grid-template-areas:
-    'logo logo header header header header'
-    'logo logo nav nav nav nav'
-    'menu main main main rightUp rightUp'
-    'menu main main main rightDown rightDown'
-    'footer footer footer footer footer footer';
-  height: 100vmin;
-  width:100%;
-  margin-top: -0.5vw;
-  grid-template-columns: 15vmax 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 10vmax 7vmax 1fr 1fr 5vmax;
+	display: grid;
+	grid-template-areas:
+		'logo logo header header header header'
+		'logo logo sep sep sep sep'
+		'logo logo nav nav nav nav'
+		'menu main main main rightUp rightUp'
+		'menu main main main rightDown rightDown'
+		'menu footer footer footer  footer footer';
+	height: 100vmin;
+	width: 100%;
+	margin-top: -0.5vw;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 0.2fr 0.02fr 0.4fr 3.09fr 3.09fr 0.2fr;
 }
-
-.logo{
-  grid-area: logo;
-  background-color: #c87354;
-font-size: 3vw;
-  color: black;
-  font-family: 'MyRivanna', sans-serif;
-  padding: 1vw;
-  text-align: left;
-}
-
 
 .header { 
 	grid-area: header;
 	font-family: 'MyRivanna', sans-serif;
-	/*font-family: 'Cinzel Decorative', cursive;*/
+	font-size: 6vw;
 	text-align: right; 
-	font-size: 7vw;
+	padding: 1vw;
 	color: #c87354;
-	letter-spacing: -0.05vw;
+	letter-spacing:0.2vw;
 	position: static;
-	padding: 0.5vw;
 	background-color: black;
 }
+
+.sep {
+  grid-area: sep;
+  background-color: black; 
+}
+
+.logo{
+	grid-area: logo;
+	background-color: #c87354;
+	font-size: 2vw;
+	color: black;
+	padding: 1vw;
+	text-align: right;
+	border-bottom: 0.2vw solid #000000;
+}
+
+	.logo p{
+		font-family: 'MyRivanna', sans-serif;
+		margin-bottom:-1em;
+		letter-spacing:1em;
+		}
 
 .navbar{
   grid-area: nav;
   background-color: black;
-font-family: 'MyRivanna', sans-serif;
-	
-	position: static;
-  /*display: flex; manca blocco allo scorrimento in alto*/
+	font-family: 'MyJenson', serif;
+	font-size: 1.2vw;
+	position: flex;
 }
 
 .menu { 
 	grid-area: menu; 
 	background-color: black;
 	color: #c87354;
-	border: 0.2vw solid #000000;
+	border-left: 0.2vw solid #000000;
 	padding: 1vw;
 	overflow: auto;
-	font-family: 'MyRivanna', sans-serif;
+	font-family: 'MyJenson', serif;
 }
 
+	.menu h6 {
+		font-family: 'MyRivanna', sans-serif;
+	}
+	
+	.menu h4, h5, p {
+	font-family: 'MyJenson', serif;
+	}
+	
 .boxM { 
+	font-family: 'MyJenson', serif;
 	grid-area: main; 
-	overflow: auto;
-	border-top: 0.2vw solid #000000;
-	border-bottom: 0.2vw solid #000000;
-	padding:2vw;
-	font-family: MyRivanna;
+	overflow-y: auto;
+	overflow-x: hidden;
+	padding: 0.3vw;
 }
 
 .boxRU { 
 	grid-area: rightUp; 
-	overflow:auto;
-	border-right: 0.2vw solid #000000;
-	border-top: 0.2vw solid #000000;
+	overflow-y: auto;
+	overflow-x: hidden;
 	border-left: 0.2vw solid #000000;
-	padding:2vw;
+	border-bottom: 0.2vw solid #000000;
+	padding: 0.3vw;
+	font-family: 'MyJenson', serif;
 }
 
 .boxRD { 
 	grid-area: rightDown;
-	overflow:auto;
-	border: 0.2vw solid #000000;
-	padding:2vw
+	overflow-y: auto;
+	overflow-x: hidden;
+	border-left: 0.2vw solid #000000;
+	padding:0.3vw;
+	font-family: 'MyJenson', serif;
 }
 
 .footer { 
@@ -103,14 +175,84 @@ font-family: 'MyRivanna', sans-serif;
 	text-align: center;
 	color: #c87354;
 	background-color: black;
+	font-family: 'MyJenson', serif;
 }
 
-img {
-	weight: 100%
+/*Highlighting*/
+
+.highlighted {
+background-color: #c87354;
+  color: black;
 }
 
-/* Responsive layout - when the screen is less than xxpx (o vmin??) wide, make the grid items stack on top of each other instead of next to each other */
+.highlighted_more {
+background-color: black;
+  color: #c87354;
+}
 
+
+/*Decorations*/
+/*Capolettera*/
+
+.maincontent div[id^="sec"] p:first-of-type::first-letter {
+	font-family: 'MyRivanna', sans-serif;
+	padding: 0.1em 0.1em;
+	font-size: 4em;
+	font-style: normal;
+	float: left;
+}
+
+/*Fine paragrafo*/
+.boxM .maincontent p:after {
+	content: "☙";
+	font-size: 1eh;
+    display: inline-block;
+    /*background: url("icon.jpg") no-repeat;
+    width: 20px;
+    height: 20px;
+    float: left;*/
+    margin: 0 6px 0 0;
+}
+
+
+/*customized scrollbar*/
+/* width */
+::-webkit-scrollbar {
+  width: 3vw;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+background: url("../img/styles/1800scrollbar.PNG");
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #555; 
+/*	background: #555 #c87354; */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #e5c19a; 
+}
+
+/*customized modal*/
+
+.w3-container{
+	background: url(../img/styles/PikPng.com_art-nouveau-png_6017636.png);
+}
+
+.w3-content h4{
+	font-family: 'MyRivanna', sans-serif;
+	letter-spacing: 0.5em;
+}
+
+.w3-content a{
+	text-decoration: none;
+}
+	
+/* Responsive layout - when the screen is less than xxpx (o vmin??) wide, make the grid items stack on top of each other instead of next to each other
 @media screen and (max-width: 500px) {
 	.logo { display: none; }
 	.header { grid-area: 1 / 1 / 2 / span 6 ; }
@@ -122,17 +264,36 @@ img {
 	.footer{ grid-area: 10 / 1 / 11 / span 6 ; }
 }
 
-/* Style the body or other elements*/
-body {
-  font-family: Arial;
+@media all and (max-width:30em){
+a.button{
+display:block;
+margin:0.2em auto;
 }
+}*/
 
-.maincontent div[id^="sec"] p:first-of-type::first-letter {
-  font-family: 'MyRivanna', sans-serif;
-  font-size: 12vmin;
-  font-style: normal;
-  float: left;
+
+
+/*.maincontent p {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
 }
+.maincontent p:after, p::after {
+  content: "_____________________________________________" ;
+/*  url("../img/styles/1800.PNG");
+  display: inline-block;
+  width: %;
+  height: %;
+ z-index: -1;
+ position: absolute;
+}*/
+
+
+/*nuovo.references {
+	background-image: url("../img/styles/kisspng-borders-and-frames-art-nouveau-art-deco-clip-art-huy-5b3de9091fcf26.5596030415307840091303.png");
+	width: %;
+	z-index: -1;
+}*/
 
 /* Style the navigation bar links */
 
@@ -141,6 +302,7 @@ body {
   padding: 0.1vw 0.2vw;
   text-decoration: none;
   text-align: center;
+font-family: 'MyJenson', serif;
 }
 
 .navbar a:hover, .dropdown:hover {
@@ -162,7 +324,7 @@ body {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
-  min-width: 50vw;
+  min-width: 25vw;
   /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
   z-index: 1;
 }
@@ -176,13 +338,6 @@ body {
 }
 
 
-.entity {
-  background-color: #ffe6e6;
-}
-
-.highlighted {
-  background-color: #ffffcc; 
-}
 
 /*.navbar-nav ul, li {
   list-style-type: none;
@@ -193,10 +348,6 @@ body {
 /*li a:hover, .dropdown:hover .nav-item {
   background-color: #ddd;
 }
-
 li .dropdown {
   display: inline-block;
 }*/
-
-
-/* Higlight the entities and the references */
