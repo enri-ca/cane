@@ -17,21 +17,21 @@ src: url("../fonts/Akzidenz-grotesk-black.ttf");
 /*general settings*/
 * {
   box-sizing: border-box;
-  font-family: MyAkzidenz;
+  font-family: MyAkzidenz, sans-serif;
 }
 
 h2 {
-	font-family: MyAkzidenz_b;
+	font-family: MyAkzidenz_b, sans-serif;
 	line-height: 1em;
 }
 
 h3, h4, h5, h6 {
-	font-family: MyAkzidenz_b;
+	font-family: MyAkzidenz_b, sans-serif;
 	padding-top: 1em;
 }
 
 body {
-	font-family: MyAkzidenz;
+	font-family: MyAkzidenz, sans-serif;
 }
 
 img {
@@ -73,7 +73,7 @@ img {
 	.logo p{
 		font-size: 3vw; 
 		line-height: 0.1vw;
-		font-family: MyAkzidenz_b;
+		font-family: MyAkzidenz_b, sans-serif;
 		text-transform:uppercase;
 		}
 		
@@ -113,7 +113,7 @@ img {
 	}
 	
 	.menu H6, p {
-		font-family: font-family: MyAkzidenz;
+		font-family: MyAkzidenz, sans-serif;
 	}
 	
 	.menu a {
@@ -148,14 +148,20 @@ img {
 	padding:1vw
 }
 
+	.boxM p, .boxRU p, .boxRD p {
+		line-height: 97%;
+		font-family: MyAkzidenz, sans-serif;
+		}
+
 	.title_art {
 		border-bottom: 4vh solid black;	
 	}
-
-	.boxM, .boxRU, .boxRD p {
-		line-height: 97%;
-		font-family: MyAkzidenz;
-		}
+	
+	.pub_data p {
+		border: 0.3vw solid #000000;
+		margin: 0.5vw;
+		padding:0.3vw;
+	}
 
 .footer { 
 	grid-area: footer; 
@@ -175,13 +181,13 @@ img {
 /*Highlighting*/
 
 .highlighted {
-  font-family: MyAkzidenz_b; 
-  font-size: 1.5em; 
+  font-family: MyAkzidenz_b, sans-serif; 
+  font-size: 1.4em; 
 }
 
 .highlighted_more {
-  font-family: MyAkzidenz_b; 
-  font-size: 1.5em; 
+  font-family: MyAkzidenz_b, sans-serif; 
+  font-size: 1.6em; 
 }
 
 	.higlighted_more:before {
@@ -234,7 +240,7 @@ img {
 }
 
 .w3-content p{
-	font-family: MyAkzidenz; 
+	font-family: MyAkzidenz, sans-serif; 
 }
 
 .w3-content a{

@@ -20,7 +20,7 @@ src: url("../fonts/Art Nouveau Flowers.ttf");
 
 /*general settings*/
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 body {
@@ -65,9 +65,10 @@ img{
 .header { 
 	grid-area: header;
 	font-family: 'MyRivanna', sans-serif;
-	font-size: 6vw;
+	font-size: 5vw;
 	text-align: right; 
-	padding: 1vw;
+	padding-top: 0vw;
+	padding-right: 1vw;
 	color: #c87354;
 	letter-spacing:0.2vw;
 	position: static;
@@ -84,8 +85,9 @@ img{
 	background-color: #c87354;
 	font-size: 2vw;
 	color: black;
-	padding: 1vw;
-	text-align: right;
+	padding-top: 0vw;
+	padding-left: 1vw;
+	text-align: left;
 	border-bottom: 0.2vw solid #000000;
 }
 
@@ -108,14 +110,14 @@ img{
 	border-left: 0.2vw solid #000000;
 	padding: 1vw;
 	overflow: auto;
-	font-family: 'MyJenson', serif;
+	font-family: 'MyJenson', serif;	
 }
 
 	.menu h4 {
 		font-family: 'MyRivanna', sans-serif;
 	}
 	
-	.menu h6, p {
+	.menu h6, .menu p {
 	font-family: 'MyJenson', serif;
 	text-align: left;
 	}
@@ -125,11 +127,11 @@ img{
 	}
 	
 .boxM { 
-	font-family: 'MyJenson', serif;
 	grid-area: main; 
 	overflow-y: auto;
 	overflow-x: hidden;
-	padding: 0.3vw;
+	padding: 3vw;
+	font-family: 'MyJenson', serif;
 }
 
 .boxRU { 
@@ -138,7 +140,7 @@ img{
 	overflow-x: hidden;
 	border-left: 0.2vw solid #000000;
 	border-bottom: 0.2vw solid #000000;
-	padding: 0.3vw;
+	padding: 1vw;
 	font-family: 'MyJenson', serif;
 }
 
@@ -147,10 +149,28 @@ img{
 	overflow-y: auto;
 	overflow-x: hidden;
 	border-left: 0.2vw solid #000000;
-	padding:0.3vw;
+	padding: 1vw;
 	font-family: 'MyJenson', serif;
 }
 
+	.boxM p, .boxRU p, .boxRD p {
+		font-family: 'MyJenson', serif;
+		text-align: justify;
+		  -webkit-hyphens: auto;
+		  -moz-hyphens: auto;
+		  -ms-hyphens: auto;
+		hyphens: auto;
+		font-size: 1.2em;
+		line-height: 0.95em;
+	}
+
+	.title_art p {
+		text-align: center;
+	}
+	.title_art h2 {
+		line-height: 0.98em;
+	}
+	
 .footer { 
 	grid-area: footer; 
 	text-align: center;
@@ -158,6 +178,13 @@ img{
 	background-color: black;
 	font-family: 'MyJenson', serif;
 }
+
+	.footer p{
+		border-top: 0.3vw solid #c87354;
+		margin: 0.5vw;
+		padding:0.3vw;
+		border-bottom: 0.2vw solid #c87354;
+	}
 
 /*Highlighting*/
 
@@ -173,12 +200,12 @@ img{
 
 
 /*Decorations*/
-/*Capolettera*/
-
+/*Drop caps*/
 .maincontent div[id^="sec"] p:first-of-type::first-letter {
 	font-family: 'MyRivanna', sans-serif;
-	padding: 0;
-	font-size: 4em;
+	padding-right: 0.2em;
+	line-height: 1em;
+	font-size: 3.8em;
 	font-style: normal;
 	float: left;
 }
@@ -289,12 +316,12 @@ margin:0.2em auto;
 
 .navbar a {
 	color: white;
-	padding: 0.1vw 0.2vw;
+	padding: 0.2vw;
 	text-decoration: none;
 	text-align: center;
 	font-family: 'MyRivanna', sans-serif;
 	letter-spacing: 0.1em;
-	font-size: 1.2vw;
+	font-size: 1em;
 }
 
 .navbar a:hover, .dropdown:hover {
@@ -333,7 +360,7 @@ button {
 	background-color: #e5c19a;
 		font-family: 'MyRivanna', sans-serif;
 	letter-spacing: 0.1em;
-	font-size: 1.2vw;
+	font-size: 1em;
 	color:black;
 	padding:0.3em 0.3em;
 	/*display:inline-block;
