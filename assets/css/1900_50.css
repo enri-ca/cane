@@ -138,6 +138,7 @@ img {
 .boxRD { 
 	grid-area: rightDown;
 	overflow-y: auto;
+    scrollbar-color: black;
 	overflow-x: hidden;
 	border-top: 0.2vw solid #000000;
 	border-bottom: 0.2vw solid #000000;
@@ -223,7 +224,16 @@ img {
 
 .w3-container{
 	background: black;
-	opacity: 50%;
+	opacity: 10%;
+}
+
+.w3-content h4{
+	font-family: 'Staatliches', cursive;
+}
+
+.w3-content p{
+	font-family: MyAkzidenz; 
+	text-decoration: none;
 }
 
 /* Style the navigation bar links */
