@@ -109,7 +109,11 @@ img {
 	font-family: 'Staatliches', cursive;
 }
 
-	.menu h2, h4, h5, h6, p {
+	.menu h6 {
+		font-family: 'Staatliches', cursive;
+	}
+	
+	.menu h4, h5, p {
 		font-family: font-family: MyAkzidenz;
 	}
 
@@ -166,11 +170,6 @@ img {
 
 /*Highlighting*/
 
-.entity:before {
-	content: "▶";
-    display: inline-block;
-}
-
 .highlighted {
   font-family: MyAkzidenz_b; 
   font-size: 1.5em; 
@@ -213,11 +212,18 @@ img {
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
-	background: transparent;	
+	background: #555;	
 }
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
 	background: #555; 
+}
+
+/*customized modal*/
+
+.w3-container{
+	background: black;
+	opacity: 50%;
 }
 
 /* Style the navigation bar links */
@@ -279,9 +285,6 @@ a.button{
 display:block;
 margin:0.2em auto;
 }
-
-
-
 
 /*.navbar-nav ul, li {
   list-style-type: none;
