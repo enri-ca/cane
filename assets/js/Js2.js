@@ -50,7 +50,7 @@ function load_MD() {
 	//document.querySelectorAll("#main_art_title, #main_art_url").classList.add("highlighted");
 //$("#artM", "#artL1", "#artL2").addEventListener("dblclick", function open_full_article())
 
-function open_full_article() {	
+function open_full_article(this) {	
 	var url = (this.getElementsByTagName('h2')[0]).getAttribute('data-src');
 	//var url = "www.google.com";
 	var win = window.open(url, '_blank');
