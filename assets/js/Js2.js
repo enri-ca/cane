@@ -44,7 +44,8 @@ function change_issue(issue) {
 function load_MD() {
 	main_art_h2 = document.getElementById("artM").getElementsByClassName("title_art")[0].getElementsByTagName("h2")[0];
 	document.getElementById("main_art_title").innerText = main_art_h2.innerHTML;
-	(document.getElementById("main_art_url").getElementsByTagName(a)[0]).setAttribute(href, main_art_h2.getAttribute('data-src'));
+	main_art_url_h2 = document.getElementById("main_art_url").getElementsByTagName(a)[0];
+	main_art_url_h2.setAttribute(href, main_art_h2.getAttribute('data-src'));
 	guest_art_h2 = document.getElementsByTagName("h2")[1];
 	document.getElementById("guest_art_title").innerText = main_art_h2.innerHTML;
 	(document.getElementById("guest_art_url").getElementsByTagName(a)[0]).setAttribute(href, main_art_h2.getAttribute('data-src'));
