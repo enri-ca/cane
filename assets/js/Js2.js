@@ -34,9 +34,6 @@ function change_issue(issue) {
 	$("#artL1").load(art2);
 	$("#artL2").load(art3);
 	document.getElementById("issue_title").innerHTML = document.getElementById(issue_id).innerText;
-}
-
-$("#artM", "#artL1", "#artL2").ready(function(){
 	function load_MD() {
 		main_art_h2 = document.getElementById("artM").getElementsByClassName("title_art")[0].getElementsByTagName("h2")[0];
 		document.getElementById("main_art_title").innerText = main_art_h2.innerHTML;
@@ -49,7 +46,11 @@ $("#artM", "#artL1", "#artL2").ready(function(){
 		(document.getElementById("rev_art_url").getElementsByTagName(a)[0]).setAttribute(href, main_art_h2.getAttribute('data-src'));
 		document.querySelectorAll("#main_art_title, #main_art_url").classList.add("highlighted");
 		}
-})
+}
+
+//$("#artM", "#artL1", "#artL2").ready(function(){
+//	
+//})
 		//main_art_h2 = document.getElementById("artM").getElementsByClassName("title_art")[0].getElementsByTagName(h2)[0];
 		
 			//Element.setAttribute(name, value);
