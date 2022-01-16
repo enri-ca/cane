@@ -48,8 +48,8 @@ $("#artM", "#artL1", "#artL2").addEventListener("load", function(){
 		document.getElementById("rev_art_title").innerText = main_art_h2.innerHTML;
 		(document.getElementById("rev_art_url").getElementsByTagName(a)[0]).setAttribute(href, main_art_h2.getAttribute('data-src'));
 		document.querySelectorAll("#main_art_title, #main_art_url").classList.add("highlighted");
-		}
-})
+		};
+});
 
 //$("#artM", "#artL1", "#artL2").addEventListener("dblclick", function open_full_article())
 
