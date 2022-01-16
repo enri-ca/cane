@@ -42,17 +42,19 @@ function change_issue(issue) {
 //document.querySelectorAll("#artM", "#artL1", "#artL2").addEventListener("load", function(){ load_MD() });
 
 $(window).on('load', function() {
-	function load_MD() {
-		var main_art_h2 = document.getElementById("artM").getElementsByClassName("title_art")[0].getElementsByTagName("h2")[0];
-		var guest_art_h2 = document.getElementsByTagName("h2")[1];
-		var rev_art_h2 = document.getElementsByTagName("h2")[2];document.getElementById("main_art_title").innerText = main_art_h2.innerHTML;
-		document.getElementById("guest_art_title").innerText = guest_art_h2.innerHTML;
-		document.getElementById("rev_art_title").innerText = rev_art_h2.innerHTML;
-		(document.getElementById("main_art_url").getElementsByTagName('a')[0]).setAttribute('href', main_art_h2.getAttribute('data-src'));
-		(document.getElementById("guest_art_url").getElementsByTagName('a')[0]).setAttribute('href', guest_art_h2.getAttribute('data-src'));
-		(document.getElementById("rev_art_url").getElementsByTagName('a')[0]).setAttribute('href', rev_art_h2.getAttribute('data-src'));
-		} 
+	function load_MD()
 	})
+
+function load_MD() {
+	var main_art_h2 = document.getElementById("artM").getElementsByClassName("title_art")[0].getElementsByTagName("h2")[0];
+	var guest_art_h2 = document.getElementsByTagName("h2")[1];
+	var rev_art_h2 = document.getElementsByTagName("h2")[2];document.getElementById("main_art_title").innerText = main_art_h2.innerHTML;
+	document.getElementById("guest_art_title").innerText = guest_art_h2.innerHTML;
+	document.getElementById("rev_art_title").innerText = rev_art_h2.innerHTML;
+	(document.getElementById("main_art_url").getElementsByTagName('a')[0]).setAttribute('href', main_art_h2.getAttribute('data-src'));
+	(document.getElementById("guest_art_url").getElementsByTagName('a')[0]).setAttribute('href', guest_art_h2.getAttribute('data-src'));
+	(document.getElementById("rev_art_url").getElementsByTagName('a')[0]).setAttribute('href', rev_art_h2.getAttribute('data-src'));
+	} 
 
 //document.querySelectorAll("#main_art_title, #main_art_url").classList.add("highlighted");
 //$("#artM", "#artL1", "#artL2").addEventListener("dblclick", function open_full_article())
