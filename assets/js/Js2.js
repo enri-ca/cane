@@ -20,13 +20,15 @@ function change_issue(issue) {
 	$("#artL1").load(art2);
 	$("#artL2").load(art3);
 	document.getElementById("issue_title").innerHTML = document.getElementById(issue_id).innerText;
-	load_MD()
-}
+	$(window).on('load', function() {
+		load_MD()
+		})
+	}
 
 //function load default MDarticle in the menu//
-$(window).on('load', function() {
-	load_MD()
-	})
+//$(window).on('load', function() {
+//	load_MD()
+//	})
 
 //function load MDarticles in the menu//
 function load_MD() {
