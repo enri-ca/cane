@@ -34,51 +34,52 @@ function change_issue(issue) {
 	$("#artL1").load(art2);
 	$("#artL2").load(art3);
 	document.getElementById("issue_title").innerHTML = document.getElementById(issue_id).innerText;
-	main_art_h2 = document.getElementsByTagName("h2")[0];
-	//main_art_h2 = document.getElementById("artM").getElementsByClassName("title_art")[0].getElementsByTagName(h2)[0];
-	document.getElementById("main_art_title").innerText = main_art_h2.innerHTML;
-	//(document.getElementById("main_art_url").getElementsByTagName(a)[0]).setAttribute(href, main_art_h2.getAttribute('data-src'))
-	//Element.setAttribute(name, value);
-	//document.getElementById("main_art_url").innerHTML = 
-	//href="http://dx.doi.org/10.1590/2237-266093237"
-	//document.getElementById("guest_art_title").innerText = document.getElementById("artL1").getElementsByClassName("title_art")[0].innerHTML;
-	//document.getElementById("rev_art_title").innerText = document.getElementById("artL2").getElementsByClassName("title_art")[0].innerHTML;
-		
-//		document.querySelector('div.boxRD div.title_art h2').innerText;
-	
-	//boxM.querySelector('.title_art > h2').innerText = document.getElementById("main_art_title").innerText;
-	//title_artRU = (document.querySelector('title_art.boxRU > h2'))at[0].innerText
-	//document.getElementById("guest_art_title").innerText;
-	//document.querySelector('title_art.div.boxRD > h2').innerText = document.getElementById("rev_art_title").innerText;
-	
-	//document.querySelector('boxM.div.title_art.boxM > h2').innerText = document.getElementById("main_art_url").innerHText;
-	//document.querySelector('boxRU.div.title_art > h2').innerText = document.getElementById("guest_art_url").innerText;
-	//document.querySelector('boxRD.div.title_art > h2').innerText = document.getElementById("rev_art_url").innerText;
-	//data-src="https://www.scielo.br/j/rbep/a/P6MCRbbMS8srQCcqFMhDcRv/?lang=en" h2
-//	if (issue == 1) {
-		//art1 = "1_1.html";
-		//art2 = "1_2.html";
-		//art3 = "1_3.html";
-		//metadata_issue = '<h6 id="main_art_title">' + issue + '.1' + document.querySelector('boxM.div.title_art > h2').innerText + '. Main article</h6>';
-		//<p id="main_art_url"><a href="http://dx.doi.org/10.1590/2237-266093237">original version</a></p><h6 id="guest_art_title">1.2 El lugar de la diferencia en Chile:circo y transformismo. El caso del Circo Timoteo. Guest article</h6><p id="guest_art_url"><a href="https://raco.cat/index.php/DocumentsAnalisi/article/view/259380/346596">original version</a></p><h6 id="rev_art_title">1.3 The Semiotics of Clowns and Clowning: Rituals of Transgression and the Theory of Laughter. Book review</h6><p id="rev_art_url"><a href="https://europeanjournalofhumour.org/ejhr/article/view/126">original version</a></p>';
-		//}
-//	if (issue == 2) {
-		//art1 = "2_1.html";
-		//art2 = "2_2.html";
-		//art3 = "2_3.html";
-		//metadata_issue = '<h6 id="main_art_title">' + issue + '.2' + document.querySelector('div.title_art > h2').innerText + '. Main article</h6>';
-		//metadata_issue = '<h6 id="main_art_title">2.1 Freaks (1932): Dysmorphisms, Solidarity and Revenge. Main article</h6><p id="main_art_url"><a href="http://dx.doi.org/10.1590/2237-266093237">original version</a></p><h6 id="guest_art_title">2.2 Esperienze musicali nel Circo Paniko. Guest article</h6><p id="guest_art_url"><a href="https://revistas.usal.es/index.php/medicina_y_cine/article/view/68/91">original version</a></p><h6 id="rev_art_title">2.3 The Circus as a Parallel Universe. Book review</h6><p id="rev_art_url"><a href="https://we-make-money-not-art.com/the_circus_as_a_parallel_unive/">original version</a></p>';
-		//}
-//	if (issue == 3) {
-		//art1 = "3_1.html";
-		//art2 = "3_2.html";
-		//art3 = "3_3.html";
-		//metadata_issue = '<h6 id="main_art_title">3.1 Building Resilience by Becoming a Circus Artist. Main article</h6><p id="main_art_url"><a href="https://doi.org/10.1093/jrs/fez091">original version</a></p><h6 id="guest_art_title">3.2	Enseigner les arts du cirque au collège : une dévolution artistique. Guest article</h6><p id="guest_art_url"><a href="https://journals.openedition.org/ejrieps/1362?lang=en">original version</a></p><h6 id="rev_art_title">3.3	The Welfare of Performing Animals. A Historical Perspective. Book review</h6><p id="rev_art_url"><a href="https://doi.org/10.3390/ani6110076">original version</a></p>';
-		//}
-//	document.getElementById("issue_metadata").innerHTML = metadata_issue;
+	function load_MD() {
+		main_art_h2 = document.getElementsByTagName("h2")[0];
+		//main_art_h2 = document.getElementById("artM").getElementsByClassName("title_art")[0].getElementsByTagName(h2)[0];
+		document.getElementById("main_art_title").innerText = main_art_h2.innerHTML;
+		//(document.getElementById("main_art_url").getElementsByTagName(a)[0]).setAttribute(href, main_art_h2.getAttribute('data-src'))
+		//Element.setAttribute(name, value);
+		//document.getElementById("main_art_url").innerHTML = 
+		//href="http://dx.doi.org/10.1590/2237-266093237"
+		//document.getElementById("guest_art_title").innerText = document.getElementById("artL1").getElementsByClassName("title_art")[0].innerHTML;
+		//document.getElementById("rev_art_title").innerText = document.getElementById("artL2").getElementsByClassName("title_art")[0].innerHTML;
+
+	//		document.querySelector('div.boxRD div.title_art h2').innerText;
+
+		//boxM.querySelector('.title_art > h2').innerText = document.getElementById("main_art_title").innerText;
+		//title_artRU = (document.querySelector('title_art.boxRU > h2'))at[0].innerText
+		//document.getElementById("guest_art_title").innerText;
+		//document.querySelector('title_art.div.boxRD > h2').innerText = document.getElementById("rev_art_title").innerText;
+
+		//document.querySelector('boxM.div.title_art.boxM > h2').innerText = document.getElementById("main_art_url").innerHText;
+		//document.querySelector('boxRU.div.title_art > h2').innerText = document.getElementById("guest_art_url").innerText;
+		//document.querySelector('boxRD.div.title_art > h2').innerText = document.getElementById("rev_art_url").innerText;
+		//data-src="https://www.scielo.br/j/rbep/a/P6MCRbbMS8srQCcqFMhDcRv/?lang=en" h2
+	//	if (issue == 1) {
+			//art1 = "1_1.html";
+			//art2 = "1_2.html";
+			//art3 = "1_3.html";
+			//metadata_issue = '<h6 id="main_art_title">' + issue + '.1' + document.querySelector('boxM.div.title_art > h2').innerText + '. Main article</h6>';
+			//<p id="main_art_url"><a href="http://dx.doi.org/10.1590/2237-266093237">original version</a></p><h6 id="guest_art_title">1.2 El lugar de la diferencia en Chile:circo y transformismo. El caso del Circo Timoteo. Guest article</h6><p id="guest_art_url"><a href="https://raco.cat/index.php/DocumentsAnalisi/article/view/259380/346596">original version</a></p><h6 id="rev_art_title">1.3 The Semiotics of Clowns and Clowning: Rituals of Transgression and the Theory of Laughter. Book review</h6><p id="rev_art_url"><a href="https://europeanjournalofhumour.org/ejhr/article/view/126">original version</a></p>';
+			//}
+	//	if (issue == 2) {
+			//art1 = "2_1.html";
+			//art2 = "2_2.html";
+			//art3 = "2_3.html";
+			//metadata_issue = '<h6 id="main_art_title">' + issue + '.2' + document.querySelector('div.title_art > h2').innerText + '. Main article</h6>';
+			//metadata_issue = '<h6 id="main_art_title">2.1 Freaks (1932): Dysmorphisms, Solidarity and Revenge. Main article</h6><p id="main_art_url"><a href="http://dx.doi.org/10.1590/2237-266093237">original version</a></p><h6 id="guest_art_title">2.2 Esperienze musicali nel Circo Paniko. Guest article</h6><p id="guest_art_url"><a href="https://revistas.usal.es/index.php/medicina_y_cine/article/view/68/91">original version</a></p><h6 id="rev_art_title">2.3 The Circus as a Parallel Universe. Book review</h6><p id="rev_art_url"><a href="https://we-make-money-not-art.com/the_circus_as_a_parallel_unive/">original version</a></p>';
+			//}
+	//	if (issue == 3) {
+			//art1 = "3_1.html";
+			//art2 = "3_2.html";
+			//art3 = "3_3.html";
+			//metadata_issue = '<h6 id="main_art_title">3.1 Building Resilience by Becoming a Circus Artist. Main article</h6><p id="main_art_url"><a href="https://doi.org/10.1093/jrs/fez091">original version</a></p><h6 id="guest_art_title">3.2	Enseigner les arts du cirque au collège : une dévolution artistique. Guest article</h6><p id="guest_art_url"><a href="https://journals.openedition.org/ejrieps/1362?lang=en">original version</a></p><h6 id="rev_art_title">3.3	The Welfare of Performing Animals. A Historical Perspective. Book review</h6><p id="rev_art_url"><a href="https://doi.org/10.3390/ani6110076">original version</a></p>';
+			//}
+	//	document.getElementById("issue_metadata").innerHTML = metadata_issue;
 	document.querySelectorAll("#main_art_title, #main_art_url").classList.add("highlighted");
 	}
-
+}
 //function slide_articles() in an issue//
 counter=0
 function slide_articles(){
