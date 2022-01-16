@@ -51,7 +51,7 @@ function load_MD() {
 //$("#artM", "#artL1", "#artL2").addEventListener("dblclick", function open_full_article())
 
 function open_full_article() {	
-	var url = (document.this.getElementsByTagName('h2')[0])).getAttribute('data-src');
+	var url = (document.getElementById("artL1").getElementsByTagName('h2')[0])).getAttribute('data-src');
 	//var url = "www.google.com";
 	var win = window.open(url, '_blank');
 	win.focus();
