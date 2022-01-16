@@ -34,7 +34,8 @@ function change_issue(issue) {
 	$("#artL1").load(art2);
 	$("#artL2").load(art3);
 	document.getElementById("issue_title").innerHTML = document.getElementById(issue_id).innerText;
-	main_art_h2 = document.getElementById("artM").getElementsByClassName("title_art")[0].getElementsByTagName(h2)[0];
+	main_art_h2 = div.getElementsByClassName("title_art")[0].getElementsByTagName(h2)[0];
+	//main_art_h2 = document.getElementById("artM").getElementsByClassName("title_art")[0].getElementsByTagName(h2)[0];
 	document.getElementById("main_art_title").innerText = main_art_h2.innerHTML;
 	//(document.getElementById("main_art_url").getElementsByTagName(a)[0]).setAttribute(href, main_art_h2.getAttribute('data-src'))
 	//Element.setAttribute(name, value);
@@ -65,7 +66,7 @@ function change_issue(issue) {
 		//art1 = "2_1.html";
 		//art2 = "2_2.html";
 		//art3 = "2_3.html";
-		metadata_issue = '<h6 id="main_art_title">' + issue + '.2' + document.querySelector('div.title_art > h2').innerText + '. Main article</h6>';
+		//metadata_issue = '<h6 id="main_art_title">' + issue + '.2' + document.querySelector('div.title_art > h2').innerText + '. Main article</h6>';
 		//metadata_issue = '<h6 id="main_art_title">2.1 Freaks (1932): Dysmorphisms, Solidarity and Revenge. Main article</h6><p id="main_art_url"><a href="http://dx.doi.org/10.1590/2237-266093237">original version</a></p><h6 id="guest_art_title">2.2 Esperienze musicali nel Circo Paniko. Guest article</h6><p id="guest_art_url"><a href="https://revistas.usal.es/index.php/medicina_y_cine/article/view/68/91">original version</a></p><h6 id="rev_art_title">2.3 The Circus as a Parallel Universe. Book review</h6><p id="rev_art_url"><a href="https://we-make-money-not-art.com/the_circus_as_a_parallel_unive/">original version</a></p>';
 		//}
 //	if (issue == 3) {
