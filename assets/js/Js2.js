@@ -51,6 +51,15 @@ $("#artM", "#artL1", "#artL2").addEventListener("load", function load_MD())
 		document.querySelectorAll("#main_art_title, #main_art_url").classList.add("highlighted");
 		}
 
+$("#artM", "#artL1", "#artL2").addEventListener("dblclick", function open_full_article())
+
+function open_full_article() {
+//	$ (#, # div).dblclick(function() {
+ 		//function OpenInNewTab(url) {
+  		var win = window.open(url, '_blank');
+  		win.focus();
+//		}
+	})
 		//main_art_h2 = document.getElementById("artM").getElementsByClassName("title_art")[0].getElementsByTagName(h2)[0];
 		
 			//Element.setAttribute(name, value);
