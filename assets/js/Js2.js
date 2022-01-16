@@ -50,7 +50,8 @@ function load_MD() {
 	document.getElementById("guest_art_title").innerText = guest_art_h2.innerHTML;
 	document.getElementById("rev_art_title").innerText = rev_art_h2.innerHTML;
 //	document.querySelectorAll("#main_art_title, #main_art_url").classList.add("highlighted");
-	(document.getElementById("main_art_url").getElementsByTagName(a)[0]).setAttribute(href, main_art_h2.getAttribute('data-src'));
+
+	(document.getElementById("main_art_url").getElementsByTagName('a')[0]).setAttribute(href, main_art_h2.getAttribute('data-src'));
 //	(document.getElementById("guest_art_url").getElementsByTagName(a)[0]).setAttribute(href, guet_art_h2.getAttribute('data-src'));
 //	(document.getElementById("rev_art_url").getElementsByTagName(a)[0]).setAttribute(href, rev_art_h2.getAttribute('data-src'));
 	} 
