@@ -32,7 +32,7 @@ function change_issue(issue) {
 
 //function load MDarticles in the menu//
 function load_MD() {
-	var main_art_h2 = document.getElementsByTagName("h2")[0];
+	var main_art_h2 = art1.getElementsByTagName("h2")[0];
 	var guest_art_h2 = document.getElementsByTagName("h2")[1];
 	var rev_art_h2 = document.getElementsByTagName("h2")[2];
 	document.getElementById("main_art_title").innerText = main_art_h2.innerHTML;
