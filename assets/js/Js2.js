@@ -36,7 +36,7 @@ function change_issue(issue) {
 	document.getElementById("issue_title").innerHTML = document.getElementById(issue_id).innerText;
 }
 
-$("#artM", "#artL1", "#artL2").load(function(){
+$("#artM", "#artL1", "#artL2").ready(function(){
 	function load_MD() {
 		main_art_h2 = document.getElementById("artM").getElementsByClassName("title_art")[0].getElementsByTagName("h2")[0];
 		document.getElementById("main_art_title").innerText = main_art_h2.innerHTML;
