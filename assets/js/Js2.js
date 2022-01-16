@@ -20,7 +20,7 @@ function change_issue(issue) {
 	$("#artL1").load(art2);
 	$("#artL2").load(art3);
 	document.getElementById("issue_title").innerHTML = document.getElementById(issue_id).innerText;
-	$(window).on('load', function() {
+	$("#artL2").on('load', function() {
 		load_MD()
 		})
 	}
