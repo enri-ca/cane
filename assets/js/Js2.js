@@ -13,7 +13,7 @@ $(document).ready(function(){
 //function change_issue//
 function change_issue(issue) {
 	issue_id = 'I' + issue;
-	art1 = issue + '_1.html body';
+	art1 = issue + '_1.html #B1.1';
 	art2 = issue + '_2.html';
 	art3 = issue + '_3.html';
 	$("#artM").load(art1);
