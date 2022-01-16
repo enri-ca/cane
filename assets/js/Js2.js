@@ -34,25 +34,26 @@ function change_issue(issue) {
 	$("#artL1").load(art2);
 	$("#artL2").load(art3);
 	document.getElementById("issue_title").innerHTML = document.getElementById(issue_id).innerText;
-	load_MD()
+	//load_MD()
 }
 
 //element.addEventListener("click", function(){ myFunction(p1, p2); });
 //$("#artM", "#artL1", "#artL2").addEventListener("load", function(){
 //document.querySelectorAll("#artM", "#artL1", "#artL2").addEventListener("load", function(){ load_MD() });
 
+main_art_h2 = document.getElementById("artM").getElementsByClassName("title_art")[0].getElementsByTagName("h2")[0];
+guest_art_h2 = document.getElementsByTagName("h2")[1];
+rev_art_h2 = document.getElementsByTagName("h2")[2];
+
 function load_MD() {
-	main_art_h2 = document.getElementById("artM").getElementsByClassName("title_art")[0].getElementsByTagName("h2")[0];
 	document.getElementById("main_art_title").innerText = main_art_h2.innerHTML;
-	main_art_url_h2 = document.getElementById("main_art_url").getElementsByTagName(a)[0];
-	main_art_url_h2.setAttribute(href, main_art_h2.getAttribute('data-src'));
-	guest_art_h2 = document.getElementsByTagName("h2")[1];
-	document.getElementById("guest_art_title").innerText = main_art_h2.innerHTML;
-	(document.getElementById("guest_art_url").getElementsByTagName(a)[0]).setAttribute(href, main_art_h2.getAttribute('data-src'));
-	rev_art_h2 = document.getElementsByTagName("h2")[2];
-	document.getElementById("rev_art_title").innerText = main_art_h2.innerHTML;
-	(document.getElementById("rev_art_url").getElementsByTagName(a)[0]).setAttribute(href, main_art_h2.getAttribute('data-src'));
+	document.getElementById("guest_art_title").innerText = guest_art_h2.innerHTML;
+	document.getElementById("rev_art_title").innerText = rev_art_h2.innerHTML;
 	document.querySelectorAll("#main_art_title, #main_art_url").classList.add("highlighted");
+//	main_art_url_h2 = document.getElementById("main_art_url").getElementsByTagName(a)[0];
+//	main_art_url_h2.setAttribute(href, main_art_h2.getAttribute('data-src'));
+//	(document.getElementById("guest_art_url").getElementsByTagName(a)[0]).setAttribute(href, main_art_h2.getAttribute('data-src'));
+//	(document.getElementById("rev_art_url").getElementsByTagName(a)[0]).setAttribute(href, main_art_h2.getAttribute('data-src'));
 	} 
 //;})
 
