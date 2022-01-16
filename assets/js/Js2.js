@@ -48,7 +48,7 @@ $(window).load(function(){
 		document.getElementById("rev_art_title").innerText = main_art_h2.innerHTML;
 		(document.getElementById("rev_art_url").getElementsByTagName(a)[0]).setAttribute(href, main_art_h2.getAttribute('data-src'));
 		document.querySelectorAll("#main_art_title, #main_art_url").classList.add("highlighted");
-		})
+		});
 })
 		//main_art_h2 = document.getElementById("artM").getElementsByClassName("title_art")[0].getElementsByTagName(h2)[0];
 		
