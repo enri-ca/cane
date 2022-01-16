@@ -34,7 +34,7 @@ function change_issue(issue) {
 	$("#artL1").load(art2);
 	$("#artL2").load(art3);
 	document.getElementById("issue_title").innerHTML = document.getElementById(issue_id).innerText;
-	main_art_h2 = getElementsByTagName("h2")[0];
+	main_art_h2 = document.getElementsByTagName("h2")[0];
 	//main_art_h2 = document.getElementById("artM").getElementsByClassName("title_art")[0].getElementsByTagName(h2)[0];
 	document.getElementById("main_art_title").innerText = main_art_h2.innerHTML;
 	//(document.getElementById("main_art_url").getElementsByTagName(a)[0]).setAttribute(href, main_art_h2.getAttribute('data-src'))
