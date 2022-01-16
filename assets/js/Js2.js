@@ -60,13 +60,15 @@ function load_MD() {
 //$("#artM", "#artL1", "#artL2").addEventListener("dblclick", function open_full_article())
 
 function open_full_article() {
-//	$ (#, # div).dblclick(function() {
- 		//function OpenInNewTab(url) {
-		var url = "www.google.it";
-		var win = window.open(url, '_blank');
-		win.focus();
+	var url = "www.google.it";
+	var win = window.open(url, '_blank');
+	win.focus();
+}
+
+//$ (#, # div).dblclick(function() {
+//function OpenInNewTab(url) {
 //		}
-	})
+
 		//main_art_h2 = document.getElementById("artM").getElementsByClassName("title_art")[0].getElementsByTagName(h2)[0];
 		
 			//Element.setAttribute(name, value);
