@@ -49,7 +49,7 @@ function load_MD() {
 	var rev_art_h2 = document.getElementsByTagName("h2")[2];document.getElementById("main_art_title").innerText = main_art_h2.innerHTML;
 	document.getElementById("guest_art_title").innerText = guest_art_h2.innerHTML;
 	document.getElementById("rev_art_title").innerText = rev_art_h2.innerHTML;
-	document.querySelectorAll("#main_art_title, #main_art_url").classList.add("highlighted");
+//	document.querySelectorAll("#main_art_title, #main_art_url").classList.add("highlighted");
 	(document.getElementById("main_art_url").getElementsByTagName(a)[0]).setAttribute(href, main_art_h2.getAttribute('data-src'));
 //	(document.getElementById("guest_art_url").getElementsByTagName(a)[0]).setAttribute(href, guet_art_h2.getAttribute('data-src'));
 //	(document.getElementById("rev_art_url").getElementsByTagName(a)[0]).setAttribute(href, rev_art_h2.getAttribute('data-src'));
