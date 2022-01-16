@@ -36,7 +36,10 @@ function change_issue(issue) {
 	document.getElementById("issue_title").innerHTML = document.getElementById(issue_id).innerText;
 }
 
-$("#artM", "#artL1", "#artL2").addEventListener("load", function(){
+//element.addEventListener("click", function(){ myFunction(p1, p2); });
+//$("#artM", "#artL1", "#artL2").addEventListener("load", function(){
+document.querySelectorAll("#artM", "#artL1", "#artL2").addEventListener("load", function(){ load_MD() });
+
 	function load_MD() {
 		main_art_h2 = document.getElementById("artM").getElementsByClassName("title_art")[0].getElementsByTagName("h2")[0];
 		document.getElementById("main_art_title").innerText = main_art_h2.innerHTML;
@@ -48,8 +51,8 @@ $("#artM", "#artL1", "#artL2").addEventListener("load", function(){
 		document.getElementById("rev_art_title").innerText = main_art_h2.innerHTML;
 		(document.getElementById("rev_art_url").getElementsByTagName(a)[0]).setAttribute(href, main_art_h2.getAttribute('data-src'));
 		document.querySelectorAll("#main_art_title, #main_art_url").classList.add("highlighted");
-		};
-})
+		} 
+//;})
 
 //$("#artM", "#artL1", "#artL2").addEventListener("dblclick", function open_full_article())
 
