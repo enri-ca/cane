@@ -59,7 +59,7 @@ $("#artM", "#artL1", "#artL2").addEventListener("load", function(){
   //		var win = window.open(url, '_blank');
   //		win.focus();
 //		}
-	})
+//	})
 		//main_art_h2 = document.getElementById("artM").getElementsByClassName("title_art")[0].getElementsByTagName(h2)[0];
 		
 			//Element.setAttribute(name, value);
