@@ -34,7 +34,7 @@ function change_issue(issue) {
 	$("#artL1").load(art2);
 	$("#artL2").load(art3);
 	document.getElementById("issue_title").innerHTML = document.getElementById(issue_id).innerText;
-	document.getElementById("rev_art_title").innerText = document.querySelector('div.boxRD > h2').innerText;
+	document.getElementById("rev_art_title").innerText = document.querySelector('div.boxRD h2').innerText;
 	
 	//boxM.querySelector('.title_art > h2').innerText = document.getElementById("main_art_title").innerText;
 	//title_artRU = (document.querySelector('title_art.boxRU > h2'))at[0].innerText
