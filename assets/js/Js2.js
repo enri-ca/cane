@@ -35,13 +35,14 @@ function change_issue(issue) {
 	$("#artL2").load(art3);
 	document.getElementById("issue_title").innerHTML = document.getElementById(issue_id).innerText;
 	
-	div.querySelector('title_art.boxM > h2').innerText = document.getElementById("main_art_title").innerText;
+	boxM.querySelector('.title_art > h2').innerText = document.getElementById("main_art_title").innerText;
 	document.querySelector('title_art.boxRU > h2').innerText = document.getElementById("guest_art_title").innerText;
 	document.querySelector('title_art.div.boxRD > h2').innerText = document.getElementById("rev_art_title").innerText;
 	
 	//document.querySelector('boxM.div.title_art.boxM > h2').innerText = document.getElementById("main_art_url").innerHText;
 	//document.querySelector('boxRU.div.title_art > h2').innerText = document.getElementById("guest_art_url").innerText;
 	//document.querySelector('boxRD.div.title_art > h2').innerText = document.getElementById("rev_art_url").innerText;
+	//data-src="https://www.scielo.br/j/rbep/a/P6MCRbbMS8srQCcqFMhDcRv/?lang=en" h2
 //	if (issue == 1) {
 		//art1 = "1_1.html";
 		//art2 = "1_2.html";
