@@ -13,14 +13,14 @@ $(document).ready(function(){
 //function change_issue//
 function change_issue(issue) {
 	issue_id = 'I' + issue;
-	art1 = issue + '_1.html';
+	art1 = issue + '_1.html body';
 	art2 = issue + '_2.html';
 	art3 = issue + '_3.html';
 	$("#artM").load(art1);
 	$("#artL1").load(art2);
 	$("#artL2").load(art3);
 	document.getElementById("issue_title").innerHTML = document.getElementById(issue_id).innerText;
-	$("#artL2").on('load', function() {
+	$("#artM, #artL1, #artL2").on('load', function() {
 		load_MD()
 		})
 	}
