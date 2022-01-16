@@ -34,7 +34,10 @@ function change_issue(issue) {
 	$("#artL1").load(art2);
 	$("#artL2").load(art3);
 	document.getElementById("issue_title").innerHTML = document.getElementById(issue_id).innerText;
-	window.onload = function load_MD() {
+}
+
+$(window).load(function(){
+	function load_MD() {
 		main_art_h2 = document.getElementById("artM").getElementsByClassName("title_art")[0].getElementsByTagName("h2")[0];
 		document.getElementById("main_art_title").innerText = main_art_h2.innerHTML;
 		(document.getElementById("main_art_url").getElementsByTagName(a)[0]).setAttribute(href, main_art_h2.getAttribute('data-src'));
@@ -44,7 +47,9 @@ function change_issue(issue) {
 		rev_art_h2 = document.getElementsByTagName("h2")[2];
 		document.getElementById("rev_art_title").innerText = main_art_h2.innerHTML;
 		(document.getElementById("rev_art_url").getElementsByTagName(a)[0]).setAttribute(href, main_art_h2.getAttribute('data-src'));
-	
+		document.querySelectorAll("#main_art_title, #main_art_url").classList.add("highlighted");
+		})
+})
 		//main_art_h2 = document.getElementById("artM").getElementsByClassName("title_art")[0].getElementsByTagName(h2)[0];
 		
 			//Element.setAttribute(name, value);
@@ -84,9 +89,7 @@ function change_issue(issue) {
 			//metadata_issue = '<h6 id="main_art_title">3.1 Building Resilience by Becoming a Circus Artist. Main article</h6><p id="main_art_url"><a href="https://doi.org/10.1093/jrs/fez091">original version</a></p><h6 id="guest_art_title">3.2	Enseigner les arts du cirque au collège : une dévolution artistique. Guest article</h6><p id="guest_art_url"><a href="https://journals.openedition.org/ejrieps/1362?lang=en">original version</a></p><h6 id="rev_art_title">3.3	The Welfare of Performing Animals. A Historical Perspective. Book review</h6><p id="rev_art_url"><a href="https://doi.org/10.3390/ani6110076">original version</a></p>';
 			//}
 	//	document.getElementById("issue_metadata").innerHTML = metadata_issue;
-	document.querySelectorAll("#main_art_title, #main_art_url").classList.add("highlighted");
-	}
-}
+
 //function slide_articles() in an issue//
 counter=0
 function slide_articles(){
