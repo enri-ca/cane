@@ -34,9 +34,11 @@ function change_issue(issue) {
 	$("#artL1").load(art2);
 	$("#artL2").load(art3);
 	document.getElementById("issue_title").innerHTML = document.getElementById(issue_id).innerText;
-	main_art_title = document.getElementById("artM").getElementsByClassName("title_art")[0];
-	document.getElementById("main_art_title").innerText = main_art_title.innerHTML;
-	//document.getElementById("main_art_url").innerHTML = main_art_title.getAttribute('data-src')
+	main_art_h2 = document.getElementById("artM").getElementsByClassName("title_art")[0];
+	document.getElementById("main_art_title").innerText = main_art_h2.innerHTML;
+	//(document.getElementById("main_art_url").getElementsByTag(a)[0].)attribute = main_art_h2.getAttribute('data-src')
+	//document.getElementById("main_art_url").innerHTML = 
+	//href="http://dx.doi.org/10.1590/2237-266093237"
 	//document.getElementById("guest_art_title").innerText = document.getElementById("artL1").getElementsByClassName("title_art")[0].innerHTML;
 	//document.getElementById("rev_art_title").innerText = document.getElementById("artL2").getElementsByClassName("title_art")[0].innerHTML;
 		
