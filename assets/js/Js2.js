@@ -36,10 +36,18 @@ function change_issue(issue) {
 	document.getElementById("issue_title").innerHTML = document.getElementById(issue_id).innerText;
 	function load_MD() {
 		main_art_h2 = document.getElementsByTagName("h2")[0];
-		//main_art_h2 = document.getElementById("artM").getElementsByClassName("title_art")[0].getElementsByTagName(h2)[0];
 		document.getElementById("main_art_title").innerText = main_art_h2.innerHTML;
-		//(document.getElementById("main_art_url").getElementsByTagName(a)[0]).setAttribute(href, main_art_h2.getAttribute('data-src'))
-		//Element.setAttribute(name, value);
+		(document.getElementById("main_art_url").getElementsByTagName(a)[0]).setAttribute(href, main_art_h2.getAttribute('data-src'));
+		guest_art_h2 = document.getElementsByTagName("h2")[1];
+		document.getElementById("guest_art_title").innerText = main_art_h2.innerHTML;
+		(document.getElementById("guest_art_url").getElementsByTagName(a)[0]).setAttribute(href, main_art_h2.getAttribute('data-src'));
+		rev_art_h2 = document.getElementsByTagName("h2")[2];
+		document.getElementById("rev_art_title").innerText = main_art_h2.innerHTML;
+		(document.getElementById("rev_art_url").getElementsByTagName(a)[0]).setAttribute(href, main_art_h2.getAttribute('data-src'));
+	
+		//main_art_h2 = document.getElementById("artM").getElementsByClassName("title_art")[0].getElementsByTagName(h2)[0];
+		
+			//Element.setAttribute(name, value);
 		//document.getElementById("main_art_url").innerHTML = 
 		//href="http://dx.doi.org/10.1590/2237-266093237"
 		//document.getElementById("guest_art_title").innerText = document.getElementById("artL1").getElementsByClassName("title_art")[0].innerHTML;
@@ -51,7 +59,6 @@ function change_issue(issue) {
 		//title_artRU = (document.querySelector('title_art.boxRU > h2'))at[0].innerText
 		//document.getElementById("guest_art_title").innerText;
 		//document.querySelector('title_art.div.boxRD > h2').innerText = document.getElementById("rev_art_title").innerText;
-
 		//document.querySelector('boxM.div.title_art.boxM > h2').innerText = document.getElementById("main_art_url").innerHText;
 		//document.querySelector('boxRU.div.title_art > h2').innerText = document.getElementById("guest_art_url").innerText;
 		//document.querySelector('boxRD.div.title_art > h2').innerText = document.getElementById("rev_art_url").innerText;
