@@ -132,7 +132,7 @@ var all_entities = document.getElementsByClassName("entity")
 
 //function openPopUp//
 function openPopUp(el){
-	all_entities.classList.remove("highlighted", "highlighted_more");
+	(Array.from(all_entities)).forEach(entity => entity.classList.remove("highlighted", "highlighted_more"));
 	//se si trovasse una soluzione per tenerle insieme sarebbe fico
 	let label = el.innerText;
 	var clicked_entity = ((Array.from(all_entities)).filter(entity => entity.getAttribute("data-label") == label));
