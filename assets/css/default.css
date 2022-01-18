@@ -3,9 +3,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Lato&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap');
-@font-face{
-  src: url(assets/fonts/quentincaps.regular.ttf);
-  font-family: QuentinCaps;
+@import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
+
+@font-face {
+  src: url('assets/fonts/quentincaps/Circus.ttf');
+  font-family: 'Circus Font';
 }
 * {
   box-sizing: border-box;
@@ -27,7 +29,7 @@
   /*grid-template-columns: 25vmin 1fr 1fr 1fr 1fr 1fr;*/
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   /*grid-template-rows: 15vmin 2vmin 13vw 1fr 1fr 10vmin;*/
-  grid-template-rows: 0.2fr 0.3fr 0.8fr 2.1fr 2.1fr 0.3fr;
+  grid-template-rows: 0.3fr 0.05fr 0.2fr 3fr 3fr 0.3fr;
   /*ricordiamoci che dobbiamo ragionare in 12imi */
 
 }
@@ -37,14 +39,15 @@
   background-color: #000000;
   color: white;
   font-family: 'Raleway', sans-serif;
-  padding: 1vw;
   text-align: left;
+  line-height: 0.1vmin;
+
 }
 
 .header { 
   grid-area: header;
-  font-family: QuentinCaps;
-  font-size: 4.5vw;
+  font-family: 'Circus Font';
+  font-size: 4vw;
   text-shadow: 4px 4px 16px white;
   text-align: center; 
   letter-spacing: -0.05vw;
@@ -79,7 +82,7 @@
 }
 
 #menutitle{
-  font-family: QuentinCaps;
+  font-family: Showboat;
   font-size: 2.5vw;
   letter-spacing: 0.2vw;
   text-shadow: 2px 2px 5px #dfbfbf;
@@ -218,4 +221,48 @@ margin-top: 2.5vmin;
   font-size: 1.2vw;
 
   
+}
+
+  .modal {
+  display: none; /* Hidden by default */
+  position: absolute; /* Stay in place */
+  z-index: 9; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 50%; /* Full width */
+  height: 50%; /* Full height */
+  overflow: none; /* Enable scroll if needed */
+  border-radius:10%;
+  }
+
+  .modal-content {
+  background-color: #f2e6e6;
+  font-family: 'Cinzel', serif;
+  font-size: 1.2vw;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+  border-radius:10%;
+  cursor:grab;
+  }
+
+#PopUpHeader{
+font-family: 'Cinzel', serif;
+font-size: 1.5vw;
+font-weight: bold;
+}
+
+.close {
+  color: #993333;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
 }
