@@ -256,19 +256,56 @@ img{
 
 /*customized modal*/
 
-.w3-container{
+.modal {
+	display: none; /* Hidden by default */
+	position: absolute; /* Stay in place */
+	z-index: 9; /* Sit on top */
+	top: 0%;
+	left: 0%;
+	width: 100%; /* Full width */
+	height: 50%; /* Full height */
+	overflow: none; /* Enable scroll if needed */
+	border-radius:10%;
+  }
+
+.modal-content {
 	background: url(../img/styles/PikPng.com_art-nouveau-png_6017636.png);
+	background-color: white;
+	color: #c87354;
+	margin: auto;
+	padding: 0.1vw 0.4vw;
+	border: 0.2vw solid black
+	text-align: left;
+	font-weight: bold;
 }
 
-.w3-content h4{
-	font-family: 'MyRivanna', sans-serif;
-	letter-spacing: 0.5em;
+	.modal-content h4{
+		font-family: 'MyRivanna', sans-serif;
+		letter-spacing: 0.5em;
+	}
+
+	.modal-content p{
+		font-family: MyJenson, serif; 
+		font-size: 1.2em;
+	}
+
+	.modal-content a{
+		text-decoration: none;
+	}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
 }
 
-.w3-content a{
-	text-decoration: none;
-}
-	
+	.close:hover, .close:focus {
+	  color: #000;
+	  text-decoration: none;
+	  cursor: pointer;
+	}
+
 /* Responsive layout - when the screen is less than xxpx (o vmin??) wide, make the grid items stack on top of each other instead of next to each other
 @media screen and (max-width: 500px) {
 	.logo { display: none; }
@@ -343,7 +380,7 @@ margin:0.2em auto;
   display: none;
   position: absolute;
   background-color: #f9f9f9;
-  min-width: 25vw;
+  max-width: 40vw;
   /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
   z-index: 1;
 }
