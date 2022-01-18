@@ -270,12 +270,13 @@ img{
 
 .modal-content {
 	background: url(../img/styles/PikPng.com_art-nouveau-png_6017636.png);
-	background-color: white;
+	background-position: center;
+	height: 4vw;
 	color: #c87354;
 	margin: auto;
 	padding: 0.1vw 0.4vw;
-	border: 0.2vw solid black
-	text-align: left;
+	border: 0.2vw solid black;
+	text-align: center;
 	font-weight: bold;
 }
 
