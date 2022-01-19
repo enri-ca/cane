@@ -105,19 +105,18 @@ function MDV(selection){
 	if (selection == 4){
 		classname="entity organization";
 		id = "OR"};
-	//var arr = document.getElementsByClassName(classname);
-	//myarray.sort();
-	//myarray.reverse();
-	//riassunti in var myarray = ((Array.from(document.getElementsByClassName(classname))).sort()).reverse(); 
-	//però non funziona perchè il sort ordina l'arrai di object quindi a seconda dell'indice e non per il label: proposta:
 	var myarray = Array.from(document.getElementsByClassName(classname));
+	var my_sub_array = myarray.filter(entity => entity.hasAttribute("data-active"));
+	var array_label_to_sort = [];
 	var array_label = [];
-	for (let i = 0; i < myarray.length; i++) {
-		if (myarray[i].hasAttribute("data-active")){
-			array_label.push(myarray[i].getAttribute("data-label"));
-			}
-		}
-	array_label.sort();
+	for (let i = 0; i < my_sub_array.length; i++) {
+			array_label_to_sort.push((myarray[i].getAttribute("data-sort")).toLowerCase());
+			}		
+	array_label_to_sort.sort();
+	for (let i = 0; i < array_label_to_sort.length; i++) {
+			if (my_sub_array[i].hasAttribute("data-sort") == array_label_to_sort[i]) {
+				array_label.push(my_sub_array[i].getAttribute("data-label"))
+				}
 	let text = "";
 	for (let i = 0; i < array_label.length; i++) {
 		//text += '<li> <a onclick="highlight(this)" about="'+ myarray[i].getAttribute("about") + '">' + myarray[i].getAttribute("data-label") + '</a></li>';
@@ -126,7 +125,7 @@ function MDV(selection){
 		}
 	document.getElementById(id).innerHTML = text;
 	}
-
+	
 //set a global variable with all the entities to be recalled if needed//
 var all_entities = document.getElementsByClassName("entity")
 
