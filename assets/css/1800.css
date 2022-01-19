@@ -268,8 +268,8 @@ img{
   }
 
 .modal-content {
-	width: 33.5vw; /* Full width */
-	height: 14vw; /* Full height */
+	width: 35.5vw; /* Full width */
+	height: 5vw; /* Full height */
 	background: url(../img/styles/1800modal.png);
 	background-position: center center;
 	background-repeat: no-repeat;
