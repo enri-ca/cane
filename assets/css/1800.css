@@ -62,11 +62,11 @@ img{
 	grid-template-rows: 0.2fr 0.02fr 0.4fr 3.09fr 3.09fr 0.2fr;
 }
 
-.header { 
+.header {
 	grid-area: header;
 	font-family: 'MyRivanna', sans-serif;
 	font-size: 5vw;
-	text-align: right; 
+	text-align: right;
 	padding-top: 0vw;
 	padding-right: 1vw;
 	color: #c87354;
@@ -77,7 +77,7 @@ img{
 
 .sep {
 	grid-area: sep;
-	background-color: black; 
+	background-color: black;
 }
 
 .logo{
@@ -103,40 +103,40 @@ img{
 	background-color: black;
 }
 
-.menu { 
-	grid-area: menu; 
+.menu {
+	grid-area: menu;
 	background-color: black;
 	color: #c87354;
 	border-left: 0.2vw solid #000000;
 	padding: 1vw;
 	overflow: auto;
-	font-family: 'MyJenson', serif;	
+	font-family: 'MyJenson', serif;
 }
 
 	#issue_title {
 		font-family: 'MyRivanna', sans-serif;
 		font-size: 1.5em;
 	}
-	
+
 	.menu h6, .menu p {
 		font-family: 'MyJenson', serif;
 		text-align: left;
 	}
-	
+
 	.menu a {
 		text-decoration:none;
 	}
-	
-.boxM { 
-	grid-area: main; 
+
+.boxM {
+	grid-area: main;
 	overflow-y: auto;
 	overflow-x: hidden;
 	padding: 3vw;
 	font-family: 'MyJenson', serif;
 }
 
-.boxRU { 
-	grid-area: rightUp; 
+.boxRU {
+	grid-area: rightUp;
 	overflow-y: auto;
 	overflow-x: hidden;
 	border-left: 0.2vw solid #000000;
@@ -145,7 +145,7 @@ img{
 	font-family: 'MyJenson', serif;
 }
 
-.boxRD { 
+.boxRD {
 	grid-area: rightDown;
 	overflow-y: auto;
 	overflow-x: hidden;
@@ -171,9 +171,9 @@ img{
 	.title_art h2 {
 		line-height: 0.98em;
 	}
-	
-.footer { 
-	grid-area: footer; 
+
+.footer {
+	grid-area: footer;
 	text-align: center;
 	color: #c87354;
 	background-color: black;
@@ -243,16 +243,16 @@ img{
 	background: url("../img/styles/1800scrollbar.PNG");
 	/*from https://anno.onb.ac.at/cgi-content/anno-plus?aid=vsa&datum=1898&page=316&size=18&qid=KJUQ53UXY3PEFUDA2C48T9ZRWIEWHK*/
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-	background: #555; 
+	background: #555;
 	/*	background: #555 #c87354; */
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-	background: #e5c19a; 
+	background: #e5c19a;
 }
 
 /*customized modal*/
@@ -271,7 +271,7 @@ img{
 	width: 33.5vw; /* Full width */
 	height: 14vw; /* Full height */
 	background: url(../img/styles/1800modal.png);
-	background-position: center right;
+	background-position: center center;
 	background-repeat: no-repeat;
 	/*background-attachment: fixed;*/
 	background-size: cover;
@@ -289,7 +289,7 @@ img{
 	}
 
 	.modal-content p{
-		font-family: MyJenson, serif; 
+		font-family: MyJenson, serif;
 		font-size: 1.2em;
 		text-align: center;
 	}
