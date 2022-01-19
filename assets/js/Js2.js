@@ -106,7 +106,7 @@ function MDV(selection){
 		classname="entity organization";
 		id = "OR"};
 	var myarray = Array.from(document.getElementsByClassName(classname));
-	var my_sub_array = myarray.filter(entity => entity.hasAttribute("data-active"));
+	var my_sub_array = myarray.filter(entity => entity.getAttribute("data-active") == "true");
 	var array_label_to_sort = [];
 	var array_label = [];
 	for (let i = 0; i < my_sub_array.length; i++) {
