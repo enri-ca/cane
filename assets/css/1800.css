@@ -286,12 +286,14 @@ img{
 	.modal-content h4{
 		font-family: 'MyRivanna', sans-serif;
 		letter-spacing: 0.5em;
+		line-height:.5em;
 	}
 
 	.modal-content p{
 		font-family: MyJenson, serif;
 		font-size: 1.2em;
 		text-align: center;
+		line-height: .8em;
 	}
 
 	.modal-content a{
