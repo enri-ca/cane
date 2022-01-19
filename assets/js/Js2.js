@@ -110,8 +110,8 @@ function MDV(selection){
 	var array_label_to_sort = [];
 	var array_label = [];
 	for (let i = 0; i < my_sub_array.length; i++) {
-			array_label_to_sort.push((my_sub_array[i].getAttribute("data-sort")).toLowerCase());
-			}		
+			array_label_to_sort.push(my_sub_array[i].getAttribute("data-sort"));
+			}
 	array_label_to_sort.sort();
 	for (let i = 0; i < array_label_to_sort.length; i++) {
 		for (let j = 0; j < my_sub_array.length; i++) {
