@@ -117,6 +117,7 @@ function MDV(selection){
 			if (my_sub_array[i].hasAttribute("data-sort") == array_label_to_sort[i]) {
 				array_label.push(my_sub_array[i].getAttribute("data-label"))
 				}
+			}
 	let text = "";
 	for (let i = 0; i < array_label.length; i++) {
 		//text += '<li> <a onclick="highlight(this)" about="'+ myarray[i].getAttribute("about") + '">' + myarray[i].getAttribute("data-label") + '</a></li>';
