@@ -269,8 +269,8 @@ img{
 
 .modal-content {
 	width: 35.5vw; /* Full width */
-	height: 5vw; /* Full height */
-	background: url(../img/styles/1800modal.png);
+	height: 14vw; /* Full height */
+	background: url(../img/styles/1800modal2.png);
 	background-position: center center;
 	background-repeat: no-repeat;
 	/*background-attachment: fixed;*/
