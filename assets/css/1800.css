@@ -54,11 +54,11 @@ img{
 		'logo logo nav nav nav nav'
 		'menu main main main rightUp rightUp'
 		'menu main main main rightDown rightDown'
-		'menu footer footer footer  footer footer';
+		'footer footer footer footer  footer footer';
 	height: 100vmin;
 	width: 100%;
 	margin-top: -0.5vw;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-columns: 1.2fr 0.8fr 1fr 1fr 1fr 1fr;
 	grid-template-rows: 0.2fr 0.02fr 0.4fr 3.09fr 3.09fr 0.2fr;
 }
 
@@ -94,7 +94,7 @@ img{
 	.logo p{
 		font-family: 'MyRivanna', sans-serif;
 		margin-bottom:-1em;
-		letter-spacing:1em;
+		letter-spacing: 1em;
 		font-weight: bold;
 		}
 
@@ -113,13 +113,14 @@ img{
 	font-family: 'MyJenson', serif;	
 }
 
-	.menu h4 {
+	#issue_title {
 		font-family: 'MyRivanna', sans-serif;
+		font-size: 1.5em;
 	}
 	
 	.menu h6, .menu p {
-	font-family: 'MyJenson', serif;
-	text-align: left;
+		font-family: 'MyJenson', serif;
+		text-align: left;
 	}
 	
 	.menu a {
@@ -262,21 +263,23 @@ img{
 	z-index: 9; /* Sit on top */
 	top: 0%;
 	left: 0%;
-	width: 100%; /* Full width */
-	height: 50%; /* Full height */
 	overflow: none; /* Enable scroll if needed */
 	border-radius:10%;
   }
 
 .modal-content {
-	background: url(../img/styles/PikPng.com_art-nouveau-png_6017636.png);
-	background-position: center;
-	height: 4vw;
+	width: 33.5vw; /* Full width */
+	height: 14vw; /* Full height */
+	background: url(../img/styles/1800modal.png);
+	background-position: center right;
+	background-repeat: no-repeat;
+	/*background-attachment: fixed;*/
+	background-size: cover;
+	background-color: transparent;
 	color: #c87354;
 	margin: auto;
 	padding: 0.1vw 0.4vw;
 	border: 0.2vw solid black;
-	text-align: center;
 	font-weight: bold;
 }
 
@@ -288,6 +291,7 @@ img{
 	.modal-content p{
 		font-family: MyJenson, serif; 
 		font-size: 1.2em;
+		text-align: center;
 	}
 
 	.modal-content a{
@@ -418,6 +422,9 @@ button {
 	background-color:#c87354;
 	}
 
+.navbar-nav-selector {
+	align: left;
+}
 
 
 /*.navbar-nav ul, li {
