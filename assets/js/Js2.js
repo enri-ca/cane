@@ -105,21 +105,14 @@ function MDV(selection){
 	if (selection == 4){
 		classname="entity organization";
 		id = "OR"};
-	var myarray = Array.from(document.getElementsByClassName(classname));
-	var my_sub_array = myarray.filter(entity => entity.getAttribute("data-active") == "true");
-	var array_label_to_sort = [];
+var myarray = Array.from(document.getElementsByClassName(classname));
 	var array_label = [];
-	for (let i = 0; i < my_sub_array.length; i++) {
-			array_label_to_sort.push(my_sub_array[i].getAttribute("data-sort"));
-			}
-	array_label_to_sort.sort();
-	for (let i = 0; i < array_label_to_sort.length; i++) {
-		for (let j = 0; j < my_sub_array.length; i++) {
-			if (my_sub_array[j].getAttribute("data-label") == array_label_to_sort[i]) {
-				array_label.push(my_sub_array[j].getAttribute("data-label"))
-				}
+	for (let i = 0; i < myarray.length; i++) {
+		if (myarray[i].hasAttribute("data-active")){
+			array_label.push(myarray[i].getAttribute("data-label"));
 			}
 		}
+	array_label.sort();
 	let text = "";
 	for (let i = 0; i < array_label.length; i++) {
 		//text += '<li> <a onclick="highlight(this)" about="'+ myarray[i].getAttribute("about") + '">' + myarray[i].getAttribute("data-label") + '</a></li>';
@@ -128,6 +121,7 @@ function MDV(selection){
 		}
 	document.getElementById(id).innerHTML = text;
 	}
+
 	
 //set a global variable with all the entities to be recalled if needed//
 var all_entities = document.getElementsByClassName("entity")
