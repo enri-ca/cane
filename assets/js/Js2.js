@@ -110,14 +110,16 @@ function MDV(selection){
 	var array_label_to_sort = [];
 	var array_label = [];
 	for (let i = 0; i < my_sub_array.length; i++) {
-			array_label_to_sort.push((myarray[i].getAttribute("data-sort")).toLowerCase());
+			array_label_to_sort.push((my_sub_array[i].getAttribute("data-sort")).toLowerCase());
 			}		
 	array_label_to_sort.sort();
 	for (let i = 0; i < array_label_to_sort.length; i++) {
-			if (my_sub_array[i].hasAttribute("data-sort") == array_label_to_sort[i]) {
-				array_label.push(my_sub_array[i].getAttribute("data-label"))
+		for (let j = 0; j < my_sub_array.length; i++) {
+			if (my_sub_array[j].getAttribute("data-label") == array_label_to_sort[i]) {
+				array_label.push(my_sub_array[j].getAttribute("data-label"))
 				}
 			}
+		}
 	let text = "";
 	for (let i = 0; i < array_label.length; i++) {
 		//text += '<li> <a onclick="highlight(this)" about="'+ myarray[i].getAttribute("about") + '">' + myarray[i].getAttribute("data-label") + '</a></li>';
