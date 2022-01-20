@@ -218,7 +218,7 @@ img {
 /*Fine paragrafo*/
 .boxM .maincontent p:after {
 	content: "☙";
-	font-size: 1eh;
+	font-size: 1em;
     display: inline-block;
     /*background: url("icon.jpg") no-repeat;
     width: 20px;
