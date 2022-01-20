@@ -206,14 +206,6 @@ img {
 
 /*Decorations*/
 /*Drop caps*/
-.maincontent div[id^="sec"] p:first-of-type::first-letter {
-	font-family: 'MyRivanna', sans-serif;
-	padding-right: 0.2em;
-	line-height: 1em;#c87354
-	font-size: 3.8em;
-	font-style: normal;
-	float: left;
-}
 
 /*Fine paragrafo*/
 .boxM .maincontent p:after {
