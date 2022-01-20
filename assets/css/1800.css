@@ -359,7 +359,7 @@ margin:0.2em auto;
 	font-size: 1em;
 }
 
-.navbar a:hover, .dropdown:hover {
+.navbar, a:hover, .dropdown:hover {
   background-color: #ddd;
   color: black;
 }
@@ -368,7 +368,7 @@ margin:0.2em auto;
 	display: inline-block;
 }
 
-.dropdown:hover .dropdown-menu {
+.dropdown:hover, .dropdown-menu {
   display: block;
 }
 
@@ -391,7 +391,7 @@ margin:0.2em auto;
   text-align: left;
 }
 
-.buttons {
+button {
 	background-color: #e5c19a;
 		font-family: 'MyRivanna', sans-serif;
 	letter-spacing: 0.1em;
@@ -411,7 +411,7 @@ margin:0.2em auto;
 	text-decoration:none;
 }
 
-button:hover{
+button:hover {
 	background-color:#c87354;
 }
 
