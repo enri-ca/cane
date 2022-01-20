@@ -233,17 +233,6 @@ img {
 
 
 /*customized modal*/
-
-.modal {
-	display: none; /* Hidden by default */
-	position: absolute; /* Stay in place */
-	z-index: 9; /* Sit on top */
-	top: 0%;
-	left: 0%;
-	overflow: none; /* Enable scroll if needed */
-	border-radius:10%;
-}
-
 .modal {
   display: none; /* Hidden by default */
   position: absolute; /* Stay in place */
