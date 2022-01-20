@@ -221,26 +221,16 @@ img {
 
 /*customized scrollbar*/
 /* width */
-::-webkit-scrollbar {
-  width: 3vw;
-}
+
 
 /* Track */
-::-webkit-scrollbar-track {
-	background: url("../img/styles/1800scrollbar.PNG");
-	/*from https://anno.onb.ac.at/cgi-content/anno-plus?aid=vsa&datum=1898&page=316&size=18&qid=KJUQ53UXY3PEFUDA2C48T9ZRWIEWHK*/
-}
+
 
 /* Handle */
-::-webkit-scrollbar-thumb {
-	background: #555;
-	/*	background: #555 #c87354; */
-}
+
 
 /* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-	background: #e5c19a;
-}
+
 
 /*customized modal*/
 
