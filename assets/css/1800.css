@@ -391,7 +391,7 @@ margin:0.2em auto;
   text-align: left;
 }
 
-button {
+.buttons {
 	background-color: #e5c19a;
 		font-family: 'MyRivanna', sans-serif;
 	letter-spacing: 0.1em;
