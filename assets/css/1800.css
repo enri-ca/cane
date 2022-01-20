@@ -267,13 +267,36 @@ img{
 	border-radius:10%;
   }
 
-.modal-content {
-	width: 35.5vw; /* Full width */
-	height: 14vw; /* Full height */
+	.modal {
+  display: none; /* Hidden by default */
+  position: absolute; /* Stay in place */
+  z-index: 9; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 50%; /* Full width */
+  height: 50%; /* Full height */
+  overflow: none; /* Enable scroll if needed */
+  border-radius:10%;
+  }
+
+  .modal-content {
+  background-color: #f2e6e6;
+  font-family: 'Cinzel', serif;
+  font-size: 1.2vw;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+  border-radius:10%;
+  cursor:grab;
+  }
+
+/*.modal-content {
+	width: 35.5vw;
+	height: 14vw;
 	background: url(../img/styles/1800modal2.png);
 	background-position: center center;
 	background-repeat: no-repeat;
-	/*background-attachment: fixed;*/
 	background-size: cover;
 	background-color: transparent;
 	color: #c87354;
@@ -283,7 +306,7 @@ img{
 	font-weight: bold;
 }
 
-/*	.modal-content h4{
+	.modal-content h4{
 		font-family: 'MyRivanna', sans-serif;
 		letter-spacing: 0.5em;
 		line-height:.9em;
