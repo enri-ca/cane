@@ -35,7 +35,7 @@ h2, h3, h4, h5, h6 {
 	text-align:center;
 }
 
-img{
+img {
 	width: 100%;
 	filter: sepia(100%);
 	opacity: 0.7;
@@ -80,7 +80,7 @@ img{
 	background-color: black;
 }
 
-.logo{
+.logo {
 	grid-area: logo;
 	background-color: #c87354;
 	font-size: 2vw;
@@ -91,14 +91,14 @@ img{
 	border-bottom: 0.2vw solid #000000;
 }
 
-	.logo p{
+.logo p {
 		font-family: 'MyRivanna', sans-serif;
 		margin-bottom:-1em;
 		letter-spacing: 1em;
 		font-weight: bold;
-		}
+}
 
-.navbar{
+.navbar {
 	grid-area: nav;
 	background-color: black;
 }
@@ -113,19 +113,19 @@ img{
 	font-family: 'MyJenson', serif;
 }
 
-	#issue_title {
+#issue_title {
 		font-family: 'MyRivanna', sans-serif;
 		font-size: 1.5em;
-	}
+}
 
-	.menu h6, .menu p {
+.menu h6, .menu p {
 		font-family: 'MyJenson', serif;
 		text-align: left;
-	}
+}
 
-	.menu a {
+.menu a {
 		text-decoration:none;
-	}
+}
 
 .boxM {
 	grid-area: main;
@@ -154,7 +154,7 @@ img{
 	font-family: 'MyJenson', serif;
 }
 
-	.boxM p, .boxRU p, .boxRD p {
+.boxM p, .boxRU p, .boxRD p {
 		font-family: 'MyJenson', serif;
 		text-align: justify;
 		  -webkit-hyphens: auto;
@@ -163,14 +163,15 @@ img{
 		hyphens: auto;
 		font-size: 1.2em;
 		line-height: 0.95em;
-	}
+}
 
-	.title_art p {
+.title_art p {
 		text-align: center;
-	}
-	.title_art h2 {
+}
+
+.title_art h2 {
 		line-height: 0.98em;
-	}
+}
 
 .footer {
 	grid-area: footer;
@@ -180,12 +181,12 @@ img{
 	font-family: 'MyJenson', serif;
 }
 
-	.footer p {
+.footer p {
 		border-top: 0.3vw solid #c87354;
 		margin: 0.5vw;
 		padding:0.3vw;
 		border-bottom: 0.2vw solid #c87354;
-	}
+}
 
 /*Highlighting*/
 
@@ -202,7 +203,7 @@ img{
 
 /*Decorations*/
 /*Drop caps*/
-.maincontent div[id^="sec"] p:first-of-type p::first-letter {
+.maincontent div[id^="sec"] p:first-of-type::first-letter {
 	font-family: 'MyRivanna', sans-serif;
 	padding-right: 0.2em;
 	line-height: 1em;#c87354
@@ -265,9 +266,9 @@ img{
 	left: 0%;
 	overflow: none; /* Enable scroll if needed */
 	border-radius:10%;
-  }
+}
 
-	.modal {
+.modal {
   display: none; /* Hidden by default */
   position: absolute; /* Stay in place */
   z-index: 9; /* Sit on top */
@@ -277,9 +278,9 @@ img{
   height: 50%; /* Full height */
   overflow: none; /* Enable scroll if needed */
   border-radius:10%;
-  }
+}
 
-  .modal-content {
+.modal-content {
   background-color: #f2e6e6;
   font-family: 'Cinzel', serif;
   font-size: 1.2vw;
@@ -289,7 +290,7 @@ img{
   width: 50%;
   border-radius:10%;
   cursor:grab;
-  }
+}
 
 /*.modal-content {
 	width: 35.5vw;
@@ -332,11 +333,11 @@ img{
   font-weight: bold;
 }
 
-	.close:hover, .close:focus {
+.close:hover, .close:focus {
 	  color: #000;
 	  text-decoration: none;
 	  cursor: pointer;
-	}
+}
 
 /* Responsive layout - when the screen is less than xxpx (o vmin??) wide, make the grid items stack on top of each other instead of next to each other
 @media screen and (max-width: 500px) {
@@ -445,9 +446,9 @@ button {
 	text-decoration:none;
 }
 
-	button:hover{
+button:hover{
 	background-color:#c87354;
-	}
+}
 
 .navbar-nav-selector {
 	align: left;
