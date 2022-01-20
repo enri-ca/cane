@@ -283,10 +283,10 @@ img{
 	font-weight: bold;
 }
 
-	.modal-content h4{
+/*	.modal-content h4{
 		font-family: 'MyRivanna', sans-serif;
 		letter-spacing: 0.5em;
-		line-height:.5em;
+		line-height:.9em;
 		padding-top:2.5vw;
 		font-size: 1.2vw;
 	}
@@ -301,7 +301,7 @@ img{
 	.modal-content a{
 		text-decoration: none;
 	}
-
+*/
 .close {
   color: #aaaaaa;
   float: right;
