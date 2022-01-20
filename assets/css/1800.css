@@ -196,15 +196,16 @@ img{
 
 .highlighted_more {
 	background-color: black;
+	color: #c87354;
 }
 
 
 /*Decorations*/
 /*Drop caps*/
-.maincontent div[id^="sec"] p:first-of-type::first-letter {
+.maincontent div[id^="sec"] p:first-of-type p::first-letter {
 	font-family: 'MyRivanna', sans-serif;
 	padding-right: 0.2em;
-	line-height: 1em;
+	line-height: 1em;#c87354
 	font-size: 3.8em;
 	font-style: normal;
 	float: left;
