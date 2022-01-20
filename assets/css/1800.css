@@ -359,7 +359,7 @@ margin:0.2em auto;
 	font-size: 1em;
 }
 
-.navbar, a:hover, .dropdown:hover {
+.navbar a:hover, .dropdown:hover {
   background-color: #ddd;
   color: black;
 }
@@ -368,7 +368,7 @@ margin:0.2em auto;
 	display: inline-block;
 }
 
-.dropdown:hover, .dropdown-menu {
+.dropdown:hover .dropdown-menu {
   display: block;
 }
 
