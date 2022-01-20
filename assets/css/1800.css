@@ -18,6 +18,9 @@ font-family: MyFlow;
 src: url("../fonts/Art Nouveau Flowers.ttf");
 }
 
+@charset "utf-8";
+
+
 /*general settings*/
 * {
 	box-sizing: border-box;
