@@ -73,24 +73,7 @@
 AlmaStartBase();
 ">UniCASearch al volo - new!</a>
 	
-  <a style="background-color:#F0F0F0" href="javascript:function AlmaStartBase() {
-	if(window.getSelection){
-		Qr=window.getSelection();
-		}
-	else if(document.getSelection){
-		Qr=document.getSelection();
-		} 
-	else if(document.selection){
-		Qr=document.selection.createRange().text;
-		} 
-	if(!Qr || Qr=='' ){
-		Qr=prompt('Inserisci stringa di ricerca per UniCASearch:','');
-		}
-	if(Qr){
-		w=window.open('http://search.ebscohost.com/login.aspx?direct=true&scope=site&type=0&site=eds-live&custid=s3415299&groupid=main&profile=eds&lang=it&authtype=ip,guest&bquery=%27+escape(Qr)+%27 %27);window.setTimeout(%27w.focus()%27,1000);
-		}
-	}; 
-AlmaStartBase();
+  <a style="background-color:#F0F0F0" href="javascript:function AlmaStartBase () { if(window.getSelection) {Qr=window.getSelection();}else if(document.getSelection) {Qr=document.getSelection();} else if(document.selection){Qr=document.selection.createRange().text;} if (!Qr || Qr=='' ) {Qr=prompt('Inserisci stringa di ricerca per UniCASearch:',''); } if (Qr) { w=window.open('https://research.ebsco.com/c/clltgk/search/results?q=%27+escape(Qr)+%27 %27);window.setTimeout(%27w.focus()%27,1000); }}; AlmaStartBase();
 ">UniCASearch al volo!</a>
 
 	
